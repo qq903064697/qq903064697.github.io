@@ -20,12 +20,12 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="1title: 操作系统原理  第一章 操作系统引论操作系统的设置目标 管理系统资源，达到系统资源的有效利用和共享  合理组织计算机的工作流程，改善系统性能（响应时间、吞吐量）  响应时间：从提出要求到系统做出响应所需时间 吞吐量：单位时间内处理作业的数量   提供用户接口，简化用户使用操作 简而言之就是：方便性、有效性、可扩充性和开放性。   操作系统的定义操作系统是控制和管理计算机系统硬件和软">
+    <meta name="description" content="第一章 操作系统引论操作系统的设置目标 管理系统资源，达到系统资源的有效利用和共享  合理组织计算机的工作流程，改善系统性能（响应时间、吞吐量）  响应时间：从提出要求到系统做出响应所需时间 吞吐量：单位时间内处理作业的数量   提供用户接口，简化用户使用操作 简而言之就是：方便性、有效性、可扩充性和开放性。   操作系统的定义操作系统是控制和管理计算机系统硬件和软件资源、合理地组织计算机工作流程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="操作系统原理笔记">
 <meta property="og:url" content="http://example.com/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1title: 操作系统原理  第一章 操作系统引论操作系统的设置目标 管理系统资源，达到系统资源的有效利用和共享  合理组织计算机的工作流程，改善系统性能（响应时间、吞吐量）  响应时间：从提出要求到系统做出响应所需时间 吞吐量：单位时间内处理作业的数量   提供用户接口，简化用户使用操作 简而言之就是：方便性、有效性、可扩充性和开放性。   操作系统的定义操作系统是控制和管理计算机系统硬件和软">
+<meta property="og:description" content="第一章 操作系统引论操作系统的设置目标 管理系统资源，达到系统资源的有效利用和共享  合理组织计算机的工作流程，改善系统性能（响应时间、吞吐量）  响应时间：从提出要求到系统做出响应所需时间 吞吐量：单位时间内处理作业的数量   提供用户接口，简化用户使用操作 简而言之就是：方便性、有效性、可扩充性和开放性。   操作系统的定义操作系统是控制和管理计算机系统硬件和软件资源、合理地组织计算机工作流程">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/bqQfVz5yrrGYSXMvKr.cqepFqvWp5mGFznyBCHvH4kyJzeqRA8h*Q5N52pMQLJef3NUbvif*ZoId31KU8Ot02JNeGfpzQcflz2hUJojBH.I!/b&bo=lwGAAQAAAAADBzU!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEBI5Pu6PQ334tLb3i848zMWp6OPOgGNnALfTgVI0MXeiRCxpYnyTiruLeHp3u*so3hklNgO4WAtNpIOcDGIESv0!/b&bo=iAKJAAAAAAADFzE!&rf=viewer_4">
@@ -72,14 +72,14 @@
 <meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPF0yo8wROdhTTxKYyHdleFgTsryZHcVn34fpsAm5Lw00SOiYHkPIGkRhfj6ZYDLVaFyb49HCBCSXOttrkpQlec!/b&bo=kQLWAQAAAAADF3Y!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEJ8jV1J5o8Es2Nnz934KmvDybrdZpoAymYCaVobnVA5ru5b0TvPAfP2GQFGDyhGlJfaZhLJrImVL9KCXchCQ7lo!/b&bo=igLQAQAAAAADF2s!&rf=viewer_4">
 <meta property="article:published_time" content="2020-09-27T02:20:50.339Z">
-<meta property="article:modified_time" content="2020-09-27T02:20:24.383Z">
+<meta property="article:modified_time" content="2020-09-27T02:27:08.933Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/bqQfVz5yrrGYSXMvKr.cqepFqvWp5mGFznyBCHvH4kyJzeqRA8h*Q5N52pMQLJef3NUbvif*ZoId31KU8Ot02JNeGfpzQcflz2hUJojBH.I!/b&bo=lwGAAQAAAAADBzU!&rf=viewer_4">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>Han&#39;s Studio</title>
+    <title>操作系统原理笔记 · Han&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -274,7 +274,7 @@
                 <a href="/" >Han&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name"></a>
+                <a href="#" class="post-name">操作系统原理笔记</a>
             </div>
     </div>
     
@@ -304,7 +304,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [Untitled Post]
+            操作系统原理笔记
             <!-- 404 -->
             
         </h1>
@@ -452,9 +452,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title: 操作系统原理</span><br></pre></td></tr></table></figure>
-
-<h2 id="第一章-操作系统引论"><a href="#第一章-操作系统引论" class="headerlink" title="第一章 操作系统引论"></a>第一章 操作系统引论</h2><h3 id="操作系统的设置目标"><a href="#操作系统的设置目标" class="headerlink" title="操作系统的设置目标"></a>操作系统的设置目标</h3><ol>
+        <h2 id="第一章-操作系统引论"><a href="#第一章-操作系统引论" class="headerlink" title="第一章 操作系统引论"></a>第一章 操作系统引论</h2><h3 id="操作系统的设置目标"><a href="#操作系统的设置目标" class="headerlink" title="操作系统的设置目标"></a>操作系统的设置目标</h3><ol>
 <li><p>管理系统资源，达到系统资源的有效利用和共享</p>
 </li>
 <li><p>合理组织计算机的工作流程，改善系统性能（响应时间、吞吐量）</p>
@@ -2556,7 +2554,7 @@ height:50vh;
             <p>Author：<a href="http://example.com">John Doe</a>
             <p>原文链接：<a href="http://example.com/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/">http://example.com/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/</a>
             <p>发表日期：<a href="http://example.com/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/">September 27th 2020, 10:20:50 am</a>
-            <p>更新日期：<a href="http://example.com/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/">September 27th 2020, 10:20:24 am</a>
+            <p>更新日期：<a href="http://example.com/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/">September 27th 2020, 10:27:08 am</a>
             <p>版权声明：本文采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -2748,7 +2746,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/" >[Untitled Post]</a>
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/" >操作系统原理笔记</a>
         </li>
     
     
