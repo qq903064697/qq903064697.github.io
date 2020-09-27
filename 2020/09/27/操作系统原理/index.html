@@ -27,55 +27,55 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="第一章 操作系统引论操作系统的设置目标 管理系统资源，达到系统资源的有效利用和共享  合理组织计算机的工作流程，改善系统性能（响应时间、吞吐量）  响应时间：从提出要求到系统做出响应所需时间 吞吐量：单位时间内处理作业的数量   提供用户接口，简化用户使用操作 简而言之就是：方便性、有效性、可扩充性和开放性。   操作系统的定义操作系统是控制和管理计算机系统硬件和软件资源、合理地组织计算机工作流程">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/bqQfVz5yrrGYSXMvKr.cqepFqvWp5mGFznyBCHvH4kyJzeqRA8h*Q5N52pMQLJef3NUbvif*ZoId31KU8Ot02JNeGfpzQcflz2hUJojBH.I!/b&bo=lwGAAQAAAAADBzU!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEBI5Pu6PQ334tLb3i848zMWp6OPOgGNnALfTgVI0MXeiRCxpYnyTiruLeHp3u*so3hklNgO4WAtNpIOcDGIESv0!/b&bo=iAKJAAAAAAADFzE!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEB..Xb*N.HAKFk0jlxPiD6Ubm2yLiSe1XJ4auhAqQS*4FMm4xjec2SV3T5O1dP8JuloyhifrnFzRUttz35ySbDE!/b&bo=HQL1AQAAAAADF9k!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEKTuQPmj*14TxnOVGi0elqTEHfKpZ.Uoz6ZrQFIQEXyk9GUYvWqqA4oyDb9SJWyV31OX08A*V4WCHsKlRr90crc!/b&bo=eQIHAgAAAAADJ3w!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPIp.PSzpkxgHgIAQ*JqbE*MA7TKZatSiB3Fi9Adgv*g7mrcKd8hOHVd9p8w1iJEHHfeGV5NlcjHNXaFMPJGzL4!/b&bo=0QHvAAAAAAADFw0!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEJNgAo0ZFC*CyrjAXzzbSoF0RvbFJ*JXSy3WnPYd4CDiDgIeI1fWcUzjiLYPYHkIHkSjBFuFldRoe3Mj3RZqRd0!/b&bo=yQLzAQAAAAADNys!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrELjoT5mC7uZesLzIrpNrCYjP7yPLQLs0nf.hFZw4KtRPocfszz*DndYUAx808RD35Yv5Sw4m4xjga7r.7rxXmfE!/b&bo=NwMYAQAAAAADJy8!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEDsvIVbgNO2pLegVGcjF153ng63rhsX*xf8A72bIkMAe0yzCCZmPMTFcctW62DywR3ADdVRUfaJe7DRwPdp.5TE!/b&bo=WwJxAQAAAAADJys!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrENyQdFT1T1VV5YlvG2J5gLMlV.W0NNa8BBOsbwZ67kNtquXdgdcvs8Rinn4kpQtQd0miO0BpRjzXmIPRh35QHmk!/b&bo=0gLKAQAAAAADJxk!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEHQ3KzFvyi215oO0mgc5nBkI8d6yJz6IbBiJnMMWHMMfFKo8MYWqWi2wcOYGGAotiIt2yREMHumDk6FRYjiC8sg!/b&bo=jQG2AAAAAAADFwg!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEOTFkPkqvbRBka6yVP4BMPDeGKv3xnQF.9uDfJqtD2UWeSDoTPLM2RnJsqHTtUCqjhunYmCFlaN2J*9RVge*DEQ!/b&bo=BQEKAQAAAAADFz0!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEFGlhZvD.ouPbcjwJxCUf*BO4nkSsshul.4Qc*.RGRYmkmslhm3RHOw5qTtNF57y4MR9AxojfkrV2v5QQTZFzas!/b&bo=jgGsAAAAAAADFxE!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEH3pewzppDaO6USll9sFCh1gRuMLFBYVbS1IAX9ovwXFh4mXvz4xMTnfiBu7VBLBM3gRBtDoJj8ue6k49skUy4g!/b&bo=TAEZAQAAAAADF2c!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEP1Sfx8t9JRtAs5An6TDrGStFpwynVHzKjUYdKCF0eIojBA**pTVB23T1M8w.Edx7TY0ofuOfuSN50lz3Lr6bNY!/b&bo=kwEUAQAAAAADF7U!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrELrj*S75PvXLD7t0UEEkX2X1IjK.pHhR41Rs52VX5U5GuQGnEqS4tAbN.p*o37exvMkekFpTAdr89csCdosWWwo!/b&bo=QAJvAAAAAAADFx8!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEFojzSyWuuXWhcmvhOUIQvcn.63MZINnczwDrIiZxYLblQzzpzDOTqOONhd.23aJcnsG2PAZpIEALcMGKfo.1Go!/b&bo=rQEBAQAAAAADF54!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPrQM6t4Vo23yalbquEoWV0JMcoM2EbZP0BS8VbUJuxlyZb2y3qDLuGJ2rnktswE9X9Ax0FQrEKqYs8yNrA9AFU!/b&bo=EQPbAAAAAAADJ8s!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEDOIvscEdninhFvOV3aSXfDeKejb.TWjinnarUah0ZgvAUwV3WAiNQiDWyZI3kFp.ASclVoe8yl6vzGCJwxz6xA!/b&bo=fwMlAgAAAAADF2k!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEM87iAzQnIGAgKENH5lPaUOlE6acqg4UEzbOXm6YB9Mb2RNVP8ZGRQVTxTn9iSQh7zqzceG4xe7T1A2zqvv14uQ!/b&bo=ZQTrAAAAAAADJ4g!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEJ5cnDsjg2iONBPMIkl25h*lapkSdtTVdmKcMgIs2aJ.PupHbaHHnLf2l0VfxLA1VVannckruQW7Eq9xXj3qp88!/b&bo=dATaAQAAAAADF5k!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEEr6jV8MtEbwRolGtIfXTWtuvhqpVW5pLGN7PE.WBURb6*TY04B0PpYgJhqoxRipSLjtJIstnpZ8Z1jz5PTF5.s!/b&bo=RgTjAAAAAAADF5M!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEMkawi2XtwUZWJZZJU01ZHprM7xUcPRyIFYAe96RzvkVzbA3hghPwCA9XiL4bhX8rnXrWnYjSQIi*P0lKbAYFwQ!/b&bo=OQIgAQAAAAADFyg!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEN2NlwGU18pqxiANke33xQePXo5fF22eptGBkLitCU6dEUWzImSocyZQ53tVNpWYEX5yfVQsZ3DJmhRYiRNLT7g!/b&bo=.AQwAgAAAAADN9w!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEFhJ526Rga8ByYThztB7pjhgEMXW8GWCJshjnJe8r6eLkmB3tMGwq.UTAytsYBQc1Z5fFu.i8tRKpOX1CVqqtsQ!/b&bo=3wTQAQAAAAADFzg!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEKlLZEbCYAwdqnphTr.QREaTOUZ97lOkAJ7Gb2m8.EE4KC5VaPIBkkRo1iz1Ol*0DuvZKkg0*nEjCLxGNOmWeg0!/b&bo=cQKJAAAAAAADF8g!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPrFr5tj1EoOJ*UqSXKFiG5541ACiLqd3AlBd3Wfdsfb71dlSiKDUsUQRyiG2djCpOu*3PpywjZaYJQ.pxEH9BE!/b&bo=0gRHAAAAAAADF6M!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEP76WNxTmIPPtratN0inmpzYVe1Y6TRrsTg8D8E6Xk2qeMffOICCB.Kji7xqUtA7X6ly2rhTvq39a2kH7ho6dQY!/b&bo=mAE7AQAAAAADF5E!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrECZUayV*GQWaxvqpyZ8y2*rbqr.5ZGOgT9vvic.FhAm8FvaPXLVrPSsJpnxGdGvfiRw*VOS9txbQEAVb.1AaLbA!/b&bo=cQI4AQAAAAADF3g!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEOuB3ETAuSB1wwbhYRTeZqydjts*nLMFgpULqp1GhJT6yL4dgdUjEi596MbCPUA4o74QdSu6w9oAF7Un.K7v9ks!/b&bo=jAJ8AQAAAAADF8E!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEFXRvYCAAFENFxNDS3sJDsPqeCAbhHBIeu7aPfpHJyzjWWkW0rnWGlk5foK8LGq30aDEwTUhlfadTM3HYei0g6A!/b&bo=wQKgAQAAAAADF1A!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEHBI.ZVcM5WZUDJcrGF1bHLky2hOkVXV4WLskiTIyAWp6LDAxupyifXqdB.39jmKoF*rMhBQEfqrDu*yvReVfKo!/b&bo=CwN9AQAAAAADJ3Y!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEAaGRNWeFommndVgu11gjz3MgNRynMOADZoVHDSppsxTS*M8sgk2*mQBcT8xCU*m6RwyB5bsgMjfGlXwR7udjHA!/b&bo=vALIAAAAAAADF0Q!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEMa795KfMLZfZ.L74UhOjmEXyxk4HA4XK0vbP0ylyZVTQW9QR8f21E1ADf1RYq.MyzLalp2.qETT9sMoOmKscrs!/b&bo=IAToAQAAAAADF*8!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrECj6WNygc5iO0xZHFFCW4j9Esk4*qW5DR7Yi*8J7zt463TKAOnlFpotzbidY8NG.skoJkT3crgoO81CUvdjFT.s!/b&bo=8AMCAQAAAAADF8I!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEED32gQwsEXAQJASPNtWihLgL7iZivNowIO82lkOVG2I5vIoag8MnfJWVbbCQlFWS9gojQNQC*pJNY6mU9KvwpA!/b&bo=2QIlAgAAAAADJ*4!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPWSdx8Lnv.9GCqBleuBwqEfqg1JtZTOZMI1VmJBs5gecQzDwDUEbPpPWiCEFXo.gGPs4LaFWJZSqfxPauAWtJg!/b&bo=1QTEAgAAAAADNwU!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEMcdKCViWxBdOIcAaXk8eTVHcn.QLCNfTe6ZTfY3fW1QlFgZ0XUFetL1deSi3b5NX4VFnZEj2B7YgtB8pCzHlq0!/b&bo=twLQAQAAAAADF1Y!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEGfO8q8BwvSbC3LDSrQap6fpL58484jwCw0NBzgRYX*7rDhs6jd2va38dXHsieaERF0OqA4nZ09qpb5hDPUsXQ4!/b&bo=wgFJAQAAAAADF7k!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEKr68MNjn.fhsiTYIwTsdKjujXZf8Xs*dhiBmT*GdWMs.VI9udRPbdPY3.8PE4HENmbyTQ7fEEbsA7x6hvFAtZY!/b&bo=zwLnAQAAAAADFxk!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEKC1S74LA8ZeaI.npYrK6wwbmCKtvTQJ3ve8MyvSmK4V6*XGFMfQvgB2vfBVABsXIqi8M2HxKEWPkJObIl*5JjI!/b&bo=xQHrAAAAAAADFx0!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrELyAazdKdMLpTem8iY7eW1z9A9YLSBaqc0WoAn88i8zDG9il5T5AR4fQboru5A6HlzDri5xXoEOkMCDslT0XpWo!/b&bo=pwLfAQAAAAADF0k!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEMb4Wjzhf*Pg59Jxc3oCC*TCyYJ1QeyEvdP*gT0.gi2kiF2kk0T7CTAHUAXq3AKp0rgMuiRgeUMfzTk8UiEB5gM!/b&bo=DwL4AAAAAAADF8c!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPF0yo8wROdhTTxKYyHdleFgTsryZHcVn34fpsAm5Lw00SOiYHkPIGkRhfj6ZYDLVaFyb49HCBCSXOttrkpQlec!/b&bo=kQLWAQAAAAADF3Y!&rf=viewer_4">
-<meta property="og:image" content="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEJ8jV1J5o8Es2Nnz934KmvDybrdZpoAymYCaVobnVA5ru5b0TvPAfP2GQFGDyhGlJfaZhLJrImVL9KCXchCQ7lo!/b&bo=igLQAQAAAAADF2s!&rf=viewer_4">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200911143910130.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912102151988.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912103733486.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912103846344.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912103920770.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912103929834.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912104011877.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912152455941.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912162826526.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095443048.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095744859.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095754551.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095829692.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095904036.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913144339432.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913160929646.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913162557195.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913172019666.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913172710343.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913173235573.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914135746955.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914140501432.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914140832626.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914140727368.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914145729236.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914152128036.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914195730141.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914200517585.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914212955182.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914213002042.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914213030702.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914215936765.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200915093457914.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200915094138778.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914233821729.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914234526616.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235316172.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914234946125.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235326932.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914234952655.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235339332.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235104023.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235348055.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235416444.png">
 <meta property="article:published_time" content="2020-09-27T02:20:50.339Z">
-<meta property="article:modified_time" content="2020-09-27T02:27:08.933Z">
+<meta property="article:modified_time" content="2020-09-27T14:39:01.754Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/bqQfVz5yrrGYSXMvKr.cqepFqvWp5mGFznyBCHvH4kyJzeqRA8h*Q5N52pMQLJef3NUbvif*ZoId31KU8Ot02JNeGfpzQcflz2hUJojBH.I!/b&bo=lwGAAQAAAAADBzU!&rf=viewer_4">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200911143910130.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
@@ -479,7 +479,7 @@ height:50vh;
 </li>
 <li>OS实现了对计算机资源的抽象</li>
 </ul>
-<h3 id="操作系统与硬件、其他软件的层次关系"><a href="#操作系统与硬件、其他软件的层次关系" class="headerlink" title="操作系统与硬件、其他软件的层次关系"></a>操作系统与硬件、其他软件的层次关系</h3><p><img src="https://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/bqQfVz5yrrGYSXMvKr.cqepFqvWp5mGFznyBCHvH4kyJzeqRA8h*Q5N52pMQLJef3NUbvif*ZoId31KU8Ot02JNeGfpzQcflz2hUJojBH.I!/b&bo=lwGAAQAAAAADBzU!&rf=viewer_4" alt="image-20200911143910130"></p>
+<h3 id="操作系统与硬件、其他软件的层次关系"><a href="#操作系统与硬件、其他软件的层次关系" class="headerlink" title="操作系统与硬件、其他软件的层次关系"></a>操作系统与硬件、其他软件的层次关系</h3><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200911143910130.png" alt="image-20200911143910130"></p>
 <h3 id="推动操作系统发展的主要动力"><a href="#推动操作系统发展的主要动力" class="headerlink" title="推动操作系统发展的主要动力"></a>推动操作系统发展的主要动力</h3><ul>
 <li>不断提高计算机资源利用率</li>
 <li>方便用户</li>
@@ -710,7 +710,7 @@ height:50vh;
 <ul>
 <li>设置内核模式（或称为系统模式/内核态/系统态）和和用户模式（或称为用户态） ，PSW中设置模式位=<strong>0/1指示当前模式</strong></li>
 </ul>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEBI5Pu6PQ334tLb3i848zMWp6OPOgGNnALfTgVI0MXeiRCxpYnyTiruLeHp3u*so3hklNgO4WAtNpIOcDGIESv0!/b&bo=iAKJAAAAAAADFzE!&rf=viewer_4" alt="image-20200912102151988"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912102151988.png" alt="image-20200912102151988"></p>
 <ul>
 <li>当系统引导时，硬件从内核模式开始。操作系统接着加载，然后开始在用户模式下执行用户程序；一旦有自陷或中断，硬件会从用户模式切换到内核模式</li>
 <li>将可能引起损害的机器指令设为特权指令（privileged instruction)，且只在内核模式下才允许执行</li>
@@ -751,22 +751,22 @@ height:50vh;
 <li>一个API也可能由多个系统调用实现，一个API的功能可能并不需要内核提供的服务，那么此时这个API也就不需要任何的系统调用</li>
 <li>常用API：Win32 API;POSIX API;Java API</li>
 </ul>
-<h3 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a>操作系统结构</h3><h4 id="单一体结构"><a href="#单一体结构" class="headerlink" title="单一体结构"></a>单一体结构</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEB..Xb*N.HAKFk0jlxPiD6Ubm2yLiSe1XJ4auhAqQS*4FMm4xjec2SV3T5O1dP8JuloyhifrnFzRUttz35ySbDE!/b&bo=HQL1AQAAAAADF9k!&rf=viewer_4" alt="image-20200912103733486"></p>
+<h3 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a>操作系统结构</h3><h4 id="单一体结构"><a href="#单一体结构" class="headerlink" title="单一体结构"></a>单一体结构</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912103733486.png" alt="image-20200912103733486"></p>
 <ul>
 <li>全部操作系统在内核态中以单一程序的方式运行，整个OS以过程集合的方式编写，链接成一个大型可执行二进制程序</li>
 <li>各个功能归为不同的功能块，每个功能块相对独立，又经过固定的界面相互联系</li>
 <li>网状关系容易造成循环调用，形成死锁，降低OS可靠性</li>
 </ul>
-<h4 id="层次式结构"><a href="#层次式结构" class="headerlink" title="层次式结构"></a>层次式结构</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEKTuQPmj*14TxnOVGi0elqTEHfKpZ.Uoz6ZrQFIQEXyk9GUYvWqqA4oyDb9SJWyV31OX08A*V4WCHsKlRr90crc!/b&bo=eQIHAgAAAAADJ3w!&rf=viewer_4" alt="image-20200912103846344"></p>
+<h4 id="层次式结构"><a href="#层次式结构" class="headerlink" title="层次式结构"></a>层次式结构</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912103846344.png" alt="image-20200912103846344"></p>
 <p>将单一体OS的功能分成不同层次，底层次的功能为其紧邻其上的一个层次的功能提供服务</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPIp.PSzpkxgHgIAQ*JqbE*MA7TKZatSiB3Fi9Adgv*g7mrcKd8hOHVd9p8w1iJEHHfeGV5NlcjHNXaFMPJGzL4!/b&bo=0QHvAAAAAAADFw0!&rf=viewer_4" alt="image-20200912103920770"></p>
-<h4 id="微内核"><a href="#微内核" class="headerlink" title="微内核"></a>微内核</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEJNgAo0ZFC*CyrjAXzzbSoF0RvbFJ*JXSy3WnPYd4CDiDgIeI1fWcUzjiLYPYHkIHkSjBFuFldRoe3Mj3RZqRd0!/b&bo=yQLzAQAAAAADNys!&rf=viewer_4" alt="image-20200912103929834"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912103920770.png" alt="image-20200912103920770"></p>
+<h4 id="微内核"><a href="#微内核" class="headerlink" title="微内核"></a>微内核</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912103929834.png" alt="image-20200912103929834"></p>
 <ul>
 <li>为了实现高可靠性，将操作系统划分成小的、良好定义的模块，只有其中一个核心模块——微内核——运行在内核态，其他模块则作为普通用户进程运行</li>
 <li>设备驱动和文件系统作为普通用户进程，模块中的错误会使模块崩溃，但不会使整个系统死机</li>
 <li>典型代表：MINIX 3</li>
 </ul>
-<h4 id="客户机-服务器模式"><a href="#客户机-服务器模式" class="headerlink" title="客户机-服务器模式"></a>客户机-服务器模式</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrELjoT5mC7uZesLzIrpNrCYjP7yPLQLs0nf.hFZw4KtRPocfszz*DndYUAx808RD35Yv5Sw4m4xjga7r.7rxXmfE!/b&bo=NwMYAQAAAAADJy8!&rf=viewer_4" alt="image-20200912104011877"></p>
+<h4 id="客户机-服务器模式"><a href="#客户机-服务器模式" class="headerlink" title="客户机-服务器模式"></a>客户机-服务器模式</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912104011877.png" alt="image-20200912104011877"></p>
 <ul>
 <li>客户机—服务器模式是微内核的变体，是一种可应用在单机或网络机器上的抽象</li>
 <li>客户端和服务器之间的通信是消息传递</li>
@@ -851,9 +851,9 @@ height:50vh;
 <li>新建状态：刚被创建，尚未进入就绪队列时的状态</li>
 <li>终止状态：进程正常/异常结束，移出就绪队列，但尚未撤销时的状态</li>
 </ul>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEDsvIVbgNO2pLegVGcjF153ng63rhsX*xf8A72bIkMAe0yzCCZmPMTFcctW62DywR3ADdVRUfaJe7DRwPdp.5TE!/b&bo=WwJxAQAAAAADJys!&rf=viewer_4" alt="image-20200912152455941"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912152455941.png" alt="image-20200912152455941"></p>
 <p><strong>进程的挂起/解挂状态</strong></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrENyQdFT1T1VV5YlvG2J5gLMlV.W0NNa8BBOsbwZ67kNtquXdgdcvs8Rinn4kpQtQd0miO0BpRjzXmIPRh35QHmk!/b&bo=0gLKAQAAAAADJxk!&rf=viewer_4" alt="image-20200912162826526"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200912162826526.png" alt="image-20200912152455941"></p>
 <p>设置进程挂起/解挂状态的原因</p>
 <ul>
 <li>用户需要：中间结果与预期不符</li>
@@ -1026,7 +1026,7 @@ height:50vh;
 <h4 id="线程类型"><a href="#线程类型" class="headerlink" title="线程类型"></a>线程类型</h4><p>内核支持线程</p>
 <p>用户级线程</p>
 <h4 id="线程的执行"><a href="#线程的执行" class="headerlink" title="线程的执行"></a>线程的执行</h4><p>状态及转换</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEHQ3KzFvyi215oO0mgc5nBkI8d6yJz6IbBiJnMMWHMMfFKo8MYWqWi2wcOYGGAotiIt2yREMHumDk6FRYjiC8sg!/b&bo=jQG2AAAAAAADFwg!&rf=viewer_4" alt="image-20200913095443048"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095443048.png" alt="image-20200913095443048"></p>
 <p>三个基本状态</p>
 <ul>
 <li>就绪</li>
@@ -1041,26 +1041,26 @@ height:50vh;
 <li>激活：线程等待的事件发生后，将被激活后进入就绪队列</li>
 <li>结束：线程执行完毕后被结束，其寄存器上下文和堆栈都将被释放</li>
 </ul>
-<h3 id="多线程模型"><a href="#多线程模型" class="headerlink" title="多线程模型"></a>多线程模型</h3><h4 id="多对一模型"><a href="#多对一模型" class="headerlink" title="多对一模型"></a>多对一模型</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEOTFkPkqvbRBka6yVP4BMPDeGKv3xnQF.9uDfJqtD2UWeSDoTPLM2RnJsqHTtUCqjhunYmCFlaN2J*9RVge*DEQ!/b&bo=BQEKAQAAAAADFz0!&rf=viewer_4" alt="image-20200913095744859"></p>
+<h3 id="多线程模型"><a href="#多线程模型" class="headerlink" title="多线程模型"></a>多线程模型</h3><h4 id="多对一模型"><a href="#多对一模型" class="headerlink" title="多对一模型"></a>多对一模型</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095744859.png" alt="image-20200913095744859"></p>
 <ul>
 <li>用户线程均映射到一个内核线程</li>
 <li>线程管理是由线程库在用户空间进行的，效率高</li>
 <li>某个用户线程因需要访问内核而阻塞时，会引起整个进程的阻塞</li>
 <li>任意时刻，只有一个线程能够访问内核，因此无法并行运行在多处<br>理器上</li>
 </ul>
-<h4 id="一对一模型"><a href="#一对一模型" class="headerlink" title="一对一模型"></a>一对一模型</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEFGlhZvD.ouPbcjwJxCUf*BO4nkSsshul.4Qc*.RGRYmkmslhm3RHOw5qTtNF57y4MR9AxojfkrV2v5QQTZFzas!/b&bo=jgGsAAAAAAADFxE!&rf=viewer_4" alt="image-20200913095754551"></p>
+<h4 id="一对一模型"><a href="#一对一模型" class="headerlink" title="一对一模型"></a>一对一模型</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095754551.png" alt="image-20200913095754551"></p>
 <ul>
 <li>每一个用户线程均映射到一个内核线程</li>
 <li>一个用户线程因需要访问内核而阻塞时，另一个用户线程能够继续执行，多个线程可以并行运行在多处理器上</li>
 <li>要为每一个用户线程创建对应的内核线程，开销大，影响应用程序性能，整个系统的线程数量受限</li>
 <li>实例：Linux和Windows系列都实现了该模型</li>
 </ul>
-<h4 id="多对多模型"><a href="#多对多模型" class="headerlink" title="多对多模型"></a>多对多模型</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEH3pewzppDaO6USll9sFCh1gRuMLFBYVbS1IAX9ovwXFh4mXvz4xMTnfiBu7VBLBM3gRBtDoJj8ue6k49skUy4g!/b&bo=TAEZAQAAAAADF2c!&rf=viewer_4" alt="image-20200913095829692"></p>
+<h4 id="多对多模型"><a href="#多对多模型" class="headerlink" title="多对多模型"></a>多对多模型</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095829692.png" alt="image-20200913095829692"></p>
 <ul>
 <li>多个用户线程映射到数量相等或更少的多个内核线程上，内核进程的数量可能与特定应用或特定硬件有关</li>
 <li>结合了多对一和一对一模型的优点：可以创建任意数量的用户线程，相应内核线程可在多处理器系统上并发执<br>行；当某个线程执行阻塞系统调用时，内核能调度另一线程执行</li>
 </ul>
-<h4 id="二级模型：多对多模型变种"><a href="#二级模型：多对多模型变种" class="headerlink" title="二级模型：多对多模型变种"></a>二级模型：多对多模型变种</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEP1Sfx8t9JRtAs5An6TDrGStFpwynVHzKjUYdKCF0eIojBA**pTVB23T1M8w.Edx7TY0ofuOfuSN50lz3Lr6bNY!/b&bo=kwEUAQAAAAADF7U!&rf=viewer_4" alt="image-20200913095904036"></p>
+<h4 id="二级模型：多对多模型变种"><a href="#二级模型：多对多模型变种" class="headerlink" title="二级模型：多对多模型变种"></a>二级模型：多对多模型变种</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913095904036.png" alt="image-20200913095904036"></p>
 <ul>
 <li>多对多模型的基础上，允许一个用户线程绑定到某个内核线程上</li>
 </ul>
@@ -1243,7 +1243,7 @@ height:50vh;
 <ul>
 <li>在优先级调度算法的基础上引入动态优先级</li>
 </ul>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrELrj*S75PvXLD7t0UEEkX2X1IjK.pHhR41Rs52VX5U5GuQGnEqS4tAbN.p*o37exvMkekFpTAdr89csCdosWWwo!/b&bo=QAJvAAAAAAADFx8!&rf=viewer_4" alt="image-20200913144339432"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913144339432.png" alt="image-20200913144339432"></p>
 <ul>
 <li>如果等待时间相同，则要求服务时间越短，优先级越高，HRRNèSJF</li>
 <li>如果要求服务时间相同，则等待时间越长，优先级越高，HRRNèFCFS</li>
@@ -1352,12 +1352,12 @@ height:50vh;
 </ul>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">P1() &#123; S1;signal(a); signal(b);&#125;</span><br><span class="line">P2() &#123; wait(a); S2;signal(c);signal(d);&#125;</span><br><span class="line">P3() &#123; wait(b); wait(c); S3; signal(e); &#125;</span><br><span class="line">P4() &#123; wait(d); wait(e); S4;&#125;</span><br><span class="line">main() &#123;</span><br><span class="line">	semaphore a, b, c, d, e;</span><br><span class="line">	a.value=<span class="number">0</span>; b.value=<span class="number">0</span>; c.value=<span class="number">0</span>; d.value=<span class="number">0</span>; e.value=<span class="number">0</span>;</span><br><span class="line">	parbegin</span><br><span class="line">	P1(); P2(); P3(); P4();</span><br><span class="line">	parend</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEFojzSyWuuXWhcmvhOUIQvcn.63MZINnczwDrIiZxYLblQzzpzDOTqOONhd.23aJcnsG2PAZpIEALcMGKfo.1Go!/b&bo=rQEBAQAAAAADF54!&rf=viewer_4" alt="image-20200913160929646"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913160929646.png" alt="image-20200913160929646"></p>
 </li>
 </ul>
 <h4 id="死锁和饥饿"><a href="#死锁和饥饿" class="headerlink" title="死锁和饥饿"></a>死锁和饥饿</h4><p>死锁：两个或多个进程无限地等待一个事件，而该事件只能由这些等待进程之一来触发，这种互为等待的状态称为死锁</p>
 <p>饿死——无限期阻塞</p>
-<h3 id="经典同步问题"><a href="#经典同步问题" class="headerlink" title="经典同步问题"></a>经典同步问题</h3><h4 id="生产者—消费者问题-有限缓冲问题"><a href="#生产者—消费者问题-有限缓冲问题" class="headerlink" title="生产者—消费者问题/有限缓冲问题"></a>生产者—消费者问题/有限缓冲问题</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPrQM6t4Vo23yalbquEoWV0JMcoM2EbZP0BS8VbUJuxlyZb2y3qDLuGJ2rnktswE9X9Ax0FQrEKqYs8yNrA9AFU!/b&bo=EQPbAAAAAAADJ8s!&rf=viewer_4" alt="image-20200913162557195"></p>
+<h3 id="经典同步问题"><a href="#经典同步问题" class="headerlink" title="经典同步问题"></a>经典同步问题</h3><h4 id="生产者—消费者问题-有限缓冲问题"><a href="#生产者—消费者问题-有限缓冲问题" class="headerlink" title="生产者—消费者问题/有限缓冲问题"></a>生产者—消费者问题/有限缓冲问题</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913162557195.png" alt="image-20200913162557195"></p>
 <p>问题</p>
 <ul>
 <li>一个包含N个单元的缓冲区，每个单元可存储一个数据项</li>
@@ -1425,7 +1425,7 @@ height:50vh;
 <li>竞争资源</li>
 <li>进程推进顺序不合理</li>
 </ul>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEDOIvscEdninhFvOV3aSXfDeKejb.TWjinnarUah0ZgvAUwV3WAiNQiDWyZI3kFp.ASclVoe8yl6vzGCJwxz6xA!/b&bo=fwMlAgAAAAADF2k!&rf=viewer_4" alt="image-20200913172019666"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913172019666.png" alt="image-20200913172019666"></p>
 <h3 id="死锁特征"><a href="#死锁特征" class="headerlink" title="死锁特征"></a>死锁特征</h3><h4 id="死锁发生的必要条件"><a href="#死锁发生的必要条件" class="headerlink" title="死锁发生的必要条件"></a>死锁发生的必要条件</h4><ul>
 <li>互斥</li>
 <li>占有并等待</li>
@@ -1442,12 +1442,12 @@ height:50vh;
 <li><p>当进程申请资源类型的一个实例时，就在资源分配图中加入一条申请边，当该申请可以得到满足时，申请边就转换成分配边，当进程使用完并释放资源后，就删除分配边</p>
 </li>
 </ul>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEM87iAzQnIGAgKENH5lPaUOlE6acqg4UEzbOXm6YB9Mb2RNVP8ZGRQVTxTn9iSQh7zqzceG4xe7T1A2zqvv14uQ!/b&bo=ZQTrAAAAAAADJ4g!&rf=viewer_4" alt="image-20200913172710343"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913172710343.png" alt="image-20200913172710343"></p>
 <p><strong>如果资源分配图没有环，那么系统中一定不存在进程死锁</strong><br><strong>如果资源分配图中有环，则可能存在死锁</strong></p>
 <ul>
 <li>当每种资源类型只有1个实例时，如果图中存在环，则一定有进程死锁→此时，环检测可用于检测死锁的存在</li>
 </ul>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEJ5cnDsjg2iONBPMIkl25h*lapkSdtTVdmKcMgIs2aJ.PupHbaHHnLf2l0VfxLA1VVannckruQW7Eq9xXj3qp88!/b&bo=dATaAQAAAAADF5k!&rf=viewer_4" alt="image-20200913173235573"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913173235573.png" alt="image-20200913173235573"></p>
 <h4 id="死锁的处理方法"><a href="#死锁的处理方法" class="headerlink" title="死锁的处理方法"></a>死锁的处理方法</h4><p>确保系统不会发生死锁</p>
 <ul>
 <li>死锁预防</li>
@@ -1696,7 +1696,7 @@ height:50vh;
 </li>
 </ul>
 <p><strong>有效访问时间</strong></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEEr6jV8MtEbwRolGtIfXTWtuvhqpVW5pLGN7PE.WBURb6*TY04B0PpYgJhqoxRipSLjtJIstnpZ8Z1jz5PTF5.s!/b&bo=RgTjAAAAAAADF5M!&rf=viewer_4" alt="image-20200914135746955"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914135746955.png" alt="image-20200914135746955"></p>
 <h4 id="共享页"><a href="#共享页" class="headerlink" title="共享页"></a>共享页</h4><ul>
 <li>分页管理的优点之一就是可以共享公共代码</li>
 <li>多用户的分时系统中，对于一个公共应用程序，如果要为每一个用户在内存中存储一份代码副本将极大地浪费空间</li>
@@ -1745,7 +1745,7 @@ height:50vh;
 <li>回收执行count-1</li>
 <li>count=0时撤销该共享段</li>
 </ul>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEMkawi2XtwUZWJZZJU01ZHprM7xUcPRyIFYAe96RzvkVzbA3hghPwCA9XiL4bhX8rnXrWnYjSQIi*P0lKbAYFwQ!/b&bo=OQIgAQAAAAADFyg!&rf=viewer_4" alt="image-20200914140501432"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914140501432.png" alt="image-20200914140501432"></p>
 <h3 id="分页与分段存储管理比较"><a href="#分页与分段存储管理比较" class="headerlink" title="分页与分段存储管理比较"></a>分页与分段存储管理比较</h3><ol>
 <li>页是信息的<strong>物理单位</strong>，为实现离散存储，提高内存利用率而引入；段是信息的<strong>逻辑单位</strong>，为满足用户要求而引入</li>
 <li>页的<strong>大小固定</strong>且由<strong>系统确定</strong>；而<strong>段长不定</strong>，<strong>取决于用户程序</strong>，并在编译时划分</li>
@@ -1765,8 +1765,8 @@ height:50vh;
 <li>设置一个段表地址寄存器，保存当前执行进程段表的起始地址和段表的长度</li>
 </ul>
 <p>示例</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEN2NlwGU18pqxiANke33xQePXo5fF22eptGBkLitCU6dEUWzImSocyZQ53tVNpWYEX5yfVQsZ3DJmhRYiRNLT7g!/b&bo=.AQwAgAAAAADN9w!&rf=viewer_4" alt="image-20200914140832626"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEFhJ526Rga8ByYThztB7pjhgEMXW8GWCJshjnJe8r6eLkmB3tMGwq.UTAytsYBQc1Z5fFu.i8tRKpOX1CVqqtsQ!/b&bo=3wTQAQAAAAADFzg!&rf=viewer_4" alt="image-20200914140727368"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914140832626.png" alt="image-20200914140832626"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914140727368.png" alt="image-20200914140727368"></p>
 <h2 id="第八章-虚存管理"><a href="#第八章-虚存管理" class="headerlink" title="第八章 虚存管理"></a>第八章 虚存管理</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>实存管理特征</p>
 <ul>
 <li>一次性：作业必须一次性地全部装入内存后才能开始运行</li>
@@ -1811,7 +1811,7 @@ height:50vh;
 </ul>
 </li>
 </ul>
-<h4 id="请求页表机制"><a href="#请求页表机制" class="headerlink" title="请求页表机制"></a>请求页表机制</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEKlLZEbCYAwdqnphTr.QREaTOUZ97lOkAJ7Gb2m8.EE4KC5VaPIBkkRo1iz1Ol*0DuvZKkg0*nEjCLxGNOmWeg0!/b&bo=cQKJAAAAAAADF8g!&rf=viewer_4" alt="image-20200914145729236"></p>
+<h4 id="请求页表机制"><a href="#请求页表机制" class="headerlink" title="请求页表机制"></a>请求页表机制</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914145729236.png" alt="image-20200914145729236"></p>
 <ul>
 <li>状态位P（有效-无效位）：用于指示该页是否已经调入内存</li>
 <li>访问字段A：用于记录本页在一段时间内被访问的次数，或记录本页最近已有多长时间未被访问，以供置换算法在选择置换页面时参考</li>
@@ -1933,7 +1933,7 @@ height:50vh;
 <li>每个进程仅仅从自己所分配的页框中进行页面置换</li>
 </ul>
 <h3 id="请求分页系统性能分析"><a href="#请求分页系统性能分析" class="headerlink" title="请求分页系统性能分析"></a>请求分页系统性能分析</h3><h4 id="抖动"><a href="#抖动" class="headerlink" title="抖动"></a>抖动</h4><p>CPU的利用率会随着道数的增加而提高，直到达到最大值，达到最大值后继续提高道数，CPU的利用率将不再提高，反而急剧下降，这就是<strong>“系统抖动”</strong><br><strong>为了提升CPU利用率，则需要减少道数，消除抖动</strong></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPrFr5tj1EoOJ*UqSXKFiG5541ACiLqd3AlBd3Wfdsfb71dlSiKDUsUQRyiG2djCpOu*3PpywjZaYJQ.pxEH9BE!/b&bo=0gRHAAAAAAADF6M!&rf=viewer_4" alt="image-20200914152128036"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914152128036.png" alt="image-20200914152128036"></p>
 <p><strong>抖动产生的原因</strong></p>
 <p>同时在系统中运行的进程太多，分配给每个进程的页框太少，不能满足进程正常运行的基本要求</p>
 <h4 id="工作集模型"><a href="#工作集模型" class="headerlink" title="工作集模型"></a>工作集模型</h4><p>局部模型</p>
@@ -1967,7 +1967,7 @@ height:50vh;
 <p>第1、2项功能：方便用户使用I/O设备</p>
 <p>第3、4项功能：提高CPU和I/O设备的利用率</p>
 <p>第5、6项功能：为用户共享提供方便并保证系统正确运行</p>
-<h4 id="I-O系统的层次结构"><a href="#I-O系统的层次结构" class="headerlink" title="I/O系统的层次结构"></a>I/O系统的层次结构</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEP76WNxTmIPPtratN0inmpzYVe1Y6TRrsTg8D8E6Xk2qeMffOICCB.Kji7xqUtA7X6ly2rhTvq39a2kH7ho6dQY!/b&bo=mAE7AQAAAAADF5E!&rf=viewer_4" alt="image-20200914195730141"></p>
+<h4 id="I-O系统的层次结构"><a href="#I-O系统的层次结构" class="headerlink" title="I/O系统的层次结构"></a>I/O系统的层次结构</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914195730141.png" alt="image-20200914195730141"></p>
 <ul>
 <li>中断处理程序：直接与I/O硬件进行交互</li>
 <li>设备驱动程序：进程和设备控制器之间的通信程序，实现上次抽象I/O请求到I/O设备具体命令和参数的转换，由设备制造厂商提供</li>
@@ -2011,7 +2011,7 @@ height:50vh;
 <li>中速设备</li>
 <li>高速设备</li>
 </ul>
-<h4 id="设备与控制器之间的接口"><a href="#设备与控制器之间的接口" class="headerlink" title="设备与控制器之间的接口"></a>设备与控制器之间的接口</h4><p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrECZUayV*GQWaxvqpyZ8y2*rbqr.5ZGOgT9vvic.FhAm8FvaPXLVrPSsJpnxGdGvfiRw*VOS9txbQEAVb.1AaLbA!/b&bo=cQI4AQAAAAADF3g!&rf=viewer_4" alt="image-20200914200517585"></p>
+<h4 id="设备与控制器之间的接口"><a href="#设备与控制器之间的接口" class="headerlink" title="设备与控制器之间的接口"></a>设备与控制器之间的接口</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914200517585.png" alt="image-20200914200517585"></p>
 <ul>
 <li>数据信号线：用于在设备与设备控制器之间传输数据</li>
 <li>控制信号线：设备控制器向I/O设备发送控制信号时的通路</li>
@@ -2082,7 +2082,7 @@ height:50vh;
 <li>减少CPU对I/O的干预，减少对CPU的中断频率， 放宽对CPU中断响应时间的限制</li>
 </ul>
 <h4 id="缓冲实现机制"><a href="#缓冲实现机制" class="headerlink" title="缓冲实现机制"></a>缓冲实现机制</h4><p><strong>单缓冲区</strong></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEOuB3ETAuSB1wwbhYRTeZqydjts*nLMFgpULqp1GhJT6yL4dgdUjEi596MbCPUA4o74QdSu6w9oAF7Un.K7v9ks!/b&bo=jAJ8AQAAAAADF8E!&rf=viewer_4" alt="image-20200914212955182"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914212955182.png" alt="image-20200914212955182"></p>
 <p>进程发出I/O请求时，操作系统在主存分配一个缓冲区，通过缓冲区完成I/O</p>
 <ol>
 <li>将一块输入数据输入缓冲区，时间T</li>
@@ -2093,11 +2093,11 @@ height:50vh;
 <p>单缓冲区时，每一块数据的处理时间为$MAX(C,T)+M$</p>
 <p>由于M&lt;&lt;T或C，所以上式近似为$MAX(T,C)$</p>
 <p><strong>双缓冲区</strong></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEFXRvYCAAFENFxNDS3sJDsPqeCAbhHBIeu7aPfpHJyzjWWkW0rnWGlk5foK8LGq30aDEwTUhlfadTM3HYei0g6A!/b&bo=wQKgAQAAAAADF1A!&rf=viewer_4" alt="image-20200914213002042"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914213002042.png" alt="image-20200914213002042"></p>
 <p>为了加快输入和输出速度，提高设备利用率，引入了双缓冲机制，也称为缓冲对换</p>
 <p>双缓冲区时，每一块数据的处理时间为$MAX(C,T)$</p>
 <p><strong>环形缓冲区</strong></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEHBI.ZVcM5WZUDJcrGF1bHLky2hOkVXV4WLskiTIyAWp6LDAxupyifXqdB.39jmKoF*rMhBQEfqrDu*yvReVfKo!/b&bo=CwN9AQAAAAADJ3Y!&rf=viewer_4" alt="image-20200914213030702"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914213030702.png" alt="image-20200914213030702"></p>
 <p>环形缓冲区中包含多个大小相同的缓冲区，可分为三类：</p>
 <ul>
 <li>装输入数据的空缓冲区R</li>
@@ -2117,7 +2117,7 @@ height:50vh;
 <li>四种工作缓冲区：收容输入数据的工作缓冲区、提取输入数据的工作缓冲区、收容输出数据的工作缓冲区、提取输出数据的工作缓冲区</li>
 </ul>
 <p><strong>缓冲池工作方式</strong></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEAaGRNWeFommndVgu11gjz3MgNRynMOADZoVHDSppsxTS*M8sgk2*mQBcT8xCU*m6RwyB5bsgMjfGlXwR7udjHA!/b&bo=vALIAAAAAAADF0Q!&rf=viewer_4" alt="image-20200914215936765"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914215936765.png" alt="image-20200914215936765"></p>
 <ul>
 <li>收容输入</li>
 <li>提取输入</li>
@@ -2265,7 +2265,7 @@ height:50vh;
 <li>时间、日期和用户标识</li>
 <li>扩展文件属性</li>
 </ul>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEMa795KfMLZfZ.L74UhOjmEXyxk4HA4XK0vbP0ylyZVTQW9QR8f21E1ADf1RYq.MyzLalp2.qETT9sMoOmKscrs!/b&bo=IAToAQAAAAADF*8!&rf=viewer_4" alt="image-20200915093457914"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200915093457914.png" alt="image-20200915093457914"></p>
 <h4 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h4><p>按用途分类</p>
 <ul>
 <li>系统文件</li>
@@ -2291,7 +2291,7 @@ height:50vh;
 <li>特殊文件</li>
 </ul>
 <h4 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h4><p>用于操纵和管理各种文件，方便用户使用文件的软件集合</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrECj6WNygc5iO0xZHFFCW4j9Esk4*qW5DR7Yi*8J7zt463TKAOnlFpotzbidY8NG.skoJkT3crgoO81CUvdjFT.s!/b&bo=8AMCAQAAAAADF8I!&rf=viewer_4" alt="image-20200915094138778"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200915094138778.png" alt="image-20200915094138778"></p>
 <h4 id="文件系统功能"><a href="#文件系统功能" class="headerlink" title="文件系统功能"></a>文件系统功能</h4><p>从用户的角度看：文件系统实现了安明存取的功能</p>
 <p>从系统的角度看</p>
 <ul>
@@ -2442,7 +2442,7 @@ height:50vh;
 <li>动态联系：一个进程可以联系着多个域，进程的运行可划分为多个阶段，每个阶段联系着一个域，可以按照实际需求来规定进程运行各个阶段所能访问的对象</li>
 </ul>
 <h3 id="文件系统结构及实现"><a href="#文件系统结构及实现" class="headerlink" title="文件系统结构及实现"></a>文件系统结构及实现</h3><h3 id="文件的物理结构"><a href="#文件的物理结构" class="headerlink" title="文件的物理结构"></a>文件的物理结构</h3><h3 id="空闲空间管理"><a href="#空闲空间管理" class="headerlink" title="空闲空间管理"></a>空闲空间管理</h3><h2 id="第十一章-磁盘管理"><a href="#第十一章-磁盘管理" class="headerlink" title="第十一章 磁盘管理"></a>第十一章 磁盘管理</h2><h3 id="磁盘"><a href="#磁盘" class="headerlink" title="磁盘"></a>磁盘</h3><p><strong>磁盘</strong>为现代计算机系统提供了大容量的外存；磁盘由多个扁平圆盘的磁盘片组<br>成；每个磁盘片的双面都涂着磁质材料，通过在磁盘片上进行磁记录可以保存信息</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEED32gQwsEXAQJASPNtWihLgL7iZivNowIO82lkOVG2I5vIoag8MnfJWVbbCQlFWS9gojQNQC*pJNY6mU9KvwpA!/b&bo=2QIlAgAAAAADJ*4!&rf=viewer_4" alt="image-20200914233821729"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914233821729.png" alt="image-20200914233821729"></p>
 <h4 id="磁盘物理结构"><a href="#磁盘物理结构" class="headerlink" title="磁盘物理结构"></a>磁盘物理结构</h4><ul>
 <li>描述磁盘地址的参数<ul>
 <li>柱面cylinder</li>
@@ -2464,7 +2464,7 @@ height:50vh;
 <p>• 磁盘使所需要读取的扇区位于磁头下方，旋转一圈所需要的时间为60/r<br>• 平均旋转延迟时间为磁盘旋转半圈的时间：$ T_r =30/r$</p>
 <p>寻道时间$T_s$:移动磁臂到预期读取的柱面（磁道）所需要的时间</p>
 <p>假设移动一个柱面（磁道）所需时间为t，需要移动n个磁道，则$T_s=nt$</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPWSdx8Lnv.9GCqBleuBwqEfqg1JtZTOZMI1VmJBs5gecQzDwDUEbPpPWiCEFXo.gGPs4LaFWJZSqfxPauAWtJg!/b&bo=1QTEAgAAAAADNwU!&rf=viewer_4" alt="image-20200914234526616"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914234526616.png" alt="image-20200914234526616"></p>
 <p><strong>提高磁盘的访问速度</strong></p>
 <ul>
 <li>数据的合理组织</li>
@@ -2474,22 +2474,22 @@ height:50vh;
 <p>目标：最小化寻道时间</p>
 <h4 id="先来先服务FCFS"><a href="#先来先服务FCFS" class="headerlink" title="先来先服务FCFS"></a>先来先服务FCFS</h4><p>思想</p>
 <p>选择等待队列中最先到达的访问请求，作为下一次的访问对象</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEMcdKCViWxBdOIcAaXk8eTVHcn.QLCNfTe6ZTfY3fW1QlFgZ0XUFetL1deSi3b5NX4VFnZEj2B7YgtB8pCzHlq0!/b&bo=twLQAQAAAAADF1Y!&rf=viewer_4" alt="image-20200914235316172"></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEGfO8q8BwvSbC3LDSrQap6fpL58484jwCw0NBzgRYX*7rDhs6jd2va38dXHsieaERF0OqA4nZ09qpb5hDPUsXQ4!/b&bo=wgFJAQAAAAADF7k!&rf=viewer_4" alt="image-20200914234946125"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235316172.png" alt="image-20200914235316172"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914234946125.png" alt="image-20200914234946125"></p>
 <h4 id="最短寻道时间优先SSTF"><a href="#最短寻道时间优先SSTF" class="headerlink" title="最短寻道时间优先SSTF"></a>最短寻道时间优先SSTF</h4><p>思想</p>
 <p>选择等待队列中离当前磁道最近的访问请求，作为下一次的访问对象（SJF调度思想的扩展）</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEKr68MNjn.fhsiTYIwTsdKjujXZf8Xs*dhiBmT*GdWMs.VI9udRPbdPY3.8PE4HENmbyTQ7fEEbsA7x6hvFAtZY!/b&bo=zwLnAQAAAAADFxk!&rf=viewer_4" alt="image-20200914235326932"></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEKC1S74LA8ZeaI.npYrK6wwbmCKtvTQJ3ve8MyvSmK4V6*XGFMfQvgB2vfBVABsXIqi8M2HxKEWPkJObIl*5JjI!/b&bo=xQHrAAAAAAADFx0!&rf=viewer_4" alt="image-20200914234952655"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235326932.png" alt="image-20200914235326932"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914234952655.png" alt="image-20200914234952655"></p>
 <h4 id="扫描算法SCAN"><a href="#扫描算法SCAN" class="headerlink" title="扫描算法SCAN"></a>扫描算法SCAN</h4><p>思想</p>
 <p>磁臂从磁盘的一端向另一端移动，同时当磁头移过每个柱面时，处理位于该柱面上的服务请求；当达到另一端时，磁头改变移动方向，继续处理</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrELyAazdKdMLpTem8iY7eW1z9A9YLSBaqc0WoAn88i8zDG9il5T5AR4fQboru5A6HlzDri5xXoEOkMCDslT0XpWo!/b&bo=pwLfAQAAAAADF0k!&rf=viewer_4" alt="image-20200914235339332"></p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEMb4Wjzhf*Pg59Jxc3oCC*TCyYJ1QeyEvdP*gT0.gi2kiF2kk0T7CTAHUAXq3AKp0rgMuiRgeUMfzTk8UiEB5gM!/b&bo=DwL4AAAAAAADF8c!&rf=viewer_4" alt="image-20200914235104023"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235339332.png" alt="image-20200914235339332"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235104023.png" alt="image-20200914235104023"></p>
 <h4 id="循环扫描C-SCAN"><a href="#循环扫描C-SCAN" class="headerlink" title="循环扫描C-SCAN"></a>循环扫描C-SCAN</h4><p>思想</p>
 <p>将磁头从磁盘一端移到磁盘的另一端，随着移动不断地处理请求，移动到另一端时马上返回到磁盘开始，返回时不处理请求</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEPF0yo8wROdhTTxKYyHdleFgTsryZHcVn34fpsAm5Lw00SOiYHkPIGkRhfj6ZYDLVaFyb49HCBCSXOttrkpQlec!/b&bo=kQLWAQAAAAADF3Y!&rf=viewer_4" alt="image-20200914235348055"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235348055.png" alt="image-20200914235348055"></p>
 <h4 id="C-LOOK调度"><a href="#C-LOOK调度" class="headerlink" title="C-LOOK调度"></a>C-LOOK调度</h4><p>思想</p>
 <p>将SCAN和C-SCAN算法中的磁头之一动到该方向上的最远的请求为止就马上掉头，就分别产生了LOOK和C-LOOK算法</p>
-<p><img src="http://m.qpic.cn/psc?/V53z6Alv4TBZLd01x8MW3ydO1L0ScibI/TmEUgtj9EK6.7V8ajmQrEJ8jV1J5o8Es2Nnz934KmvDybrdZpoAymYCaVobnVA5ru5b0TvPAfP2GQFGDyhGlJfaZhLJrImVL9KCXchCQ7lo!/b&bo=igLQAQAAAAADF2s!&rf=viewer_4" alt="image-20200914235416444"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235416444.png" alt="image-20200914235416444"></p>
 <h4 id="FSCAN调度"><a href="#FSCAN调度" class="headerlink" title="FSCAN调度"></a>FSCAN调度</h4><p>思想</p>
 <p>将磁盘请求队列分为2个子队列，其中一个为当前所有请求构成的队列，另一个为扫描期间新到达的请求构成的队列，并按N步扫描处理</p>
 <h4 id="各种磁盘调度算法的比较"><a href="#各种磁盘调度算法的比较" class="headerlink" title="各种磁盘调度算法的比较"></a>各种磁盘调度算法的比较</h4><ul>
