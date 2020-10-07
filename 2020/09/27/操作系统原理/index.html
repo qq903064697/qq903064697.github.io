@@ -72,7 +72,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235348055.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200914235416444.png">
 <meta property="article:published_time" content="2020-09-27T02:20:50.339Z">
-<meta property="article:modified_time" content="2020-09-27T14:39:01.754Z">
+<meta property="article:modified_time" content="2020-10-07T08:20:41.475Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200911143910130.png">
@@ -508,12 +508,9 @@ height:50vh;
 </li>
 <li><p>特征：多道性；无序性；调度性（两级）</p>
 </li>
-<li><p>优点：资源利用率高；系统吞吐量大</p>
-</li>
-<li><p>缺点：平均周转时间长；无交互能力</p>
-</li>
-<li><p>需要解决的问题：处理机争用问题；内存分配和保护问题；I/O设备分配问题；文件的组织和管理问题；作业管理问题；用户与系统的接口问题</p>
-</li>
+<li>优点：资源利用率高；系统吞吐量大</li>
+<li>缺点：平均周转时间长；无交互能力</li>
+<li>需要解决的问题：处理机争用问题；内存分配和保护问题；I/O设备分配问题；文件的组织和管理问题；作业管理问题；用户与系统的接口问题</li>
 </ul>
 <h4 id="分时系统"><a href="#分时系统" class="headerlink" title="分时系统"></a>分时系统</h4><ul>
 <li><p>分时系统是指在一台主机上连接了多个配有显示器和键盘的终端并由此所组成的系统，该系统与允许多个用户同时通过自己的终端，以交互方式使用计算机，共享主机中的资源。（<strong>人——机交互</strong>和<strong>共享主机</strong>）。</p>
@@ -690,7 +687,7 @@ height:50vh;
 <ul>
 <li>I/O设备和CPU并行</li>
 <li>每种设备控制器控制一类设备，设备控制器都具有局部缓存</li>
-<li>CPU通过局部缓存和贮存交换数据，I/O从设备到设备控制器的局部缓存，设备控制器通过引起**<em>中断**</em>通知CPU操作已完成</li>
+<li>CPU通过局部缓存和贮存交换数据，I/O从设备到设备控制器的局部缓存，设备控制器通过引起<strong><em>中断</em></strong>通知CPU操作已完成</li>
 </ul>
 <h3 id="操作系统的运行"><a href="#操作系统的运行" class="headerlink" title="操作系统的运行"></a>操作系统的运行</h3><ul>
 <li>操作系统是由中断驱动的</li>
@@ -777,8 +774,7 @@ height:50vh;
 </li>
 <li><p>这种方法使用动态加载模块，并广泛用于现代的UNIX中</p>
 </li>
-<li><p>内核提供核心服务，也能动态地实现特定功能</p>
-<ul>
+<li>内核提供核心服务，也能动态地实现特定功能<ul>
 <li>类似分层系统，每个内核部分都有被定义和保护的接口，但比分层系统更灵活，任一模块都能调用其他模块</li>
 <li>类似微内核方法，但实施更加高效，因为不需要调用消息传递来通信</li>
 </ul>
@@ -804,7 +800,7 @@ height:50vh;
 </ul>
 <p>前趋关系/偏序</p>
 <ul>
-<li>若两个节点$P_i$，$P_j$，仅当$P_i$操作完成后，才能执行$P_j$结点的操作，称$P_i，P_j$之间存在前趋关系，表示为：$P_i→P_j，$前趋关系$“→”$用集合表示为：${(P_i,P_j)|仅当P_i完成，才能执行P_j}$</li>
+<li>若两个节点$P_i$，$P_j$，仅当$P_i$操作完成后，才能执行$P_j$结点的操作，称$P_i，P_j$之间存在前趋关系，表示为：$P_i→P_j，$前趋关系$“→”$用集合表示为：$\{(P_i,P_j)|仅当P_i完成，才能执行P_j\}$</li>
 </ul>
 <h4 id="程序顺序执行"><a href="#程序顺序执行" class="headerlink" title="程序顺序执行"></a>程序顺序执行</h4><p>特征</p>
 <ul>
@@ -814,7 +810,6 @@ height:50vh;
 </ul>
 <h4 id="程序并发执行"><a href="#程序并发执行" class="headerlink" title="程序并发执行"></a>程序并发执行</h4><p>考虑各种并发性的程序设计方法称为<strong>并发程序设计</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//并发程序</span></span><br><span class="line">Parbegin</span><br><span class="line">	S1; S2; ...; Sn;</span><br><span class="line">Parend;</span><br><span class="line"><span class="comment">//Parbegin/Parend 可以嵌套</span></span><br><span class="line"><span class="comment">//Si 可为任何简单句、复合句和并发语句；编译时，编译程序为其设置一个进程</span></span><br></pre></td></tr></table></figure>
-
 <p>特征</p>
 <ul>
 <li>间断性</li>
@@ -1110,29 +1105,24 @@ height:50vh;
 <li>跳转到用户程序的合适位置，以重新启动程序</li>
 </ul>
 <h3 id="调度准则"><a href="#调度准则" class="headerlink" title="调度准则"></a>调度准则</h3><ul>
-<li><p>①CPU利用率</p>
-<ul>
+<li>①CPU利用率<ul>
 <li>CPU尽可能忙，40%（轻负荷）∼90%（重负荷）</li>
 </ul>
 </li>
-<li><p>② 吞吐量</p>
-<ul>
+<li>② 吞吐量<ul>
 <li>单位时间内系统完成的进程数量</li>
 </ul>
 </li>
-<li><p>③ 周转时间</p>
-<ul>
+<li>③ 周转时间<ul>
 <li>作业从提交到完成所经过的时间，包括后备队列延时、就绪队列延时、CPU执行时间、等待I/O时间</li>
 <li>平均周转时间、平均加权周转时间</li>
 </ul>
 </li>
-<li><p>④ 等待时间</p>
-<ul>
+<li>④ 等待时间<ul>
 <li>指进程在就绪队列中等待时间总和</li>
 </ul>
 </li>
-<li><p>⑤ 响应时间</p>
-<ul>
+<li>⑤ 响应时间<ul>
 <li>指从用户通过键盘提交一个请求开始，直到屏幕上显示出处理结果为止的时间间隔</li>
 <li>响应时间短对与交互系统十分重要，是分时系统中进程调度算法的重要准则</li>
 </ul>
@@ -1351,7 +1341,6 @@ height:50vh;
 <li>定义n个信号量来描述有n条边的前趋图，初值都设为0</li>
 </ul>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">P1() &#123; S1;signal(a); signal(b);&#125;</span><br><span class="line">P2() &#123; wait(a); S2;signal(c);signal(d);&#125;</span><br><span class="line">P3() &#123; wait(b); wait(c); S3; signal(e); &#125;</span><br><span class="line">P4() &#123; wait(d); wait(e); S4;&#125;</span><br><span class="line">main() &#123;</span><br><span class="line">	semaphore a, b, c, d, e;</span><br><span class="line">	a.value=<span class="number">0</span>; b.value=<span class="number">0</span>; c.value=<span class="number">0</span>; d.value=<span class="number">0</span>; e.value=<span class="number">0</span>;</span><br><span class="line">	parbegin</span><br><span class="line">	P1(); P2(); P3(); P4();</span><br><span class="line">	parend</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200913160929646.png" alt="image-20200913160929646"></p>
 </li>
 </ul>
@@ -1606,8 +1595,7 @@ height:50vh;
 <li>内碎片（Internal Fragmentation）</li>
 </ul>
 <h4 id="动态分区分配-可变分区分配"><a href="#动态分区分配-可变分区分配" class="headerlink" title="动态分区分配/可变分区分配"></a>动态分区分配/可变分区分配</h4><ul>
-<li><p>主存分为操作系统区域和用户进程区域</p>
-</li>
+<li>主存分为操作系统区域和用户进程区域</li>
 <li><p>分区说明表：记录可用分区和已分配分区</p>
 </li>
 <li><p>存储保护</p>
@@ -1675,8 +1663,7 @@ height:50vh;
 <li>设置一个页表地址寄存器，保存当前执行进程页表的起始地址和页表的长度</li>
 </ul>
 <h4 id="直接地址变换"><a href="#直接地址变换" class="headerlink" title="直接地址变换"></a>直接地址变换</h4><ul>
-<li><p>借助页表、页表寄存器完成作业的逻辑地址（虚地址）到内存物理地址的变换</p>
-</li>
+<li>借助页表、页表寄存器完成作业的逻辑地址（虚地址）到内存物理地址的变换</li>
 <li><p>页表基址寄存器（PTBR） 页表长度寄存器（PRLR）</p>
 </li>
 <li><p>从虚地址转换为物理地址，然后再完成地址访问，共访问几次主存？效率为多少？</p>
@@ -1794,10 +1781,8 @@ height:50vh;
 </li>
 <li><p>多次性</p>
 </li>
-<li><p>对换性</p>
-</li>
-<li><p>虚拟性</p>
-</li>
+<li>对换性</li>
+<li>虚拟性</li>
 </ul>
 <h3 id="请求分页存储管理方式"><a href="#请求分页存储管理方式" class="headerlink" title="请求分页存储管理方式"></a>请求分页存储管理方式</h3><h4 id="请求分页"><a href="#请求分页" class="headerlink" title="请求分页"></a>请求分页</h4><ul>
 <li>在分页系统的基础上增加了请求调页功能和页面置换功能</li>
@@ -1852,7 +1837,6 @@ height:50vh;
 </ol>
 <h4 id="请求分页性能分析"><a href="#请求分页性能分析" class="headerlink" title="请求分页性能分析"></a>请求分页性能分析</h4><p>有效访问时间</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">假设缺页率为p（<span class="number">0</span> ≤ p ≤ <span class="number">1</span>）</span><br><span class="line"><span class="keyword">if</span> p = <span class="number">0</span> 无缺页，实存管理</span><br><span class="line"><span class="keyword">if</span> p = <span class="number">1</span> 每一次页面访问都产生缺页，纯请求分页（Pure demand paging）</span><br><span class="line">EAT = (<span class="number">1</span> – p) × memory access <span class="comment">//内存访问时间</span></span><br><span class="line">	+ p× page fault time (page fault overhead <span class="comment">//缺页中断处理时间</span></span><br><span class="line">		+ swap page out (optional) <span class="comment">//页面换出时间（可选）</span></span><br><span class="line">		+ swap page in <span class="comment">//页面换入时间</span></span><br><span class="line">		+ restart overhead) <span class="comment">// 重启指令开销</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h3><h4 id="基本页面置换"><a href="#基本页面置换" class="headerlink" title="基本页面置换"></a>基本页面置换</h4><ul>
 <li>查找所需页在磁盘上的位置</li>
 <li>查找一个空闲的页框：<ul>
@@ -1892,8 +1876,7 @@ height:50vh;
 </ul>
 <h4 id="计数页面置换算法"><a href="#计数页面置换算法" class="headerlink" title="计数页面置换算法"></a>计数页面置换算法</h4><p>为页表中的每一页保留一个用于记录其访问次数的计数器</p>
 <h5 id="最不经常使用（LFU）页面置换算法"><a href="#最不经常使用（LFU）页面置换算法" class="headerlink" title="最不经常使用（LFU）页面置换算法"></a>最不经常使用（LFU）页面置换算法</h5><ul>
-<li><p>置换计数最小的页面：活动页应该有更多的访问次数</p>
-</li>
+<li>置换计数最小的页面：活动页应该有更多的访问次数</li>
 <li><p>问题：一个页面在进程开始时使用频繁，但后面不再使用</p>
 </li>
 <li><p>解决方法：定期将次数寄存器移位，形成指数衰减的平均使用次数</p>
@@ -2374,11 +2357,9 @@ height:50vh;
 <h3 id="文件访问方法"><a href="#文件访问方法" class="headerlink" title="文件访问方法"></a>文件访问方法</h3><p>顺序访问</p>
 <p>文件信息按顺序进行处理</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">read_next()<span class="comment">//读取文件的下一部分</span></span><br><span class="line">write_next()</span><br><span class="line">reset</span><br></pre></td></tr></table></figure>
-
 <p>直接访问</p>
 <p>允许程序按任意顺序进行读取和写入</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">read n：<span class="comment">//读取文件的第n条记录</span></span><br><span class="line">write n</span><br><span class="line">position to n</span><br></pre></td></tr></table></figure>
-
 <h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p>目录结构用于有效管理和组织文件的结构</p>
 <p>对目录管理的要求</p>
 <ul>
@@ -2902,7 +2883,13 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+    i
+    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+        <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
 
 

@@ -81,7 +81,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906212321610.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906220924604.png">
 <meta property="article:published_time" content="2020-09-27T02:30:13.037Z">
-<meta property="article:modified_time" content="2020-09-27T14:19:43.522Z">
+<meta property="article:modified_time" content="2020-10-07T08:20:50.495Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906222503883.png">
@@ -659,7 +659,7 @@ height:50vh;
 <p>域中所包含的值的个数称为域的基数（用<em>m</em>表示）</p>
 <p><strong>笛卡尔积</strong></p>
 <p>给定一组域$D，D，…，Dn$（它们可以包含相同的元素，即可以完全不同，也可以部分或全部相同）。$D1，D2，…，Dn$的笛卡尔积为 </p>
-<p>$D1×D2×……×Dn={（d1，d2，…，dn）|di∈Di，i=1，2，…，n}$</p>
+<p>$D1×D2×……×Dn=\{（d1，d2，…，dn）|di∈Di，i=1，2，…，n\}$</p>
 <p>每一个元素$（d1，d2，…，dn）$中的每一个值di叫做一个分量（Component），$di∈Di $</p>
 <p>每一个元素$（d1，d2，…，dn）$叫做一个n元组（n-Tuple），简称元组（Tuple）</p>
 <p>笛卡尔积$D1×D2×…×Dn$的基数M（即元素$（d1，d2，…，dn）$的个数）为所有域的基数的累乘之积，即M=<img src="C:\Users\han\AppData\Roaming\Typora\typora-user-images\image-20200906230827005.png" alt="image-20200906230827005" style="zoom: 67%;" /></p>
@@ -683,11 +683,11 @@ height:50vh;
 <p><strong>关系模式</strong></p>
 <p>关系的描述称为关系模式$R（U，D，DOM，F）$</p>
 <ul>
-<li>R–关系名 </li>
-<li>U–属性名集合 </li>
-<li>D–属性所来自的域 </li>
-<li>DOM–属性向域的映像集合 </li>
-<li>F–属性间数据的依赖关系集合 </li>
+<li>R—关系名 </li>
+<li>U—属性名集合 </li>
+<li>D—属性所来自的域 </li>
+<li>DOM—属性向域的映像集合 </li>
+<li>F—属性间数据的依赖关系集合 </li>
 </ul>
 <p>简记为$：R（U）$或$R（A1，A2，…，An）$</p>
 <h3 id="关系的码和关系的完整性"><a href="#关系的码和关系的完整性" class="headerlink" title="关系的码和关系的完整性"></a>关系的码和关系的完整性</h3><p>能唯一标识关系中元组的一个属性或属性集，称为<strong>候选码</strong></p>
@@ -727,10 +727,10 @@ height:50vh;
 <p>（１）  具有相同的列数（或称度数）n;</p>
 <p>（２） R中第i个属性和S中第i个属性必须来自同一个域。</p>
 <p>则说关系R、S是<strong>相容</strong>的。</p>
-<p>并 :$R∪S={t | t∈R∨t∈S} $</p>
-<p>差 :$R-S = {t | t∈R∧┐t∈S} $</p>
-<p>交 :$R∩S = {t | t∈R∧t∈S} $</p>
-<p>广义笛卡尔积 :$R×S = {tr⌒ts| tr∈R∧ts∈S} $</p>
+<p>并 :$R∪S=\{t | t∈R∨t∈S\} $</p>
+<p>差 :$R-S = \{t | t∈R∧┐t∈S\} $</p>
+<p>交 :$R∩S = \{t | t∈R∧t∈S\} $</p>
+<p>广义笛卡尔积 :$R×S = \{tr⌒ts| tr∈R∧ts∈S\} $</p>
 <p>$R∩S = R-(R-S) $</p>
 <p><strong>选取</strong></p>
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906232131897.png" alt="image-20200906232131897"></p>
@@ -791,7 +791,6 @@ height:50vh;
 </li>
 <li><p>用SQL命令创建</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> 数据库名称</span><br><span class="line">[<span class="keyword">ON</span></span><br><span class="line">[FILEGROUP 文件组名称]</span><br><span class="line">(  <span class="keyword">NAME</span>=数据文件逻辑名称,</span><br><span class="line">  FILENAME=<span class="string">&#x27;路径+数据文件名&#x27;</span>,  <span class="keyword">SIZE</span>=数据文件初始大小,</span><br><span class="line">  <span class="keyword">MAXSIZE</span>=数据文件最大容量,</span><br><span class="line">  FILEGROWTH=数据文件自动增长容量, )]</span><br><span class="line">[<span class="keyword">LOG</span> <span class="keyword">ON</span></span><br><span class="line">(  <span class="keyword">NAME</span>=日志文件逻辑名称,</span><br><span class="line">  FILENAME=<span class="string">&#x27;路径+日志文件名’,  SIZE=日志文件初始大小,</span></span><br><span class="line"><span class="string">  MAXSIZE=日志文件最大容量,</span></span><br><span class="line"><span class="string">  FILEGROWTH=日志文件自动增长容量, )]</span></span><br><span class="line"><span class="string">[COLLATE 数据库校验方式名称]</span></span><br><span class="line"><span class="string">[FOR ATTACH]</span></span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <p>理解</p>
@@ -833,7 +832,6 @@ height:50vh;
 </li>
 <li><p>用SQL命令删除</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">DATABASE</span> </span><br><span class="line">数据库名称[,...n] </span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <p>删除数据库后，与此数据库关联的数据文件和日志文件都会被删除，系统数据库中存储的该数据库的所有信息也会被删除，因此务必要慎重！</p>
@@ -851,7 +849,6 @@ height:50vh;
 </li>
 <li><p>用系统存储过程显示文件组信息 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sp_helpfilegroup [[@filegroupname &#x3D;] &#39;name&#39;]</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 </li>
@@ -895,9 +892,7 @@ height:50vh;
 <li>特殊类型</li>
 </ul>
 <h3 id="数据表的创建和使用"><a href="#数据表的创建和使用" class="headerlink" title="数据表的创建和使用"></a>数据表的创建和使用</h3><h4 id="用SQL命令创建数据表"><a href="#用SQL命令创建数据表" class="headerlink" title="用SQL命令创建数据表"></a>用SQL命令创建数据表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE &lt;表名&gt;</span><br><span class="line">(&lt;列定义&gt;[&#123;，&lt;列定义&gt;|&lt;表约束&gt;&#125;]) </span><br><span class="line">  </span><br><span class="line">    列定义——&lt;列名&gt;  &lt;数据类型&gt;  [DEFAULT]  [&#123;&lt;列约束&gt;&#125;] </span><br><span class="line">    </span><br><span class="line">    例子</span><br><span class="line">     用SQL命令建立一个学生表S。</span><br><span class="line">CREATE TABLE S</span><br><span class="line">(  SNo CHAR(6),</span><br><span class="line">   SN VARCHAR(10),</span><br><span class="line">   Sex NCHAR(1) DEFAULT &#39;男’,&#x2F;&#x2F;缺省值为“男” </span><br><span class="line">   Age INT,</span><br><span class="line">   Dept NVARCHAR(20)</span><br><span class="line"> )</span><br></pre></td></tr></table></figure>
-
 <h4 id="定义数据表的约束"><a href="#定义数据表的约束" class="headerlink" title="定义数据表的约束"></a>定义数据表的约束</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[CONSTRAINT &lt;约束名&gt; ] &lt;约束类型&gt; </span><br></pre></td></tr></table></figure>
-
 <h5 id="约束类型"><a href="#约束类型" class="headerlink" title="约束类型"></a>约束类型</h5><ul>
 <li><p><strong>NULL/NOT NULL</strong> </p>
 <p>NULL表示不知道 不确定或没有数据的意思</p>
@@ -931,7 +926,6 @@ height:50vh;
 </li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[CONSTRAINT &lt;约束名&gt;] CHECK (&lt;条件&gt;) </span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h5 id="PRIMARY-KEY与UNIQUE的区别："><a href="#PRIMARY-KEY与UNIQUE的区别：" class="headerlink" title="PRIMARY KEY与UNIQUE的区别："></a>PRIMARY KEY与UNIQUE的区别：</h5><ul>
@@ -944,10 +938,8 @@ height:50vh;
 </ul>
 <h4 id="数据表的修改"><a href="#数据表的修改" class="headerlink" title="数据表的修改"></a>数据表的修改</h4><p>用SQL命令修改数据表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE &lt;表名&gt;</span><br><span class="line">ADD &lt;列定义&gt; | &lt;完整性约束定义&gt;</span><br><span class="line">&#x2F;&#x2F;例子 在S表中增加一个班号列和住址列。</span><br><span class="line">	ALTER TABLE S </span><br><span class="line">	ADD</span><br><span class="line">	Class_No VARCHAR(6),</span><br><span class="line">	Address NVARCHAR(20)</span><br></pre></td></tr></table></figure>
-
 <p>使用此方式增加的新列自动填充NULL值，所以不能为增加的新列指定NOT NULL约束。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE &lt;表名&gt;</span><br><span class="line">ALTER COLUMN &lt;列名&gt; &lt;数据类型&gt; [NULL | NOT NULL] </span><br><span class="line">例子 把S表中的SN列加宽到12个字符。</span><br><span class="line">	ALTER TABLE S</span><br><span class="line">	ALTER COLUMN</span><br><span class="line">	SN NVARCHAR(12)</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>不能改变列名；</p>
 </li>
@@ -959,20 +951,17 @@ height:50vh;
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE&lt;表名&gt;</span><br><span class="line">DROP CONSTRAINT &lt;约束名&gt; </span><br><span class="line">例子 删除S表中的主键。</span><br><span class="line">	ALTER TABLE S</span><br><span class="line">	DROP CONSTRAINT S_Prim</span><br></pre></td></tr></table></figure>
-
 <h4 id="数据表的删除"><a href="#数据表的删除" class="headerlink" title="数据表的删除"></a>数据表的删除</h4><p>用SQL命令删除数据表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE &lt;表名&gt;</span><br></pre></td></tr></table></figure>
-
 <p><strong>注意</strong> ：只能删除自己建立的表，不能删除其他用户所建的表</p>
 <h4 id="数据表的查看"><a href="#数据表的查看" class="headerlink" title="数据表的查看"></a>数据表的查看</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906110808255.png" alt="image-20200906110808255"></p>
 <h3 id="单关系（表）的数据查询"><a href="#单关系（表）的数据查询" class="headerlink" title="单关系（表）的数据查询"></a>单关系（表）的数据查询</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> [<span class="keyword">ALL</span>|<span class="keyword">DISTINCT</span>][TOP N [<span class="keyword">PERCENT</span>][<span class="keyword">WITH</span> <span class="keyword">TIES</span>]]</span><br><span class="line">〈列名〉[<span class="keyword">AS</span> 别名<span class="number">1</span>] [&#123;，〈列名〉[ <span class="keyword">AS</span> 别名<span class="number">2</span>]&#125;]</span><br><span class="line"><span class="keyword">FROM</span>〈表名〉[[<span class="keyword">AS</span>] 表别名]</span><br><span class="line">[<span class="keyword">WHERE</span>〈检索条件〉]</span><br><span class="line">[<span class="keyword">GROUP</span> <span class="keyword">BY</span> &lt;列名<span class="number">1</span>&gt;[<span class="keyword">HAVING</span> &lt;条件表达式&gt;]]</span><br><span class="line">[<span class="keyword">ORDER</span> <span class="keyword">BY</span> &lt;列名<span class="number">2</span>&gt;[<span class="keyword">ASC</span>|<span class="keyword">DESC</span>]]</span><br></pre></td></tr></table></figure>
-
 <h4 id="无条件查询"><a href="#无条件查询" class="headerlink" title="无条件查询"></a>无条件查询</h4><p>是指只包含<code>SELECT…FROM</code>的查询，这种查询最简单，相当于只对关系（表）进行投影操作。</p>
 <p>例子</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">查询学生的全部信息。</span><br><span class="line">	SELECT * </span><br><span class="line">	FROM S</span><br><span class="line">用“*”表示S表的全部列名，而不必逐一列出。</span><br><span class="line"></span><br><span class="line">查询选修了课程的学生的学号。</span><br><span class="line">	SELECT DISTINCT SNo  </span><br><span class="line">	FROM SC</span><br><span class="line"></span><br><span class="line">查询全体学生的姓名、学号和年龄。</span><br><span class="line">	SELECT SN Name, SNo, Age </span><br><span class="line">	FROM S</span><br></pre></td></tr></table></figure>
-
 <h4 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h4><p>当要在表中找出满足某些条件的行时，则需使用where子句指定查询条件。</p>
 <p>常用的比较运算符如下表</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -980,7 +969,8 @@ height:50vh;
 <th><strong>含义</strong></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><strong>=, &gt;, &lt;, &gt;=, &lt;=, != ,&lt; &gt;</strong></td>
 <td><strong>比较大小</strong></td>
 </tr>
@@ -1004,20 +994,18 @@ height:50vh;
 <td><strong>IS NULL</strong></td>
 <td><strong>空值</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>例子</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//查询选修课程号为&#x27;C1&#x27;的学生的学号和成绩。</span><br><span class="line"><span class="keyword">SELECT</span> SNo,Score </span><br><span class="line"><span class="keyword">FROM</span> SC </span><br><span class="line"><span class="keyword">WHERE</span> CNo= <span class="string">&#x27;C1</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="多重条件查询"><a href="#多重条件查询" class="headerlink" title="多重条件查询"></a>多重条件查询</h4><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906131243333.png" alt="image-20200906131243333"></p>
 <p>例子</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//查询选修C1或C2且分数大于等于85分学生的学号、课程号和成绩。</span><br><span class="line"><span class="keyword">SELECT</span> SNo, CNo, Score</span><br><span class="line"><span class="keyword">FROM</span> SC</span><br><span class="line"><span class="keyword">WHERE</span> (CNo = <span class="string">&#x27;C1&#x27;</span> <span class="keyword">OR</span> CNo = <span class="string">&#x27;C2&#x27;</span>) <span class="keyword">AND</span> (Score &gt;= <span class="number">85</span>)</span><br></pre></td></tr></table></figure>
-
 <h4 id="部分匹配查询"><a href="#部分匹配查询" class="headerlink" title="部分匹配查询"></a>部分匹配查询</h4><p>当不知道完全精确的值时，用户可以使用<strong>LIKE</strong>或<strong>NOT LIKE</strong>进行部分匹配查询（也称模糊查询）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;属性名&gt; LIKE &lt;字符串常量&gt; </span><br></pre></td></tr></table></figure>
-
 <p>例子</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//查询所有姓张的教师的教师号和姓名。</span><br><span class="line">	<span class="keyword">SELECT</span> TNo, TN </span><br><span class="line">	<span class="keyword">FROM</span> T</span><br><span class="line">	<span class="keyword">WHERE</span> TN <span class="keyword">LIKE</span> <span class="string">&#x27;张%&#x27;</span></span><br><span class="line">	</span><br><span class="line">//查询姓名中第二个汉字是“力”的教师号和姓名。</span><br><span class="line">	<span class="keyword">SELECT</span> TNo, TN </span><br><span class="line">	<span class="keyword">FROM</span> T</span><br><span class="line">	<span class="keyword">WHERE</span> TN <span class="keyword">LIKE</span><span class="string">&#x27;_力%&#x27;</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="空值查询"><a href="#空值查询" class="headerlink" title="空值查询"></a>空值查询</h4><ul>
 <li><p>某个字段没有值称之为具有空值（NULL） </p>
 </li>
@@ -1025,15 +1013,16 @@ height:50vh;
 </li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//查询没有考试成绩的学生的学号和相应的课程号。</span><br><span class="line">	<span class="keyword">SELECT</span> SNo, CNo</span><br><span class="line">	<span class="keyword">FROM</span> SC</span><br><span class="line">	<span class="keyword">WHERE</span> Score <span class="keyword">IS</span> <span class="literal">NULL</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="常用库函数及统计汇总查询"><a href="#常用库函数及统计汇总查询" class="headerlink" title="常用库函数及统计汇总查询"></a><strong>常用库函数及统计汇总查询</strong></h4><table>
+<h4 id="常用库函数及统计汇总查询"><a href="#常用库函数及统计汇总查询" class="headerlink" title="常用库函数及统计汇总查询"></a><strong>常用库函数及统计汇总查询</strong></h4><div class="table-container">
+<table>
 <thead>
 <tr>
 <th><strong>函数名称</strong></th>
 <th><strong>功 能</strong></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><strong>AVG</strong></td>
 <td><strong>按列计算平均值</strong></td>
 </tr>
@@ -1053,19 +1042,17 @@ height:50vh;
 <td><strong>COUNT</strong></td>
 <td><strong>按列值计个数</strong></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>例子</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">//求学号为S1的学生的总分和平均分。</span><br><span class="line">	<span class="keyword">SELECT</span> <span class="keyword">SUM</span>(Score) <span class="keyword">AS</span> TotalScore, <span class="keyword">AVG</span>(Score) <span class="keyword">AS</span> </span><br><span class="line">	AvgScore</span><br><span class="line">	<span class="keyword">FROM</span> SC</span><br><span class="line">	<span class="keyword">WHERE</span> (SNo = <span class="string">&#x27;S1&#x27;</span>)</span><br><span class="line">	</span><br><span class="line">//求选修C1号课程的最高分、最低分及之间相差的分数。</span><br><span class="line">	<span class="keyword">SELECT</span> <span class="keyword">MAX</span>(Score) <span class="keyword">AS</span> MaxScore, <span class="keyword">MIN</span>(Score) <span class="keyword">AS</span> </span><br><span class="line">	MinScore, <span class="keyword">MAX</span>(Score)－<span class="keyword">MIN</span>(Score) <span class="keyword">AS</span> Diff</span><br><span class="line">	<span class="keyword">FROM</span> SC</span><br><span class="line">	<span class="keyword">WHERE</span> (CNo = <span class="string">&#x27;C1&#x27;</span>)</span><br><span class="line"></span><br><span class="line">//求计算机系学生的总数。</span><br><span class="line">	<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>（SNo）<span class="keyword">FROM</span> S</span><br><span class="line">	<span class="keyword">WHERE</span> Dept= <span class="string">&#x27;计算机&#x27;</span></span><br><span class="line"></span><br><span class="line">//求学校中共有多少个系。</span><br><span class="line">	<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(<span class="keyword">DISTINCT</span> Dept) <span class="keyword">AS</span> DeptNum</span><br><span class="line">	<span class="keyword">FROM</span> S</span><br><span class="line">//<span class="keyword">DISTINCT</span>消去重复行 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//统计有成绩同学的人数。</span><br><span class="line">	<span class="keyword">SELECT</span> <span class="keyword">COUNT</span> (Score) </span><br><span class="line">	<span class="keyword">FROM</span> SC</span><br><span class="line">//  上例中成绩为<span class="number">0</span>的同学也计算在内，没有成绩（即为空值）的不计算。</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">//利用特殊函数<span class="keyword">COUNT</span>(*)求计算机系学生的总数。</span><br><span class="line">	<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> S</span><br><span class="line">	<span class="keyword">WHERE</span> Dept=<span class="string">&#x27;计算机&#x27;</span></span><br><span class="line">//<span class="keyword">COUNT</span>（*）用来统计元组的个数，不消除重复行，不允许使用<span class="keyword">DISTINCT</span>关键字。</span><br></pre></td></tr></table></figure>
-
 <h4 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h4><p><strong>GROUP BY</strong>子句可以将查询结果按属性列或属性列组合在行的方向上进行分组，每组在属性列或属性列组合上具有相同的值。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//查询各个教师的教师号及其任课的门数。</span><br><span class="line">	<span class="keyword">SELECT</span> TNo,<span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> C_Num</span><br><span class="line">	<span class="keyword">FROM</span> TC</span><br><span class="line">	<span class="keyword">GROUP</span> <span class="keyword">BY</span> TNo</span><br><span class="line">//<span class="keyword">GROUP</span> <span class="keyword">BY</span>子句按TNo的值分组，所有具有相同TNo的元组为一组，对每一组使用函数<span class="keyword">COUNT</span>进行计算，统计出各位教师任课的门数。</span><br></pre></td></tr></table></figure>
-
 <p>若在分组后还要按照一定的条件进行筛选，则需使用<strong>HAVING</strong>子句 </p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">查询选修两门以上（含两门）课程的学生的学号和选课门数。</span><br><span class="line">	<span class="keyword">SELECT</span> SNo, <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> SC_Num</span><br><span class="line">	<span class="keyword">FROM</span> SC</span><br><span class="line">	<span class="keyword">GROUP</span> <span class="keyword">BY</span> SNo</span><br><span class="line">	<span class="keyword">HAVING</span> (<span class="keyword">COUNT</span>(*) &gt;= <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-
 <p>当<strong>需要对查询结果排序</strong>时，应该使用<strong>ORDER BY</strong>子句，ORDER BY子句必须出现在其他子句之后。排序方式可以指定，<strong>DESC为降序，ASC为升序，缺省时为升序</strong>。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//查询选修C2，C3，C4或C5课程的学号、课程号和成绩，查询结果按学号升序排列，学号相同再按成绩降序排列。</span><br><span class="line">	<span class="keyword">SELECT</span> SNo, CNo, Score</span><br><span class="line">	<span class="keyword">FROM</span> SC</span><br><span class="line">	<span class="keyword">WHERE</span> CNo <span class="keyword">IN</span> (<span class="string">&#x27;C2&#x27;</span>, <span class="string">&#x27;C3&#x27;</span>, <span class="string">&#x27;C4&#x27;</span>, <span class="string">&#x27;C5’)</span></span><br><span class="line"><span class="string">	ORDER BY SNo, Score DESC</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="多关系（表）的连接查询"><a href="#多关系（表）的连接查询" class="headerlink" title="多关系（表）的连接查询"></a>多关系（表）的连接查询</h3><h4 id="多关系（表）的连接查询结构"><a href="#多关系（表）的连接查询结构" class="headerlink" title="多关系（表）的连接查询结构"></a>多关系（表）的连接查询结构</h4><ul>
 <li>当查询同时涉及两个及两个以上的表时，称为<strong>连接查询</strong>。</li>
 <li>连接查询实际上是通过各个表之间共同字段的关联性来查询数据的，这种字段称为<strong>连接字段</strong>。</li>
@@ -1078,32 +1065,35 @@ height:50vh;
 </li>
 </ul>
 <p>*JOIN的分类</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>INNER  JOIN</th>
-<th align="left">显示符合条件的记录，此为默认值</th>
+<th style="text-align:left">显示符合条件的记录，此为默认值</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>LEFT（OUTER）JOIN</td>
-<td align="left">为左（外）连接，用于显示符合条件的数据行以及左边表中不符合条件的数据行，此时右边数据行会以NULL来显示</td>
+<td style="text-align:left">为左（外）连接，用于显示符合条件的数据行以及左边表中不符合条件的数据行，此时右边数据行会以NULL来显示</td>
 </tr>
 <tr>
 <td>RIGHT（OUTER）JOIN</td>
-<td align="left">右（外）连接，用于显示符合条件的数据行以及右边表中不符合条件的数据行。此时左边数据行会以NULL来显示</td>
+<td style="text-align:left">右（外）连接，用于显示符合条件的数据行以及右边表中不符合条件的数据行。此时左边数据行会以NULL来显示</td>
 </tr>
 <tr>
 <td>FULL（OUTER）JOIN</td>
-<td align="left">显示符合条件的数据行以及左边表和右边表中不符合条件的数据行。此时缺乏数据的数据行会以NULL来显示</td>
+<td style="text-align:left">显示符合条件的数据行以及左边表和右边表中不符合条件的数据行。此时缺乏数据的数据行会以NULL来显示</td>
 </tr>
 <tr>
 <td>CROSS  JOIN</td>
-<td align="left">将一个表的每一个记录和另一表的每个记录匹配成新的数据行</td>
+<td style="text-align:left">将一个表的每一个记录和另一表的每个记录匹配成新的数据行</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="内连接查询"><a href="#内连接查询" class="headerlink" title="内连接查询"></a>内连接查询</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//查询“刘伟”老师所讲授的课程，要求列出教师号、教师姓名和课程号。</span><br><span class="line">方法1</span><br><span class="line">	<span class="keyword">SELECT</span> T.TNo,TN,CNo</span><br><span class="line">	<span class="keyword">FROM</span> T,TC</span><br><span class="line">	<span class="keyword">WHERE</span> (T.TNo = TC.TNo) <span class="keyword">AND</span> (TN=<span class="string">&#x27;刘伟&#x27;</span>)</span><br><span class="line">//这里TN=<span class="string">&#x27;刘伟&#x27;</span>为查询条件，而T.TNo = TC.TNo为连接条件，TNo为连接字段。连接条件的一般格式为：</span><br><span class="line">[&lt;表名<span class="number">1</span>&gt;.] &lt;列名<span class="number">1</span>&gt; &lt;比较运算符&gt; [&lt;表名<span class="number">2</span>&gt;.] &lt;列名<span class="number">2</span>&gt;</span><br><span class="line">方法<span class="number">2</span></span><br><span class="line">	<span class="keyword">SELECT</span> T.TNo, TN, CNo</span><br><span class="line">	<span class="keyword">FROM</span> T <span class="keyword">INNER</span> <span class="keyword">JOIN</span> TC</span><br><span class="line">	<span class="keyword">ON</span> T.TNo = TC.TNo</span><br><span class="line">	<span class="keyword">WHERE</span> (TN = <span class="string">&#x27;刘伟&#x27;</span>)</span><br><span class="line"></span><br><span class="line">方法<span class="number">3</span></span><br><span class="line">    <span class="keyword">SELECT</span> R1.TNo R2.TN, R1.CNo </span><br><span class="line">    <span class="keyword">FROM</span></span><br><span class="line">    (<span class="keyword">SELECT</span> TNo,CNo <span class="keyword">FROM</span> TC ) <span class="keyword">AS</span> R1</span><br><span class="line">    <span class="keyword">INNER</span> <span class="keyword">JOIN</span> </span><br><span class="line">    (<span class="keyword">SELECT</span> TNo ,TN <span class="keyword">FROM</span> T</span><br><span class="line">    <span class="keyword">WHERE</span> TN=<span class="string">&#x27;刘伟&#x27;</span>) <span class="keyword">AS</span> R2</span><br><span class="line">    <span class="keyword">ON</span> R1.TNo=R2.TNo</span><br></pre></td></tr></table></figure>
-
 <h4 id="外连接查询"><a href="#外连接查询" class="headerlink" title="外连接查询"></a>外连接查询</h4><p>符合连接条件的数据将直接返回到结果集中，对那些不符合连接条件的列，将被填上NULL值后再返回到结果集中（对BIT类型的列，由于BIT 数据类型不允许有NULL值，因此将会被填上0值再返回到结果中）。</p>
 <p>外部连接分为<strong>左外部连接和右外部连</strong>接两种。以主表所在的方向区分外部连接：</p>
 <ul>
@@ -1113,12 +1103,9 @@ height:50vh;
 </li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//查询所有学生的学号、姓名、选课名称及成绩（没有选课的同学的选课信息显示为空）。</span><br><span class="line">	<span class="keyword">SELECT</span> S.SNo,SN,CN,Score</span><br><span class="line">	<span class="keyword">FROM</span> S</span><br><span class="line">	<span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> SC</span><br><span class="line">	<span class="keyword">ON</span> S.SNo=SC.SNo</span><br><span class="line">	<span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> C</span><br><span class="line">	<span class="keyword">ON</span> C.CNo=SC.CNo</span><br></pre></td></tr></table></figure>
-
 <h4 id="交叉查询"><a href="#交叉查询" class="headerlink" title="交叉查询"></a>交叉查询</h4><p><strong>交叉查询</strong>（CROSS JOIN）相当对连接查询的表没有特殊的要求，任何表都可以进行交叉查询操作。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">对学生表S和课程表C进行交叉查询。</span><br><span class="line">	<span class="keyword">SELECT</span> *</span><br><span class="line">	<span class="keyword">FROM</span> S <span class="keyword">CROSS</span> <span class="keyword">JOIN</span> C</span><br></pre></td></tr></table></figure>
-
 <h4 id="自连接查询"><a href="#自连接查询" class="headerlink" title="自连接查询"></a>自连接查询</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//查询所有比“刘伟”工资高的教师姓名、工资和刘伟的工资。</span><br><span class="line">    <span class="keyword">SELECT</span> X.TN,X.Sal <span class="keyword">AS</span></span><br><span class="line">     Sal_a,Y.Sal <span class="keyword">AS</span> Sal_b</span><br><span class="line">    <span class="keyword">FROM</span> T <span class="keyword">AS</span> X ,T <span class="keyword">AS</span> Y </span><br><span class="line">    <span class="keyword">WHERE</span> X.Sal&gt;Y.Sal</span><br><span class="line">    <span class="keyword">AND</span> Y.TN=<span class="string">&#x27;刘伟&#x27;</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h3><p>在WHERE子句中包含一个形包含子查询的语句称为<strong>父查询或外部查询</strong>。如SELECT-FROM-WHERE的查询块，此查询块称为<strong>子查询或嵌套查询</strong>，包含子查询的语句称为父查询或外部查询。</p>
 <h4 id="普通子查询"><a href="#普通子查询" class="headerlink" title="普通子查询"></a>普通子查询</h4><p><strong>返回一组值的普通子查询</strong>使用ANY或ALL </p>
 <ul>
@@ -1130,7 +1117,6 @@ height:50vh;
 </li>
 <li><p>使用ALL</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//查询其他系中比计算机系所有教师工资都高的教师的姓名和工资。</span><br><span class="line">	<span class="keyword">SELECT</span> TN, Sal</span><br><span class="line">	<span class="keyword">FROM</span> T</span><br><span class="line">	<span class="keyword">WHERE</span> (Sal &gt; <span class="keyword">ALL</span> (  <span class="keyword">SELECT</span> Sal</span><br><span class="line">                        	<span class="keyword">FROM</span> T</span><br><span class="line">                        	<span class="keyword">WHERE</span> Dept = <span class="string">&#x27;计算机&#x27;</span>))</span><br><span class="line">        	<span class="keyword">AND</span> (Dept &lt;&gt; <span class="string">&#x27;计算机&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h4 id="相关子查询"><a href="#相关子查询" class="headerlink" title="相关子查询"></a>相关子查询</h4><p>执行顺序</p>
@@ -1149,51 +1135,36 @@ height:50vh;
 </li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//用含有EXISTS的语句查询讲授课程号为C5的教师姓名。</span><br><span class="line">	<span class="keyword">SELECT</span> TN</span><br><span class="line">	<span class="keyword">FROM</span> T</span><br><span class="line">	<span class="keyword">WHERE</span> <span class="keyword">EXISTS</span> ( <span class="keyword">SELECT</span> *</span><br><span class="line">                 		<span class="keyword">FROM</span> TC</span><br><span class="line">                  	<span class="keyword">WHERE</span> TNo = T.TNo <span class="keyword">AND</span> CNo = <span class="string">&#x27;C5&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
 <h3 id="其他类型查询"><a href="#其他类型查询" class="headerlink" title="其他类型查询"></a>其他类型查询</h3><h4 id="合并查询"><a href="#合并查询" class="headerlink" title="合并查询"></a>合并查询</h4><p>合并查询就是使用<strong>UNION 操作符</strong>将来自不同查询的数据组合起来，形成一个具有综合信息的查询结果，UNION操作会<strong>自动将重复的数据行剔除</strong>。</p>
 <p>条件：参加合并查询的各子查询的使用的表结构应该相同，即各子查询中的数据数目和对应的数据类型都必须相同。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//从SC数据表中查询出学号为“S1”同学的学号和总分，再从SC数据表中查询出学号为“S5”的同学的学号和总分，然后将两个查询结果合并成一个结果集。</span><br><span class="line">	<span class="keyword">SELECT</span> SNo <span class="keyword">AS</span> 学号, <span class="keyword">SUM</span>(Score) <span class="keyword">AS</span> 总分</span><br><span class="line">	<span class="keyword">FROM</span> SC</span><br><span class="line">	<span class="keyword">WHERE</span> (SNo = <span class="string">&#x27;S1’)</span></span><br><span class="line"><span class="string">	GROUP BY SNo</span></span><br><span class="line"><span class="string">	UNION</span></span><br><span class="line"><span class="string">	SELECT SNo AS 学号, SUM(Score) AS 总分</span></span><br><span class="line"><span class="string">	FROM SC</span></span><br><span class="line"><span class="string">	WHERE (SNo = &#x27;</span>S5’)</span><br><span class="line">	<span class="keyword">GROUP</span> <span class="keyword">BY</span> SNo</span><br></pre></td></tr></table></figure>
-
 <h4 id="存储查询结果到表中"><a href="#存储查询结果到表中" class="headerlink" title="存储查询结果到表中"></a><strong>存储查询结果到表中</strong></h4><p>使用<strong>SELECT…INTO</strong> 语句可以将查询结果存储到一个<strong>新建的数据库表或临时表</strong>中 。</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//从SC数据表中查询出所有同学的学号和总分，并将查询结果存放到一个新的数据表Cal_Table中。</span><br><span class="line">	<span class="keyword">SELECT</span> SNo <span class="keyword">AS</span> 学号, <span class="keyword">SUM</span>(Score) <span class="keyword">AS</span> 总分</span><br><span class="line">	<span class="keyword">INTO</span> Cal_Table</span><br><span class="line">	<span class="keyword">FROM</span> SC</span><br><span class="line">	<span class="keyword">GROUP</span> <span class="keyword">BY</span> SNo</span><br></pre></td></tr></table></figure>
-
 <h3 id="数据表中的数据操纵"><a href="#数据表中的数据操纵" class="headerlink" title="数据表中的数据操纵"></a>数据表中的数据操纵</h3><h4 id="添加数据表中的数据"><a href="#添加数据表中的数据" class="headerlink" title="添加数据表中的数据"></a>添加数据表中的数据</h4><p><strong>添加一行记录</strong></p>
 <p><code>INSERT INTO</code></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在SC表中添加一条选课记录(&#x27;S7&#x27;, &#x27;C1’)。</span><br><span class="line">	<span class="keyword">INSERT</span> <span class="keyword">INTO</span> SC (SNo, CNo)</span><br><span class="line">	<span class="keyword">VALUES</span> (<span class="string">&#x27;S7&#x27;</span>, <span class="string">&#x27;C1&#x27;</span>) </span><br></pre></td></tr></table></figure>
-
 <p> <strong>添加多行记录</strong></p>
 <p><code>INSERT INTO &lt;表名&gt; [(&lt;列名1&gt;[,&lt;列名2&gt;…])]子查询</code></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//求出各系教师的平均工资，把结果存放在新表AvgSal中。</span><br><span class="line"></span><br><span class="line">//首先建立新表AvgSal，用来存放系名和各系的平均工资。</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> AvgSal</span><br><span class="line">(  Department <span class="built_in">VARCHAR</span>(<span class="number">20</span>), </span><br><span class="line">   Average <span class="built_in">SMALLINT</span>)</span><br><span class="line"></span><br><span class="line">//然后利用子查询求出T表中各系的平均工资，把结果存放在新表AvgSal中。</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> AvgSal</span><br><span class="line"><span class="keyword">SELECT</span> Dept,<span class="keyword">AVG</span>(Sal) </span><br><span class="line"><span class="keyword">FROM</span> T</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> Dept</span><br></pre></td></tr></table></figure>
-
 <h4 id="修改数据表中的数据"><a href="#修改数据表中的数据" class="headerlink" title="修改数据表中的数据"></a>修改数据表中的数据</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> &lt;表名&gt;</span><br><span class="line"><span class="keyword">SET</span> &lt;列名&gt;=&lt;表达式&gt; [,&lt;列名&gt;=&lt;表达式&gt;]…</span><br><span class="line">[<span class="keyword">WHERE</span> &lt;条件&gt;] </span><br></pre></td></tr></table></figure>
-
 <p><strong>修改一行</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//把刘伟老师转到信息系</span><br><span class="line">    <span class="keyword">UPDATE</span> T </span><br><span class="line">    <span class="keyword">SET</span> Dept= <span class="string">&#x27;信息&#x27;</span></span><br><span class="line">    <span class="keyword">WHERE</span> SN= <span class="string">&#x27;刘伟 </span></span><br></pre></td></tr></table></figure>
-
 <p><strong>修改多行</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//将所有学生的年龄增加1岁</span><br><span class="line">    <span class="keyword">UPDATE</span> S </span><br><span class="line">    <span class="keyword">SET</span> Age=Age+<span class="number">1</span> </span><br><span class="line">    </span><br><span class="line">//把教师表中工资小于或等于<span class="number">1000</span>元的讲师的工资提高<span class="number">20</span>%。</span><br><span class="line">    <span class="keyword">UPDATE</span> T</span><br><span class="line">    <span class="keyword">SET</span> Sal = <span class="number">1.2</span> * Sal</span><br><span class="line">    <span class="keyword">WHERE</span> (Prof = <span class="string">&#x27;讲师 &#x27;</span>) </span><br><span class="line">    <span class="keyword">AND</span> (Sal &lt;= <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
-
 <h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> </span><br><span class="line"><span class="keyword">FROM</span>&lt;表名&gt;</span><br><span class="line">[<span class="keyword">WHERE</span> &lt;条件&gt;]</span><br></pre></td></tr></table></figure>
-
 <p><strong>删除一行记录</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//删除刘伟老师的记录。</span><br><span class="line">    <span class="keyword">DELETE</span> </span><br><span class="line">    <span class="keyword">FROM</span> T </span><br><span class="line">    <span class="keyword">WHERE</span> TN= <span class="string">&#x27;刘伟&#x27;</span> </span><br></pre></td></tr></table></figure>
-
 <p><strong>删除多行记录</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//删除所有教师的授课记录。</span><br><span class="line">    <span class="keyword">DELETE</span> </span><br><span class="line">    <span class="keyword">FROM</span> TC</span><br></pre></td></tr></table></figure>
-
 <p><strong>利用子查询选择要删除的行</strong> </p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">删除刘伟老师授课的记录。</span><br><span class="line"><span class="keyword">DELETE</span> </span><br><span class="line"><span class="keyword">FROM</span> TC</span><br><span class="line"><span class="keyword">WHERE</span> (TNo = </span><br><span class="line">         (<span class="keyword">SELECT</span> TNo</span><br><span class="line">          <span class="keyword">FROM</span> T</span><br><span class="line">          <span class="keyword">WHERE</span> TN = <span class="string">&#x27;刘伟&#x27;</span>)) </span><br></pre></td></tr></table></figure>
-
 <h3 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h3><p>视图是一个虚拟表，其内容由查询定义。同基本表一样，视图包含一系列带有名称的列和行数据。视图在数据库中并不是以数据值存储集形式存在，除非是索引视图。行和列数据来自定义视图的查询所引用的基本表，并且在引用视图时动态生成。</p>
 <p><strong>创建视图</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span>  view_name [ (<span class="keyword">column</span> [ ,...n ] ) ] </span><br><span class="line">[ <span class="keyword">WITH</span> &lt;view_attribute&gt; [ ,...n ] ] </span><br><span class="line"><span class="keyword">AS</span> select_statement </span><br><span class="line">[ <span class="keyword">WITH</span> <span class="keyword">CHECK</span> <span class="keyword">OPTION</span> ] [ ; ]</span><br><span class="line">&lt;view_attribute&gt; ::= </span><br><span class="line">&#123;</span><br><span class="line">     [ ENCRYPTION ]</span><br><span class="line">     [ SCHEMABINDING ]</span><br><span class="line">     [ VIEW_METADATA ]     &#125;</span><br><span class="line">     </span><br><span class="line">     </span><br><span class="line">//一个计算机系教师情况的视图Sub_T</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> Sub_T </span><br><span class="line">	<span class="keyword">AS</span>  <span class="keyword">SELECT</span> TNo, TN, Prof</span><br><span class="line">   	<span class="keyword">FROM</span> T </span><br><span class="line">    <span class="keyword">WHERE</span> Dept = <span class="string">&#x27;计算机&#x27;</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>修改视图</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">VIEW</span> &lt;视图名&gt;[(&lt;视图列表&gt;)]</span><br><span class="line"><span class="keyword">AS</span> &lt;子查询&gt;</span><br><span class="line"></span><br><span class="line">//修改学生情况视图S_SC_C（包括姓名、课程名及成绩）。</span><br><span class="line">    <span class="keyword">ALTER</span> <span class="keyword">VIEW</span> S_SC_C(SN, CN, Score) </span><br><span class="line">    <span class="keyword">AS</span> <span class="keyword">SELECT</span> SN, CN, Score</span><br><span class="line">        <span class="keyword">FROM</span> S, C, SC</span><br><span class="line">       <span class="keyword">WHERE</span> S.SNo = SC.SNo <span class="keyword">AND</span> SC.CNo = C.CNo</span><br></pre></td></tr></table></figure>
-
 <p><strong>删除视图</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">VIEW</span> &lt;视图名&gt;</span><br></pre></td></tr></table></figure>
-
 <p><strong>查询视图</strong></p>
 <p>视图定义后，对视图的查询操作如同对基本表的查询操作一样。 </p>
 <p><strong>更新视图</strong></p>
@@ -1215,25 +1186,24 @@ height:50vh;
 </li>
 </ul>
 <p>创建索引</p>
-<p> <strong><code>CREATE [UNIQUE][CLUSTERED][NONCLUSTERED] INDEX name ON 表或者视图名字 </code></strong></p>
+<p> <strong><code>CREATE [UNIQUE][CLUSTERED][NONCLUSTERED] INDEX name ON 表或者视图名字</code></strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//为表SC在SNo和CNo上建立惟一索引。</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> SCI <span class="keyword">ON</span> SC(SNo,CNo) </span><br><span class="line"></span><br><span class="line">//为教师表T在TN上建立聚集索引。</span><br><span class="line"><span class="keyword">CREATE</span> CLUSTER <span class="keyword">INDEX</span> TI <span class="keyword">ON</span> T(TN)</span><br></pre></td></tr></table></figure>
-
 <p>修改索引</p>
 <p>删除索引</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> &lt;<span class="keyword">table</span> <span class="keyword">or</span> <span class="keyword">view</span> <span class="keyword">name</span>&gt;.&lt;<span class="keyword">index</span> <span class="keyword">name</span>&gt;</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> &lt;<span class="keyword">index</span> <span class="keyword">name</span>&gt; <span class="keyword">ON</span> &lt;<span class="keyword">table</span> <span class="keyword">or</span> <span class="keyword">view</span> <span class="keyword">name</span>&gt;</span><br></pre></td></tr></table></figure>
-
 <p>查看索引</p>
 <p><code>Sp_helpindex [@objname =] &#39;name&#39;</code></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//查看表SC的索引。</span><br><span class="line">	EXEC Sp_helpindex SC</span><br></pre></td></tr></table></figure>
-
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><table>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>SQL功能</th>
 <th><strong>动</strong>    <strong>词</strong></th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>数据定义</td>
 <td>CREATE、DROP、ALTER</td>
 </tr>
@@ -1249,7 +1219,9 @@ height:50vh;
 <td>数据控制</td>
 <td>GRANT、REVOKE</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="第四章-关系数据库理论"><a href="#第四章-关系数据库理论" class="headerlink" title="第四章 关系数据库理论"></a>第四章 关系数据库理论</h2><h3 id="规范化问题的提出"><a href="#规范化问题的提出" class="headerlink" title="规范化问题的提出"></a>规范化问题的提出</h3><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200907103833628.png" alt="image-20200907103833628"></p>
 <p>一个好的关系模式应该具备以下四个条件：</p>
 <ol>
@@ -1263,7 +1235,7 @@ height:50vh;
 <p><strong>函数依赖</strong>是关系模式中属性之间的一种逻辑依赖关系。</p>
 <h4 id="函数依赖的定义"><a href="#函数依赖的定义" class="headerlink" title="函数依赖的定义"></a>函数依赖的定义</h4><p>设关系模式R(U，F)，U是属性全集，F是U上的函数依赖所构成的集合，X和Y是U的子集，如果对于R(U)的任意一个可能的关系r，对于X的每一个具体值，Y都唯一的具体值与之对应，则称X决定函数Y，或Y函数依赖于X，记作$X→Y$。我们称X为决定因素，Y为依赖因素。当Y不函数依赖于X时，记作：X    Y。当$X→Y$且$Y→X$时，则记作：$X↔Y$。   </p>
 <h4 id="函数依赖的逻辑蕴含定义"><a href="#函数依赖的逻辑蕴含定义" class="headerlink" title="函数依赖的逻辑蕴含定义"></a>函数依赖的逻辑蕴含定义</h4><p>设F是在关系模式R(U)上成立的函数依赖集合，X，Y是属性集U的子集，$X→Y$是一个函数依赖。如果从F中能够推导出$X→Y$，即如果对于R的每个满足F的关系r也满足$X→Y$，则称$X→Y$为F的逻辑蕴涵（或F逻辑蕴涵$X→Y$），记为$F|=X→Y $。</p>
-<h4 id="闭包的定义"><a href="#闭包的定义" class="headerlink" title="闭包的定义"></a>闭包的定义</h4><p>设F是函数依赖集，被F逻辑蕴涵的函数依赖的全体构成的集合，称为函数依赖集F的闭包（Closure），记为F +。即：$F +={ X→Y |  F|=X→Y} $</p>
+<h4 id="闭包的定义"><a href="#闭包的定义" class="headerlink" title="闭包的定义"></a>闭包的定义</h4><p>设F是函数依赖集，被F逻辑蕴涵的函数依赖的全体构成的集合，称为函数依赖集F的闭包（Closure），记为F +。即：$F +=\{ X→Y |  F|=X→Y\} $</p>
 <h4 id="函数依赖的推理规则及正确性"><a href="#函数依赖的推理规则及正确性" class="headerlink" title="函数依赖的推理规则及正确性"></a>函数依赖的推理规则及正确性</h4><p><strong>自反律</strong></p>
 <p>如果$Y\subseteq X\subseteq U$，则$X→Y$在R上成立</p>
 <p><strong>增广律</strong></p>
@@ -1289,11 +1261,10 @@ height:50vh;
 <h4 id="传递函数依赖"><a href="#传递函数依赖" class="headerlink" title="传递函数依赖"></a>传递函数依赖</h4><p>设有关系模式R(U)，U是属性全集，X，Y，Z是U的子集 若X→Y，但$Y\nrightarrow X$，而$Y→Z（Y\notin X，Z\notin Y）$，则称Z对X传递函数依赖 ，记作：$X\stackrel{t}{\longrightarrow} Z $。如果$Y→X$，则$X\leftrightarrow Y$，这时称Z对X直接函数依赖，而不是传递函数依赖。</p>
 <h4 id="属性集的闭包及其算法"><a href="#属性集的闭包及其算法" class="headerlink" title="属性集的闭包及其算法"></a>属性集的闭包及其算法</h4><p><strong>定义</strong></p>
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906160319050.png" alt="image-20200906160319050"></p>
-<p>公式表示为$X^+={属性A|X→A在F^+中}$</p>
+<p>公式表示为$X^+=\{属性A|X→A在F^+中\}$</p>
 <p><strong>定理</strong>：$X→Y$能用函数依赖推理规则推出的充分必要条件是$Y\subseteq X^+$中 </p>
 <p><strong>求解属性集的算法</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">result&#x3D;X</span><br><span class="line">	 do</span><br><span class="line">	 &#123;</span><br><span class="line">	  if F中有某个函数依赖Y→Z满足Y包含于result</span><br><span class="line">	    then result&#x3D;result ∪ Z</span><br><span class="line">	  &#125;</span><br><span class="line">	  while (result有所改变); </span><br></pre></td></tr></table></figure>
-
 <h4 id="候选码的求解理论和算法"><a href="#候选码的求解理论和算法" class="headerlink" title="候选码的求解理论和算法"></a>候选码的求解理论和算法</h4><p><strong>定义</strong></p>
 <p>如果$X→U$在R上成立（即$X→U$在$F^+$中），那么称X是R的一个超码。<br>如果$X→U$在R上成立，但对X的任一真子集$X′$都有$X′→U$不成立（即$X′→U$不在$F^+$中，或者$X\stackrel{f}{\longrightarrow} U$），那么称X是R上的一个候选码。</p>
 <p><strong>快速求解候选码的一个充分条件</strong> </p>
@@ -1323,7 +1294,7 @@ height:50vh;
 </ol>
 <p><strong>最小函数依赖集定义</strong></p>
 <p>设F是属性集U上的函数依赖集。如果Fmin是F的一个最小函数依赖集，那么$F_{min}$应满足下列四个条件：</p>
-<p>（1）$F_{min}^+=F^+$；<br>（2）每个函数依赖的右边都是单属性；<br>（3）Fmin中没有冗余的函数依赖（即在$F_{min}$中不存在这样的函数依赖$X→Y$，使得$F_{min}$与$F_{min}-{X→Y}$等价），即减少任何一个函数依赖都将与原来的F不等价；<br>（4）每个函数依赖的左边没有冗余的属性（即$F_{min}$中不存在这样的函数依赖$X→Y$，X有真子集W使得$F_{min}-{X→Y} ∪ {W→Y}$与$F_{min}$等价），减少任何一个函数依赖左部的属性后，都将与原来的F不等价。</p>
+<p>（1）$F_{min}^+=F^+$；<br>（2）每个函数依赖的右边都是单属性；<br>（3）Fmin中没有冗余的函数依赖（即在$F_{min}$中不存在这样的函数依赖$X→Y$，使得$F_{min}$与$F_{min}-\{X→Y\}$等价），即减少任何一个函数依赖都将与原来的F不等价；<br>（4）每个函数依赖的左边没有冗余的属性（即$F_{min}$中不存在这样的函数依赖$X→Y$，X有真子集W使得$F_{min}-\{X→Y\} ∪ \{W→Y\}$与$F_{min}$等价），减少任何一个函数依赖左部的属性后，都将与原来的F不等价。</p>
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906163003178.png" alt="image-20200906163003178"></p>
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906163105772.png" alt="image-20200906163105772"></p>
 <p>都不是最小函数依赖集</p>
@@ -1338,9 +1309,9 @@ height:50vh;
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906163521087.png" alt="image-20200906163521087"></p>
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906163607902.png" alt="image-20200906163607902"></p>
 <h3 id="关系模式的分解"><a href="#关系模式的分解" class="headerlink" title="关系模式的分解"></a>关系模式的分解</h3><p><strong>定义</strong></p>
-<p>设有关系模式$R（U），R1，R2，…，Rk$都是R的子集（此处把关系模式看成是属性的集合），$R=R1∪R2∪…∪Rk$，关系模式的集合用ρ表示，$ρ={R1，R2，…，Rk}$。用ρ代替R的过程称为<strong>关系模式的分解</strong>。这里<strong>ρ称为R的一个分解，也称为数据库模式</strong>。</p>
+<p>设有关系模式$R（U），R1，R2，…，Rk$都是R的子集（此处把关系模式看成是属性的集合），$R=R1∪R2∪…∪Rk$，关系模式的集合用ρ表示，$ρ=\{R1，R2，…，Rk\}$。用ρ代替R的过程称为<strong>关系模式的分解</strong>。这里<strong>ρ称为R的一个分解，也称为数据库模式</strong>。</p>
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906181749509.png" alt="image-20200906181749509"></p>
-<h4 id="无损连接的分解"><a href="#无损连接的分解" class="headerlink" title="无损连接的分解"></a>无损连接的分解</h4><p>设有关系模式R，F是R上的函数依赖集，$ρ={R1，R2，…，Rk}$。如果对R中满足F的每一个关系r，有$r=ΠR1(r)∞ΠR2(r)∞…∞ΠRk(r),$那么就称分解ρ相对于F是“无损连接分解” ；否则称为“损失分解”。</p>
+<h4 id="无损连接的分解"><a href="#无损连接的分解" class="headerlink" title="无损连接的分解"></a>无损连接的分解</h4><p>设有关系模式R，F是R上的函数依赖集，$ρ=\{R1，R2，…，Rk\}$。如果对R中满足F的每一个关系r，有$r=ΠR1(r)∞ΠR2(r)∞…∞ΠRk(r),$那么就称分解ρ相对于F是“无损连接分解” ；否则称为“损失分解”。</p>
 <h4 id="无损分解测试算法"><a href="#无损分解测试算法" class="headerlink" title="无损分解测试算法"></a>无损分解测试算法</h4><ol>
 <li>构造一个k行n列的表格Rρ，表中每一列对应一个属性Aj（1≤j≤n），每一行对应一个模式Ri（1≤i≤k）。如果Aj在Ri中，则在表中的第i行第j列处填上符号aj，否则填上bij。</li>
 <li>把表格看成模式R的一个关系，根据F中的每个函数依赖，修改表中元素的符号，其方法如下。<ul>
@@ -1352,7 +1323,7 @@ height:50vh;
 </li>
 <li>若修改到最后，表中有一行全为a，即a1a2…an，那么称ρ相对于F是无损连接分解。 </li>
 </ol>
-<h4 id="保持函数依赖的分解"><a href="#保持函数依赖的分解" class="headerlink" title="保持函数依赖的分解"></a>保持函数依赖的分解</h4><p>设有关系模式R(U)，F是R(U)上的函数依赖集，Z是属性集U上的一个子集，$ρ={R1，R2，…，Rk}$是R的一个分解。<br>F在Z上的一个投影用ΠZ(F)表示：$ΠZ(F)={X→Y | X→Y∈F^+∧XY\subseteq Z}$；<br>F在Ri上的一个投影用ΠRi(F)表示：=$ΠR1(r)∪ΠR2(r)∪…∪ΠRk(r)；$<br>如果有$F^+=($ <img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906182548765.png" alt="image-20200906182548765">$)^+$，则称ρ是保持函数依赖集F的分解。 </p>
+<h4 id="保持函数依赖的分解"><a href="#保持函数依赖的分解" class="headerlink" title="保持函数依赖的分解"></a>保持函数依赖的分解</h4><p>设有关系模式R(U)，F是R(U)上的函数依赖集，Z是属性集U上的一个子集，$ρ={R1，R2，…，Rk}$是R的一个分解。<br>F在Z上的一个投影用ΠZ(F)表示：$ΠZ(F)=\{X→Y | X→Y∈F^+∧XY\subseteq Z\}$；<br>F在Ri上的一个投影用ΠRi(F)表示：=$ΠR1(r)∪ΠR2(r)∪…∪ΠRk(r)；$<br>如果有$F^+=($ <img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906182548765.png" alt="image-20200906182548765">$)^+$，则称ρ是保持函数依赖集F的分解。 </p>
 <p><strong>一个无损连接分解不一定是保持函数依赖的</strong></p>
 <p><strong>一个保持函数依赖的分解也不一定是无损连接的</strong></p>
 <h3 id="关系模式的范式"><a href="#关系模式的范式" class="headerlink" title="关系模式的范式"></a>关系模式的范式</h3><p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906183132752.png" alt="image-20200906183132752"></p>
@@ -1374,9 +1345,9 @@ height:50vh;
 <p><strong>3NF规范化</strong></p>
 <ul>
 <li><p>把一个关系模式分解为3NF，使它具有保持函数依赖性。</p>
-<p>（1）如果$F_{min}$中有一函数依赖$X→A$，且X$A=R$，则输出$ρ={R}$，转（4）。<br>（2）如果R中某些属性与$F_min$中所有依赖的左部和右部都无关，则将它们构成关系模式，从R中将它们分出去，单独构成一个模式。<br>（3）对于$F_{min}$中的每一个函数依赖$X→A$，都单独构成一个关系子模式$XA$。若$F_{min}$中有$X→A1，X→A2，…，X→An$，则可以用模式$XA1A2…An$取代n个模式$XA1，XA2，…，XAn$。<br>（4）停止分解，输出ρ。 </p>
+<p>（1）如果$F_{min}$中有一函数依赖$X→A$，且X$A=R$，则输出$ρ=\{R\}$，转（4）。<br>（2）如果R中某些属性与$F_min$中所有依赖的左部和右部都无关，则将它们构成关系模式，从R中将它们分出去，单独构成一个模式。<br>（3）对于$F_{min}$中的每一个函数依赖$X→A$，都单独构成一个关系子模式$XA$。若$F_{min}$中有$X→A1，X→A2，…，X→An$，则可以用模式$XA1A2…An$取代n个模式$XA1，XA2，…，XAn$。<br>（4）停止分解，输出ρ。 </p>
 </li>
-<li><p>把一个关系模式分解为3NF，使它既具有无损连接性又具有保持函数依赖性。<br>（1）根据算法4.6求出保持函数依赖的分解：$ρ={R1，R2，…，Rk}$。<br>（2）判定ρ是否具有无损连接性，若是，转（4）。<br>（3）令$ρ=ρ∪{X}={R1，R2，…，Rk，X}$，其中X是R的候选码。<br>（4）输出ρ。</p>
+<li><p>把一个关系模式分解为3NF，使它既具有无损连接性又具有保持函数依赖性。<br>（1）根据算法4.6求出保持函数依赖的分解：$ρ=\{R1，R2，…，Rk\}$。<br>（2）判定ρ是否具有无损连接性，若是，转（4）。<br>（3）令$ρ=ρ∪\{X\}=\{R1，R2，…，Rk，X\}$，其中X是R的候选码。<br>（4）输出ρ。</p>
 </li>
 </ul>
 <p>解决了2NF的四个问题</p>
@@ -1393,7 +1364,7 @@ height:50vh;
 <li>如果$R∈3NF$，则R不一定是$BCNF$ 。</li>
 </ul>
 <p>BC范式规范化</p>
-<p>把一个关系模式分解为BCNF<br>（1）令ρ={R}。<br>（2）如果ρ中所有模式都是BCNF，则转（4）。<br>（3）如果ρ中有一个关系模式S不是BCNF，则S中必能找到一个函数依赖$X→A$且X不是S的候选码，且A不属于X，设$S1=XA，S2=S-(A－X)$，用分解${S1，S2}$代替S，转（2）。<br>（4）分解结束，输出ρ。</p>
+<p>把一个关系模式分解为BCNF<br>（1）令ρ={R}。<br>（2）如果ρ中所有模式都是BCNF，则转（4）。<br>（3）如果ρ中有一个关系模式S不是BCNF，则S中必能找到一个函数依赖$X→A$且X不是S的候选码，且A不属于X，设$S1=XA，S2=S-(A－X)$，用分解$\{S1，S2\}$代替S，转（2）。<br>（4）分解结束，输出ρ。</p>
 <h3 id="关系模式的规范化"><a href="#关系模式的规范化" class="headerlink" title="关系模式的规范化"></a>关系模式的规范化</h3><p><strong>定义</strong>：一个低一级范式的关系模式，通过模式分解转化为若干个高一级范式的关系模式的集合，这种分解过程叫作关系模式的<strong>规范化</strong>。 </p>
 <p><strong>目的</strong>：使结构合理，消除存储异常，使数据冗余尽量小，便于插入、删除和更新。</p>
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906193257343.png" alt="image-20200906193257343"></p>
@@ -1502,11 +1473,11 @@ height:50vh;
 </ul>
 <h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><p>规则（Rule）就是数据库对存储在表中的列或用户自定义数据类型中的值的规定和限制。</p>
 <p>规则与其作用的表或用户自定义数据类型是相互独立的，即表或用户自定义对象的删除、修改不会对与之相连的规则产生影响。 </p>
-<p><strong>创建规则</strong> <code>CREATE RULE rule_name AS condition_expression </code></p>
-<p><strong>删除规则</strong><code>DROP RULE &#123;rule_name&#125; [,...n] </code>  <strong>在删除一个规则前必须先将与其绑定的对象解除绑定。</strong> </p>
+<p><strong>创建规则</strong> <code>CREATE RULE rule_name AS condition_expression</code></p>
+<p><strong>删除规则</strong><code>DROP RULE &#123;rule_name&#125; [,...n]</code>  <strong>在删除一个规则前必须先将与其绑定的对象解除绑定。</strong> </p>
 <h4 id="默认"><a href="#默认" class="headerlink" title="默认"></a>默认</h4><p>默认（Default）是用户在向表中添加数据时，如果没有明确地给出一个值，这时SQL Server所自动使用的值。</p>
 <p>表的一列或一个用户自定义数据类型只能与一个默认绑定。 </p>
-<p><strong>创建默认</strong><code>CREATE DEFAULT default_name AS constant_expression </code></p>
+<p><strong>创建默认</strong><code>CREATE DEFAULT default_name AS constant_expression</code></p>
 <p><strong>删除默认</strong><code>DROP DEFAULT &#123;default_name&#125; [,...n]</code>   <strong>在删除一个默认前必须先将与其绑定的对象解除绑定</strong> </p>
 <h3 id="并发性控制和封锁"><a href="#并发性控制和封锁" class="headerlink" title="并发性控制和封锁"></a>并发性控制和封锁</h3><h4 id="数据库并发性的含义"><a href="#数据库并发性的含义" class="headerlink" title="数据库并发性的含义"></a>数据库并发性的含义</h4><p>为了充分利用数据库资源，很多时候数据库用户都是对数据库系统并行存取数据，这样就会发生多个用户并发存取同一数据的情况，如果对并发操作不加控制可能会产生不正确的数据，破坏数据的完整性。</p>
 <p>并发控制就是解决这类问题，以保持数据库中数据的一致性，即在任何一个时刻数据库都将以相同的形式给用户提供数据。 </p>
@@ -1555,8 +1526,7 @@ height:50vh;
 <p><img src="https://raw.githubusercontent.com/qq903064697/img-blog/master/images/image-20200906205345557.png" alt="image-20200906205345557"></p>
 <p><strong>数据库设计方法</strong></p>
 <ul>
-<li><p>直观设计</p>
-</li>
+<li>直观设计</li>
 <li><p>规范设计法</p>
 <ul>
 <li>基于E-R模型的数据库设计方法——基于图构造</li>
@@ -1566,8 +1536,7 @@ height:50vh;
 </li>
 <li><p>计算机辅助设计法</p>
 </li>
-<li><p>现代数据库设计方法</p>
-</li>
+<li>现代数据库设计方法</li>
 </ul>
 <h3 id="系统需求分析——起点"><a href="#系统需求分析——起点" class="headerlink" title="系统需求分析——起点"></a>系统需求分析——起点</h3><p><strong>需求分析的任务：</strong></p>
 <ul>
@@ -1720,10 +1689,8 @@ height:50vh;
 <p>（1）所有的输入参数以及传给调用者的输出参数。<br>（2）被执行的针对数据库的操作语句，包括调用其他存储过程的语句。<br>（3）返回给调用者的状态值以指明调用是成功还是失败。</p>
 <p><strong>用CREATE PROCEDURE命令创建存储过程</strong>  </p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> procedure_name [ ; number ]</span><br><span class="line">[ &#123; @parameter data_type &#125;</span><br><span class="line">[ VARYING ] [ = default ] [ OUTPUT ]] [ ,...n ]</span><br><span class="line">[ <span class="keyword">WITH</span></span><br><span class="line">&#123; RECOMPILE | ENCRYPTION | RECOMPILE , ENCRYPTION &#125; ]</span><br><span class="line">[ <span class="keyword">FOR</span> <span class="keyword">REPLICATION</span> ]</span><br><span class="line"><span class="keyword">AS</span> sql_statement [ ...n ]</span><br></pre></td></tr></table></figure>
-
 <p>例子</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">//在Teach数据库中，创建一个名称为MyProc的不带参数的存储过程，该存储过程的功能是从数据表S中查询所有男同学的信息。</span><br><span class="line"><span class="keyword">USE</span> Teach</span><br><span class="line"><span class="keyword">GO</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> MyProc <span class="keyword">AS</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> S <span class="keyword">WHERE</span> Sex=<span class="string">&#x27;男&#x27;</span></span><br><span class="line"></span><br><span class="line">//定义具有参数的存储过程。在Teach数据库中，创建一个名称为InsertRecord的存储过程，该存储过程的功能是向S数据表中插入一条记录，新记录的值由参数提供。</span><br><span class="line"><span class="keyword">USE</span> Teach</span><br><span class="line"><span class="keyword">GO</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> InsertRecord </span><br><span class="line">(   @sno <span class="built_in">VARCHAR</span>(<span class="number">6</span>),</span><br><span class="line">    @sn <span class="keyword">NVARCHAR</span>(<span class="number">10</span>),</span><br><span class="line">    @sex <span class="keyword">NCHAR</span>(<span class="number">1</span>),</span><br><span class="line">    @age <span class="built_in">INT</span>,</span><br><span class="line">    @dept <span class="keyword">NVARCHAR</span>(<span class="number">20</span>)</span><br><span class="line">)</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> S <span class="keyword">VALUES</span>(@sno,@sn,@sex,@age, @dept)</span><br><span class="line"></span><br><span class="line">//定义具有参数默认值的存储过程。在Teach数据库中，创建一个名称为<span class="keyword">Insert</span> RecordDefa的存储过程，该存储过程的功能是向S数据表中插入一条记录，新记录的值由参数提供，如果未提供系别Dept的值时，由参数的默认值代替。</span><br><span class="line"><span class="keyword">USE</span> Teach</span><br><span class="line"><span class="keyword">GO</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> InsertRecordDefa </span><br><span class="line">(   @sno <span class="built_in">VARCHAR</span>(<span class="number">6</span>),</span><br><span class="line">    @sn <span class="keyword">NVARCHAR</span>(<span class="number">10</span>),</span><br><span class="line">    @sex <span class="keyword">NCHAR</span>(<span class="number">1</span>),</span><br><span class="line">    @age <span class="built_in">INT</span>,</span><br><span class="line">    @dept <span class="keyword">NVARCHAR</span>(<span class="number">20</span>)= <span class="string">&#x27;无&#x27;</span>)</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> S <span class="keyword">VALUES</span>(@sno, @sn, @sex, @age, @dept)</span><br><span class="line"></span><br><span class="line">// 定义能够返回值的存储过程。在Teach数据库中，创建一个名称为QueryTeach的存储过程。该存储过程的功能是从数据表S中根据学号查询某一同学的姓名和系别，查询的结果由参数@sn和@dept返回。</span><br><span class="line"><span class="keyword">USE</span> Teach</span><br><span class="line"><span class="keyword">GO</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> QueryTeach </span><br><span class="line">(   @sno <span class="built_in">VARCHAR</span>(<span class="number">6</span>),</span><br><span class="line">    @sn <span class="keyword">NVARCHAR</span>(<span class="number">10</span>) <span class="keyword">OUTPUT</span>,</span><br><span class="line">    @dept <span class="keyword">NVARCHAR</span>(<span class="number">20</span>) <span class="keyword">OUTPUT</span>)</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">SELECT</span> @sn=SN,@dept=Dept</span><br><span class="line"><span class="keyword">FROM</span> S</span><br><span class="line"><span class="keyword">WHERE</span> SNo=@sno</span><br></pre></td></tr></table></figure>
-
 <h3 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h3><p><strong>触发器是一种特殊类型的存储过程。</strong> </p>
 <p>优点</p>
 <ul>
@@ -1739,6 +1706,7 @@ height:50vh;
 <li>登录触发器<br>登录触发器是由登录（LOGON）事件而激活的触发器。 </li>
 </ul>
 <h4 id="触发器的工作原理"><a href="#触发器的工作原理" class="headerlink" title="触发器的工作原理"></a>触发器的工作原理</h4><p><strong>SQL Server</strong>在工作时为每个触发器在服务器的内存上建立两个特殊的表：插入表和删除表。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -1747,7 +1715,8 @@ height:50vh;
 <th>Deleted表</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>增加记录（INSERT）</td>
 <td>存放增加的记录</td>
 <td>无</td>
@@ -1762,22 +1731,19 @@ height:50vh;
 <td>存放更新后的记录</td>
 <td>存放更新前的记录</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>INSERT触发器的工作原理<br>当对表进行INSERT操作时，INSERT触发器被激发时，新的数据行被添加到创建触发器的表和Inserted表。 </li>
 <li>DELETE触发器的工作原理<br>当试图删除触发器保护的表中的一行或多行记录时，即对表进行DELETE操作时，DELETE触发器被激发，系统从被影响的表中将删除的行放入到一个特殊的Deleted表中。 </li>
 <li>UPDATE触发器的工作原理<br>当试图更新定义有UPDATE触发器的表中的数据时，即当执行UPDATE操作时触发器被激活。 </li>
 </ul>
 <h4 id="创建DML触发器"><a href="#创建DML触发器" class="headerlink" title="创建DML触发器"></a>创建DML触发器</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//使用<span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span>创建DML触发器的语法格式为：</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> trigger_name</span><br><span class="line"><span class="keyword">ON</span> &#123;<span class="keyword">table</span> | <span class="keyword">view</span>&#125;</span><br><span class="line">[<span class="keyword">With</span> Encryption]</span><br><span class="line">&#123;<span class="keyword">For</span> | <span class="keyword">After</span> | Instead <span class="keyword">Of</span>&#125;</span><br><span class="line">&#123; [ <span class="keyword">INSERT</span> ] [ , ] [ <span class="keyword">UPDATE</span> ] [ , ] [ <span class="keyword">DELETE</span>] &#125;</span><br><span class="line"><span class="keyword">AS</span> sql_statement [;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//设计一个触发器，在学生表S中删除某一个学</span><br><span class="line">生时，在选课表SC中该学生的选课记录也全部被删除。</span><br><span class="line"><span class="keyword">USE</span> Teach</span><br><span class="line"><span class="keyword">GO</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> del_S</span><br><span class="line"><span class="keyword">ON</span> S</span><br><span class="line"><span class="keyword">AFTER</span> <span class="keyword">DELETE</span></span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> SC</span><br><span class="line"><span class="keyword">WHERE</span> SC.SNo</span><br><span class="line"><span class="keyword">IN</span> (<span class="keyword">SELECT</span> SNo <span class="keyword">FROM</span> DELETED)</span><br><span class="line"><span class="keyword">GO</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="创建DDL触发器"><a href="#创建DDL触发器" class="headerlink" title="创建DDL触发器"></a>创建DDL触发器</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//创建DDL触发器的<span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span>语句的语法格式为：</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> trigger_name</span><br><span class="line"><span class="keyword">On</span> &#123;<span class="keyword">All</span> <span class="keyword">Server</span> | <span class="keyword">Database</span>&#125;</span><br><span class="line">[<span class="keyword">With</span> Encryption]</span><br><span class="line">&#123;<span class="keyword">FOR</span> | <span class="keyword">AFTER</span>&#125; &#123;event_type | event_group &#125; [,...n ]</span><br><span class="line"><span class="keyword">AS</span> sql_statement [; ]</span><br><span class="line"></span><br><span class="line">//创建一个DDL触发器safety，禁止修改和删除当</span><br><span class="line">前数据库中的任何表。</span><br><span class="line"><span class="keyword">USE</span> Teach</span><br><span class="line"><span class="keyword">GO</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TRIGGER</span> safety</span><br><span class="line"><span class="keyword">ON</span> <span class="keyword">DATABASE</span></span><br><span class="line"><span class="keyword">FOR</span> DROP_TABLE, ALTER_TABLE</span><br><span class="line"><span class="keyword">AS</span> PRINT <span class="string">&#x27;不能删除或修改数据库表！&#x27;</span></span><br><span class="line"><span class="keyword">ROLLBACK</span></span><br><span class="line"><span class="keyword">GO</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="查看表中触发器"><a href="#查看表中触发器" class="headerlink" title="查看表中触发器"></a>查看表中触发器</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//查看表中触发器</span><br><span class="line">//执行系统存储过程sp_helptrigger查看表中触发器的语法格式如下：</span><br><span class="line">EXEC sp_helptrigger &#x27;table&#x27;[,&#x27;type&#x27;]</span><br><span class="line"></span><br><span class="line">//查看触发器的定义文本</span><br><span class="line">//利用系统存储过程sp_helptext可查看某个触发器的内容，语法格式为：</span><br><span class="line">EXEC sp_helptext &#x27;trigger_name&#x27;</span><br><span class="line"></span><br><span class="line">//查看触发器的所有者和创建时间</span><br><span class="line">//系统存储过程sp_help可用于查看触发器的所有者和创建日期，语法格式如下：</span><br><span class="line">EXEC sp_help &#x27;trigger_name&#x27;</span><br></pre></td></tr></table></figure>
-
 <h4 id="修改触发器"><a href="#修改触发器" class="headerlink" title="修改触发器"></a>修改触发器</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//修改DML触发器的<span class="keyword">ALTER</span> <span class="keyword">TRIGGER</span>语句的语法格式如下：</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TRIGGER</span> schema_name.trigger_name </span><br><span class="line"><span class="keyword">ON</span> ( <span class="keyword">table</span> | <span class="keyword">view</span> ) </span><br><span class="line">[ <span class="keyword">WITH</span> ENCRYPTION ]</span><br><span class="line">&#123; <span class="keyword">FOR</span> | <span class="keyword">AFTER</span> | INSTEAD <span class="keyword">OF</span> &#125; </span><br><span class="line">&#123; [ <span class="keyword">DELETE</span> ] [ , ] [ <span class="keyword">INSERT</span> ] [ , ] [ <span class="keyword">UPDATE</span>] &#125; </span><br><span class="line"><span class="keyword">AS</span>  sql_statement [ ; ]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//修改DDL触发器的<span class="keyword">ALTER</span> <span class="keyword">TRIGGER</span>语句的语法格式如下：</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TRIGGER</span> trigger_name </span><br><span class="line"><span class="keyword">ON</span> &#123; <span class="keyword">ALL</span> <span class="keyword">SERVER</span> | <span class="keyword">DATABASE</span> &#125; </span><br><span class="line">[ <span class="keyword">WITH</span> ENCRYPTION ]</span><br><span class="line">&#123; <span class="keyword">FOR</span> | <span class="keyword">AFTER</span> &#125; &#123; event_type | event_group &#125; [ ,...n ]</span><br><span class="line"><span class="keyword">AS</span>  sql_statement  [ ; ]</span><br><span class="line"></span><br><span class="line">//使触发器无效</span><br><span class="line">//在有些情况下，用户希望暂停触发器的作用，但并不删除它，这时就可以通过DISABLE TRIGGER语句使触发器无效，语法格式如下：</span><br><span class="line">DISABLE TRIGGER &#123; [ schema.] trigger_name [ ,...n ] | ALL &#125;</span><br><span class="line">ON object_name</span><br><span class="line"></span><br><span class="line">//使触发器重新有效</span><br><span class="line">//要使DML触发器重新有效，可使用ENABLE TRIGGER语句，语法格式如下：</span><br><span class="line">ENABLE TRIGGER &#123;[ schema_name.] trigger_name [ ,...n ] | ALL &#125;</span><br><span class="line">ON object name</span><br></pre></td></tr></table></figure>
-
 <h4 id="删除触发器"><a href="#删除触发器" class="headerlink" title="删除触发器"></a>删除触发器</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">删除DML触发器的<span class="keyword">DROP</span> <span class="keyword">TRIGGER</span>语句的语法格式为：</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TRIGGER</span> trigger_name [ ,...n ] [ ; ]</span><br></pre></td></tr></table></figure>
-
 <h3 id="备份和还原"><a href="#备份和还原" class="headerlink" title="备份和还原"></a>备份和还原</h3><p><strong>备份和还原概述</strong></p>
 <p>备份是对SQL Server数据库或事务日志进行复制，数据库备份记录了在进行备份这一操作时数据库中所有数据的状态，如果数据库因意外而损坏，这些备份文件将在数据库还原时用来还原数据库。</p>
 <p>还原就是把遭受破坏、丢失的数据或出现错误的数据库还原到原来的正常状态。</p>
@@ -1794,7 +1760,6 @@ height:50vh;
 <p>简单还原     完全还原     批日志还原</p>
 <p><code>sp_addumpdevice</code>创建备份设备</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sp_addumpdevice  [ @devtype = ] &#x27;device_type&#x27; , [ @logicalname = ] &#x27;logical_name&#x27; , [ @physicalname = ] &#x27;physical_name&#x27;</span><br></pre></td></tr></table></figure>
-
 <p>使用<code>sp_dropdevice</code>来删除备份设备</p>
 <p><strong>还原数据库</strong></p>
 <p>使用对象资源管理器可以很方便地实现对数据库的还原操作。</p>
@@ -2154,7 +2119,13 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+    i
+    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+        <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
 
 
