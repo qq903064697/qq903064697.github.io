@@ -20,24 +20,21 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="第1章 绪论软件的定义：软件是程序以及开发、使用和维护程序需要的所有文档 软件危机软件危机指的是在计算机软件的开发和维护过程中所遇到的一系列严重问题 概括来说，软件危机包含两方面问题：  如何开发软件，以满足不断增长，日趋复杂的需求 如何维护数量不断膨胀的软件产品  软件危机的表现 对软件开发成本和进度的估计常常不准确,软件生产进度无法控制 软件需求定义不准确，易偏离用户需求 软件产品的质量往往靠">
+    <meta name="description" content="给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。 示例: 123给定 nums &#x3D; [2, 7, 11, 15], target &#x3D; 9因为 nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9所以返回 [0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="软件工程笔记">
-<meta property="og:url" content="http://example.com/2020/09/27/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="Leetcode第一题：两数之和">
+<meta property="og:url" content="http://example.com/2020/10/07/leetcode/Leetcode%E7%AC%AC%E4%B8%80%E9%A2%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第1章 绪论软件的定义：软件是程序以及开发、使用和维护程序需要的所有文档 软件危机软件危机指的是在计算机软件的开发和维护过程中所遇到的一系列严重问题 概括来说，软件危机包含两方面问题：  如何开发软件，以满足不断增长，日趋复杂的需求 如何维护数量不断膨胀的软件产品  软件危机的表现 对软件开发成本和进度的估计常常不准确,软件生产进度无法控制 软件需求定义不准确，易偏离用户需求 软件产品的质量往往靠">
+<meta property="og:description" content="给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。 示例: 123给定 nums &#x3D; [2, 7, 11, 15], target &#x3D; 9因为 nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9所以返回 [0">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/qq903064697/img-blog/blob/master/images/image-20201001161059436.png?raw=true">
-<meta property="og:image" content="https://github.com/qq903064697/img-blog/blob/master/images/image-20201001161745580.png?raw=true">
-<meta property="article:published_time" content="2020-09-27T04:37:45.652Z">
-<meta property="article:modified_time" content="2020-10-07T08:20:45.857Z">
+<meta property="article:published_time" content="2020-10-07T07:35:08.247Z">
+<meta property="article:modified_time" content="2020-10-07T08:20:35.390Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/qq903064697/img-blog/blob/master/images/image-20201001161059436.png?raw=true">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>软件工程笔记 · Han&#39;s Blog</title>
+    <title>Leetcode第一题：两数之和 · Han&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -232,7 +229,7 @@
                 <a href="/" >Han&#39;s Blog.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">软件工程笔记</a>
+                <a href="#" class="post-name">Leetcode第一题：两数之和</a>
             </div>
     </div>
     
@@ -262,7 +259,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            软件工程笔记
+            Leetcode第一题：两数之和
             <!-- 404 -->
             
         </h1>
@@ -281,12 +278,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">1.7k</span>Reading time: <span class="post-count reading-time">5 min</span></span>
+                        <span>Word count: <span class="post-count word-count">651</span>Reading time: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/09/27</span>
+                    <span class="post-intro-time">2020/10/07</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -410,88 +407,26 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="第1章-绪论"><a href="#第1章-绪论" class="headerlink" title="第1章 绪论"></a>第1章 绪论</h1><p>软件的定义：软件是程序以及开发、使用和维护程序需要的所有文档</p>
-<h2 id="软件危机"><a href="#软件危机" class="headerlink" title="软件危机"></a>软件危机</h2><p>软件危机指的是在计算机软件的开发和维护过程中所遇到的一系列严重问题</p>
-<p>概括来说，软件危机包含两方面问题：</p>
-<ol>
-<li>如何开发软件，以满足不断增长，日趋复杂的需求</li>
-<li>如何维护数量不断膨胀的软件产品</li>
-</ol>
-<h3 id="软件危机的表现"><a href="#软件危机的表现" class="headerlink" title="软件危机的表现"></a>软件危机的表现</h3><ul>
-<li>对软件开发成本和进度的估计常常不准确,软件生产进度无法控制</li>
-<li>软件需求定义不准确，易偏离用户需求</li>
-<li>软件产品的质量往往靠不住</li>
-<li>软件的可维护程度非常之低</li>
-<li>软件通常没有适当的文档资料</li>
-<li>软件的成本不断提高</li>
-<li>软件开发生产率的提高赶不上硬件的发展和人们需求的增长</li>
+        <p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那<strong>两个</strong>整数，并返回他们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定 nums &#x3D; [2, 7, 11, 15], target &#x3D; 9</span><br><span class="line">因为 nums[0] + nums[1] &#x3D; 2 + 7 &#x3D; 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure>
+<h4 id="方法一：暴力枚举"><a href="#方法一：暴力枚举" class="headerlink" title="方法一：暴力枚举"></a>方法一：暴力枚举</h4><h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>最容易想到的方法是枚举数组中的每一个数<code>x</code>，寻找数组中是否存在<code>target-x</code>。</p>
+<p>当我们使用遍历整个数组的方式寻找<code>target-x</code>时，需要注意到每一个位于<code>x</code>之前的元素都已经和<code>x</code>匹配过，因此不需要再进行匹配。而每一个元素不能被使用两次，所以我们只需要在 x 后面的元素中寻找<code>target-x</code>。</p>
+<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; n; ++j) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] + nums[j] == target) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, j&#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h5><ul>
+<li>时间复杂度：$O(N^2)$，其中$N$是数组中的元素数量。最坏情况下数组中任意两个数都要被匹配一次。</li>
+<li>空间复杂度：$O(1)$</li>
 </ul>
-<h3 id="软件危机产生的原因"><a href="#软件危机产生的原因" class="headerlink" title="软件危机产生的原因"></a>软件危机产生的原因</h3><ul>
-<li>软件本身的特点</li>
-<li>对软件开发与维护存在许多错误认识和做法</li>
-<li>软件开发与维护的方法不正确</li>
+<h4 id="方法二：哈希表"><a href="#方法二：哈希表" class="headerlink" title="方法二：哈希表"></a>方法二：哈希表</h4><h5 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h5><p>注意到方法一的时间复杂度较高的原因是寻找<code>target - x</code>的时间复杂度过高。因此我们需要一种更优秀的方法，能够快速寻找数组中是否存在目标元素。如果存在，我们需要找出它的索引。</p>
+<p>使用哈希表，可以将寻找<code>target - x</code>的时间复杂度降低到从$O(N)$ 降低到$O(1)$。</p>
+<p>这样我们创建一个哈希表，对于每一个<code>x</code>，我们首先查询哈希表中是否存在<code>target - x</code>，然后将<code>x</code> 插入到哈希表中，即可保证不会让<code>x</code> 和自己匹配。</p>
+<h5 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; hashtable = <span class="keyword">new</span> HashMap&lt;Integer, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (hashtable.containsKey(target - nums[i])) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;hashtable.get(target - nums[i]), i&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            hashtable.put(nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h5><ul>
+<li>时间复杂度：$O(N)$，其中$N$是数组中的元素数量。对于每个一元素<code>x</code>，我们可以O(1)地寻找<code>target-x</code>。</li>
+<li>空间复杂度：$O(N)$，其中$N$是数组中地元素数量。主要为哈希表的开销。</li>
 </ul>
-<h2 id="软件的特性"><a href="#软件的特性" class="headerlink" title="软件的特性"></a>软件的特性</h2><ul>
-<li><strong>软件是一种逻辑实体，具有抽象性</strong>——这个特点使它与其它工程对象有着明显的差异。人们可以把它记录在纸上、内存、和磁盘、光盘上，但却无法看到软件本身的形态，必须通过观察、分析、思考、判断，才能了解它的功能、性能等特性。</li>
-<li><strong>软件没有明显的制造过程</strong>——一旦研制开发成功，就可以大量拷贝同一内容的副本。所以对软件的质量控制，必须着重在软件开发方面下工夫。</li>
-<li><strong>软件在使用过程中，没有磨损、老化的问题</strong>——软件在生存周期后期不会因为磨损而老化，但会为了适应硬件、环境以及需求的变化而进行修改，而这些修改有不可避免的引入错误，导致软件失效率升高，从而导致软件<strong>退化</strong>。当修改的成本变得难以接受时，软件就被抛弃。</li>
-<li><strong>软件对硬件和环境有着不同程度的依赖性</strong>——这导致了软件移植的问题。</li>
-<li><strong>软件的开发至今尚未完全摆脱手工作坊式的开发方式</strong>——生产效率低。</li>
-<li><strong>软件是复杂的，而且以后会更加复杂</strong>——软件是人类有史以来生产的复杂度最高的工业产品。软件涉及人类社会的各行各业、方方面面，软件开发常常涉及其它领域的专门知识，这对软件工程师提出了很高的要求。</li>
-<li><strong>软件的成本相当昂贵</strong>——软件开发需要投入大量、高强度的脑力劳动，成本非常高，风险也大。现在软件的开销已大大超过了硬件的开销。</li>
-<li><strong>软件工作牵涉到很多社会因素</strong>——许多软件的开发和运行涉及机构、体制和管理方式等问题，还会设计到人们的观念和心理。这些人的因素，常常成为软件开发的困难所在，直接影响到项目的成败。</li>
-</ul>
-<h3 id="软件面临的新挑战"><a href="#软件面临的新挑战" class="headerlink" title="软件面临的新挑战"></a>软件面临的新挑战</h3><ul>
-<li>软件复杂性的增加</li>
-<li>软件规模的不断扩大</li>
-<li>软件环境的变化</li>
-<li>遗留系统的集成和复用</li>
-<li>软件开发的高质量和敏捷性要求</li>
-<li>分散的开发团队的协同</li>
-</ul>
-<h2 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h2><p><strong>软件工程</strong>采用工程的概念、原理、技术和方法来开发与维护软件的过程。</p>
-<p><strong>软件工程学</strong>是一门研究如何用系统化、规范化、数量化等工程原则和方法去进行软件的开发和维护的学科。</p>
-<h3 id="软件工程的本质特性"><a href="#软件工程的本质特性" class="headerlink" title="软件工程的本质特性"></a>软件工程的本质特性</h3><ul>
-<li>软件工程关注大型程序的构造；</li>
-<li>软件工程的中心课题的控制复杂性；</li>
-<li>软件经常变化；</li>
-<li>软件开发效率很重要；</li>
-<li>良好的合作是软件开发的关键；</li>
-<li>软件必须有效地支持它的用户；</li>
-<li>软件工程领域通常由一种专业人士替另一种专业人士创造产品</li>
-</ul>
-<h3 id="软件工程的传统途径——生命周期方法学"><a href="#软件工程的传统途径——生命周期方法学" class="headerlink" title="软件工程的传统途径——生命周期方法学"></a>软件工程的传统途径——生命周期方法学</h3><h4 id="生命周期方法学的基本内容"><a href="#生命周期方法学的基本内容" class="headerlink" title="生命周期方法学的基本内容"></a>生命周期方法学的基本内容</h4><p>从时间角度对软件开发和维护的复杂问题进行分解，把软件生命的漫长周期依次划分为若干个阶段，然后逐步完成。</p>
-<h4 id="生命周期方法学的应用方法"><a href="#生命周期方法学的应用方法" class="headerlink" title="生命周期方法学的应用方法"></a>生命周期方法学的应用方法</h4><p>从对任务的抽象逻辑分析开始，一个阶段一个阶段地进行开发；前一个阶段任务的完成是后一个阶段工作的前提和基础，而后一个阶段任务通常是使前一阶段提出的解法更进一步的具体化。</p>
-<h3 id="阶段过渡方法"><a href="#阶段过渡方法" class="headerlink" title="阶段过渡方法"></a>阶段过渡方法</h3><p>每一个阶段的开始和结束都有严格标准，前一阶段结束的标准是后一阶段工作开始的标准。技术审查和管理复审。</p>
-<p><img src="https://github.com/qq903064697/img-blog/blob/master/images/image-20201001161059436.png?raw=true" alt="image-20201001161059436"></p>
-<h3 id="技术审查和管理复审"><a href="#技术审查和管理复审" class="headerlink" title="技术审查和管理复审"></a>技术审查和管理复审</h3><p>管理复审的基本任务：在软件生命周期的每个重要的里程碑（一般是每个阶段计划、需求分析、设计、编码、维护）对工程项目的成本、实际花费、投资回报的前景等从管理的角度进行审查。</p>
-<p>技术审查的基本任务：在软件生命周期的每个阶段进行正式而严格的技术审查，尽量发现隐藏的错误。</p>
-<p>正式技术评审是软件工程实践者实施的一项软件质量保证活动</p>
-<h2 id="软件工程的金三角"><a href="#软件工程的金三角" class="headerlink" title="软件工程的金三角"></a>软件工程的金三角</h2><p><img src="https://github.com/qq903064697/img-blog/blob/master/images/image-20201001161745580.png?raw=true" alt="image-20201001161745580"></p>
-<ul>
-<li><p>人</p>
-<p>完成软件开发的主体</p>
-</li>
-<li><p>技术</p>
-<p>提供了建造软件在技术上需要“如何做”的方法，核心技术包括：系统工程、软件需求、软件设计、软件构造、软件测试、软件维护。</p>
-</li>
-<li><p>管理</p>
-<p>提供了质量管理、成本管理、时间管理、范围管理等知识和技能</p>
-</li>
-</ul>
-<h2 id="控制软件开发的复杂性"><a href="#控制软件开发的复杂性" class="headerlink" title="控制软件开发的复杂性"></a>控制软件开发的复杂性</h2><p>技术的复杂性、需求的复杂性、人的复杂性。</p>
-<ul>
-<li><p>抽象</p>
-<p>抽出共同的、本质的特征，包括两种： 过程抽象与数据抽象。</p>
-</li>
-<li><p>分解</p>
-<p>分而治之，把复杂问题分成若干简单的子问题。</p>
-</li>
-<li><p>迭代</p>
-<p>返复、循环求解，当无法正确抽象和分解时采用迭代的方法，以积累经验。</p>
-</li>
-</ul>
-<h1 id="第2章-软件过程"><a href="#第2章-软件过程" class="headerlink" title="第2章 软件过程"></a>第2章 软件过程</h1>
+
     </article>
     <!-- license  -->
     
@@ -500,16 +435,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/10/07/Leetcode%E7%AC%AC%E4%B8%80%E9%A2%98/" title= "Leetcode第一题：两数之和">
-                    <div class="nextTitle">Leetcode第一题：两数之和</div>
+                <a href= "/2020/10/10/leetcode/Leetcode%E7%AC%AC%E4%BA%8C%E9%A2%98/" title= "Leetcode第二题：整数反转">
+                    <div class="nextTitle">Leetcode第二题：整数反转</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/09/27/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" title= "数字图像处理笔记">
-                    <div class="prevTitle">数字图像处理笔记</div>
+                <a href= "/2020/09/27/notebook/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/" title= "软件工程笔记">
+                    <div class="prevTitle">软件工程笔记</div>
                 </a>
             
         </li>
@@ -639,7 +574,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%BB%AA%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text">第1章 绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8D%B1%E6%9C%BA"><span class="toc-number">1.1.</span> <span class="toc-text">软件危机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8D%B1%E6%9C%BA%E7%9A%84%E8%A1%A8%E7%8E%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">软件危机的表现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%8D%B1%E6%9C%BA%E4%BA%A7%E7%94%9F%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.1.2.</span> <span class="toc-text">软件危机产生的原因</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%9A%84%E7%89%B9%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">软件的特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E9%9D%A2%E4%B8%B4%E7%9A%84%E6%96%B0%E6%8C%91%E6%88%98"><span class="toc-number">1.2.1.</span> <span class="toc-text">软件面临的新挑战</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">软件工程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%9A%84%E6%9C%AC%E8%B4%A8%E7%89%B9%E6%80%A7"><span class="toc-number">1.3.1.</span> <span class="toc-text">软件工程的本质特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%9A%84%E4%BC%A0%E7%BB%9F%E9%80%94%E5%BE%84%E2%80%94%E2%80%94%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%96%B9%E6%B3%95%E5%AD%A6"><span class="toc-number">1.3.2.</span> <span class="toc-text">软件工程的传统途径——生命周期方法学</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%96%B9%E6%B3%95%E5%AD%A6%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">生命周期方法学的基本内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%96%B9%E6%B3%95%E5%AD%A6%E7%9A%84%E5%BA%94%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">生命周期方法学的应用方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B6%E6%AE%B5%E8%BF%87%E6%B8%A1%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.3.</span> <span class="toc-text">阶段过渡方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E5%AE%A1%E6%9F%A5%E5%92%8C%E7%AE%A1%E7%90%86%E5%A4%8D%E5%AE%A1"><span class="toc-number">1.3.4.</span> <span class="toc-text">技术审查和管理复审</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%9A%84%E9%87%91%E4%B8%89%E8%A7%92"><span class="toc-number">1.4.</span> <span class="toc-text">软件工程的金三角</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E5%A4%8D%E6%9D%82%E6%80%A7"><span class="toc-number">1.5.</span> <span class="toc-text">控制软件开发的复杂性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">第2章 软件过程</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E6%9A%B4%E5%8A%9B%E6%9E%9A%E4%B8%BE"><span class="toc-number">1.</span> <span class="toc-text">方法一：暴力枚举</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-number">1.1.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90"><span class="toc-number">1.3.</span> <span class="toc-text">复杂度分析</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="toc-number">2.</span> <span class="toc-text">方法二：哈希表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="toc-number">2.1.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="toc-number">2.2.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90-1"><span class="toc-number">2.3.</span> <span class="toc-text">复杂度分析</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -652,14 +587,6 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -734,32 +661,26 @@ top:50vh;
     
     
     
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/09/27/notebook/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" >数字图像处理笔记</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/10</span><a class="archive-post-title" href= "/2020/10/10/Leetcode%E7%AC%AC%E4%BA%8C%E9%A2%98/" >Leetcode第二题：整数反转</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/07</span><a class="archive-post-title" href= "/2020/10/07/Leetcode%E7%AC%AC%E4%B8%80%E9%A2%98/" >Leetcode第一题：两数之和</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/" >操作系统原理笔记</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86/" >数据库原理笔记</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/26</span><a class="archive-post-title" href= "/2020/09/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" >我的第一篇博客文章</a>
+            <span class="archive-post-date">09/26</span><a class="archive-post-title" href= "/2020/09/26/other/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" >我的第一篇博客文章</a>
         </li>
     
     
@@ -773,7 +694,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/09/27/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" >数字图像处理笔记</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/09/27/notebook/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/" >软件工程笔记</a>
         </li>
     
     
@@ -782,12 +703,27 @@ top:50vh;
     
         </ul>
     
-    <div class="archive-year"> Invalid date </div>
+    <div class="archive-year"> 2020 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/09/27/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/" >软件工程笔记</a>
+            <span class="archive-post-date">10/10</span><a class="archive-post-title" href= "/2020/10/10/leetcode/Leetcode%E7%AC%AC%E4%BA%8C%E9%A2%98/" >Leetcode第二题：整数反转</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/07</span><a class="archive-post-title" href= "/2020/10/07/leetcode/Leetcode%E7%AC%AC%E4%B8%80%E9%A2%98/" >Leetcode第一题：两数之和</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/notebook/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/" >操作系统原理笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/notebook/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86/" >数据库原理笔记</a>
         </li>
     
     </div>
@@ -863,7 +799,13 @@ jsonContent:
     
         <script src="/scripts/share.js" async></script>    
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+    i
+    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+        <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
 </html>
 
 
