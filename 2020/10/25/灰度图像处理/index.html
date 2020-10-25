@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+    <meta name="author" content="John Doe">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="John Doe">
+    
+    <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content="">
+    <meta name="description" content="三张照片，用代码计算直方图，概括直方图特点原图分别为  曝光不足   过度曝光   正常曝光    代码及其运行结果123456from PIL import Imageimport matplotlib.pyplot as pltimport numpy as npimg_a&#x3D;np.array(Image.open(&quot;a.png&quot;).convert(&amp;#x27;L&amp;#x27;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="灰度图像处理">
+<meta property="og:url" content="http://example.com/2020/10/25/%E7%81%B0%E5%BA%A6%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="三张照片，用代码计算直方图，概括直方图特点原图分别为  曝光不足   过度曝光   正常曝光    代码及其运行结果123456from PIL import Imageimport matplotlib.pyplot as pltimport numpy as npimg_a&#x3D;np.array(Image.open(&quot;a.png&quot;).convert(&amp;#x27;L&amp;#x27;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/a.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/b.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/c.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024144548373.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024144723598.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024144854501.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151252476.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151236684.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151219637.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024145358811.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024145417866.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024145449706.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024145619055.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151150106.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151133126.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150213508.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150346479.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150407151.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150522726.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150545596.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150613044.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150633689.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150807011.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150828348.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150847545.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150949793.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151827839.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151922169.png">
+<meta property="article:published_time" content="2020-10-25T01:26:26.501Z">
+<meta property="article:modified_time" content="2020-10-25T01:27:10.413Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/a.png">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    
+    <title>灰度图像处理 · Han&#39;s Blog</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+</script>
+
+    <link rel="icon" href= "/assets/favicon.jpg" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script" />
+    <link rel="preload" href="/scripts/main.js" as="script" />
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Han&#39;s Blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">灰度图像处理</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Han's Blog.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style="
+
+
+
+
+
+
+
+height:50vh;
+">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            灰度图像处理
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">1.6k</span>Reading time: <span class="post-count reading-time">7 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/10/25</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+        <script>
+ 
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  function asyncErr(){
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
+    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  var asyncLoadWithFallBack = function(arr, success, reject) {
+      var currReject = function(){
+        reject()
+        arr.shift()
+        if(arr.length)
+          async(arr[0], success, currReject)
+        }
+
+      async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack([
+    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
+    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
+    "/lib/webfontloader.min.js"
+  ], asyncCb, asyncErr)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="三张照片，用代码计算直方图，概括直方图特点"><a href="#三张照片，用代码计算直方图，概括直方图特点" class="headerlink" title="三张照片，用代码计算直方图，概括直方图特点"></a>三张照片，用代码计算直方图，概括直方图特点</h2><p>原图分别为</p>
+<ul>
+<li><p>曝光不足</p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/a.png" alt="a"></p>
+</li>
+<li><p>过度曝光</p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/b.png" alt="b"></p>
+</li>
+<li><p>正常曝光</p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/c.png" alt="c"></p>
+</li>
+</ul>
+<h3 id="代码及其运行结果"><a href="#代码及其运行结果" class="headerlink" title="代码及其运行结果"></a>代码及其运行结果</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img_a=np.array(Image.open(<span class="string">&quot;a.png&quot;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line">arr=img_a.flatten()</span><br><span class="line">n, bins, patches = plt.hist(arr, bins=<span class="number">256</span>, alpha=<span class="number">0.75</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024144548373.png" alt="image-20201024144548373"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">img_b=np.array(Image.open(<span class="string">&quot;b.png&quot;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line">arr=img_b.flatten()</span><br><span class="line">n, bins, patches = plt.hist(arr, bins=<span class="number">256</span>, alpha=<span class="number">0.75</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024144723598.png" alt="image-20201024144723598"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">img_c=np.array(Image.open(<span class="string">&quot;c.png&quot;</span>).convert(<span class="string">&#x27;L&#x27;</span>))</span><br><span class="line">arr=img_c.flatten()</span><br><span class="line">n, bins, patches = plt.hist(arr, bins=<span class="number">256</span>, alpha=<span class="number">0.75</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024144854501.png" alt="image-20201024144854501"></p>
+<h3 id="概述直方图的特点"><a href="#概述直方图的特点" class="headerlink" title="概述直方图的特点"></a>概述直方图的特点</h3><p>曝光不足的直方图最高峰位于最左侧，过度曝光的最高峰位于最右侧，正常曝光的直方图分布较为均衡，峰值没有位于两边界。</p>
+<h2 id="对-a-b-c-进行反转变换、对数变换、伽马变换；"><a href="#对-a-b-c-进行反转变换、对数变换、伽马变换；" class="headerlink" title="对(a)(b)(c)进行反转变换、对数变换、伽马变换；"></a>对(a)(b)(c)进行反转变换、对数变换、伽马变换；</h2><h3 id="反转变换"><a href="#反转变换" class="headerlink" title="反转变换"></a>反转变换</h3><h4 id="代码及其运行结果-1"><a href="#代码及其运行结果-1" class="headerlink" title="代码及其运行结果"></a>代码及其运行结果</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 反转变换</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reversal_transformation</span>(<span class="params">array</span>):</span></span><br><span class="line">    emptyarray = <span class="number">255</span>*np.ones(array.shape)</span><br><span class="line">    emptyarray = emptyarray-array</span><br><span class="line">    <span class="keyword">return</span> emptyarray</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    reversal_imag_a=reversal_transformation(img_a)</span><br><span class="line">    plt.imshow(reversal_imag_a, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151252476.png" alt="image-20201024151252476"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    reversal_imag_b=reversal_transformation(img_b)</span><br><span class="line">    plt.imshow(reversal_imag_b, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151236684.png" alt="image-20201024151236684"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    reversal_imag_c=reversal_transformation(img_c)</span><br><span class="line">    plt.imshow(reversal_imag_c, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151219637.png" alt="image-20201024151219637"></p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>增强了图像中暗色区域的灰色细节部分</p>
+<h3 id="对数变换"><a href="#对数变换" class="headerlink" title="对数变换"></a>对数变换</h3><h4 id="代码及其运行结果-2"><a href="#代码及其运行结果-2" class="headerlink" title="代码及其运行结果"></a>代码及其运行结果</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对数变换</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">logarithmic_transformation</span>(<span class="params">array, c</span>):</span></span><br><span class="line">    emptyarray = c*np.log(<span class="number">1</span>+array.astype(int))</span><br><span class="line">    <span class="keyword">return</span> emptyarray</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    log_imag_a = logarithmic_transformation(img_a,<span class="number">1</span>)</span><br><span class="line">    plt.imshow(log_imag_a, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024145358811.png" alt="image-20201024145358811"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    log_imag_b = logarithmic_transformation(img_b,<span class="number">1</span>)</span><br><span class="line">    plt.imshow(log_imag_b, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024145417866.png" alt="image-20201024145417866"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    log_imag_c = logarithmic_transformation(img_c,<span class="number">1</span>)</span><br><span class="line">    plt.imshow(log_imag_c, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024145449706.png" alt="image-20201024145449706"></p>
+<h4 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h4><ul>
+<li>把窄范围的低灰度级映射到宽范围的灰度级 (增强低灰度级)</li>
+<li>把宽范围的高灰度级映射到窄范围的高灰度级 (抑制高灰度级)</li>
+</ul>
+<h3 id="伽马变换"><a href="#伽马变换" class="headerlink" title="伽马变换"></a>伽马变换</h3><h4 id="代码及其运行结果-3"><a href="#代码及其运行结果-3" class="headerlink" title="代码及其运行结果"></a>代码及其运行结果</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 伽马变换</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gamma_transformation</span>(<span class="params">array,c,gamma</span>):</span></span><br><span class="line">    emptyarray = c*np.power(array.astype(int),gamma)</span><br><span class="line">    <span class="keyword">return</span> emptyarray</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:    </span><br><span class="line">    gamma_imag_a = gamma_transformation(img_a,<span class="number">1</span>,<span class="number">1.5</span>)</span><br><span class="line">    plt.imshow(gamma_imag_a, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024145619055.png" alt="image-20201024145619055"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    gamma_imag_b = gamma_transformation(img_b,<span class="number">1</span>,<span class="number">1.5</span>)</span><br><span class="line">    plt.imshow(gamma_imag_b, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151150106.png" alt="image-20201024151150106"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    gamma_imag_c = gamma_transformation(img_c,<span class="number">1</span>,<span class="number">1.5</span>)</span><br><span class="line">    plt.imshow(gamma_imag_c, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151133126.png" alt="image-20201024151133126"></p>
+<h4 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h4><p>$𝛾&lt;𝟏$: 扩展暗像素值, 压缩亮像素值<br>$𝛾&gt;𝟏$ : 压缩暗像素值, 扩展亮像素值</p>
+<h2 id="对-a-b-c-进行直方图均衡化；用-c-的直方图，对-a-和-b-进行直方图匹配"><a href="#对-a-b-c-进行直方图均衡化；用-c-的直方图，对-a-和-b-进行直方图匹配" class="headerlink" title="对(a)(b)(c)进行直方图均衡化；用(c)的直方图，对(a)和(b)进行直方图匹配"></a>对(a)(b)(c)进行直方图均衡化；用(c)的直方图，对(a)和(b)进行直方图匹配</h2><h3 id="直方图均衡化"><a href="#直方图均衡化" class="headerlink" title="直方图均衡化"></a>直方图均衡化</h3><h4 id="代码及其运行结果-4"><a href="#代码及其运行结果-4" class="headerlink" title="代码及其运行结果"></a>代码及其运行结果</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直方图均衡</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hist_equalization</span>(<span class="params">input_image</span>):</span></span><br><span class="line">    output_imgae = np.copy(input_image) <span class="comment"># 输出图像，初始化为输入</span></span><br><span class="line">    input_image_cp = np.copy(input_image) <span class="comment"># 输入图像的副本</span></span><br><span class="line">    m, n = input_image_cp.shape <span class="comment"># 输入图像的尺寸（行、列）</span></span><br><span class="line">    pixels_total_num = m*n<span class="comment"># 输入图像的像素点总数</span></span><br><span class="line">    input_image_grayscale_P = [] <span class="comment"># 输入图像中各灰度级出现的概率，亦即输入图像直方图</span></span><br><span class="line">    <span class="comment"># 求输入图像中各灰度级出现的概率，亦即输入图像直方图</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">256</span>):</span><br><span class="line">        input_image_grayscale_P.append(np.sum(input_image_cp == i) / pixels_total_num)</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># 求解输出图像</span></span><br><span class="line">    t = <span class="number">0</span>               <span class="comment"># 输入图像的灰度级分布函数F</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">256</span>):</span><br><span class="line">        t = t + input_image_grayscale_P[i]</span><br><span class="line">        output_imgae[np.where(input_image_cp == i)] = <span class="number">255</span> * t</span><br><span class="line">    <span class="keyword">return</span> output_imgae</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    output_image_a = hist_equalization(img_a)</span><br><span class="line">    n, bins, patches = plt.hist(output_image_a.flatten(), bins=<span class="number">256</span>, alpha=<span class="number">0.75</span>)</span><br><span class="line">    <span class="comment">#	plt.imshow(output_image_a, cmap=&quot;gray&quot;)</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150213508.png" alt="image-20201024150213508"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    output_image_b = hist_equalization(img_b)</span><br><span class="line">    n, bins, patches = plt.hist(output_image_b.flatten(), bins=<span class="number">256</span>, alpha=<span class="number">0.75</span>)</span><br><span class="line"><span class="comment">#     plt.imshow(output_image_b, cmap=&quot;gray&quot;)</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150346479.png" alt="image-20201024150346479"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    output_image_c = hist_equalization(img_c)</span><br><span class="line">    n, bins, patches = plt.hist(output_image_c.flatten(), bins=<span class="number">256</span>, alpha=<span class="number">0.75</span>)</span><br><span class="line"><span class="comment">#     plt.imshow(output_image_c, cmap=&quot;gray&quot;)</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150407151.png" alt="image-20201024150407151"></p>
+<h4 id="分析-3"><a href="#分析-3" class="headerlink" title="分析"></a>分析</h4><p>在均衡过程中，原来的直方图上频数较小的灰度级被归入很少几个或一个灰度级内，造成细节损失：</p>
+<ul>
+<li><p>若这些灰度级所构成的图像细节比较重要，则需采用局部区域直方图均衡；</p>
+</li>
+<li><p>一般，目标域背景的过渡处像素较少，由于归并，其或者变为背景或者变为目标点，从而使边界变得陡峭。</p>
+</li>
+</ul>
+<h3 id="直方图匹配"><a href="#直方图匹配" class="headerlink" title="直方图匹配"></a>直方图匹配</h3><h4 id="代码及其运行结果-5"><a href="#代码及其运行结果-5" class="headerlink" title="代码及其运行结果"></a>代码及其运行结果</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">out_1 = np.zeros_like(img_a)</span><br><span class="line">out_2 = np.zeros_like(img_b)</span><br><span class="line">hist_img_a , _ = np.histogram(img_a[:,:],<span class="number">256</span>)</span><br><span class="line">hist_img_b , _ = np.histogram(img_b[:,:],<span class="number">256</span>)</span><br><span class="line">hist_img_c , _ = np.histogram(img_c[:,:],<span class="number">256</span>)</span><br><span class="line">cdf_img_a = np.cumsum(hist_img_a)</span><br><span class="line">cdf_img_b = np.cumsum(hist_img_b)</span><br><span class="line">cdf_img_c = np.cumsum(hist_img_c)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">256</span>):</span><br><span class="line">    tmp1 = abs(cdf_img_a[i]-cdf_img_c)</span><br><span class="line">    tmp1 = tmp1.tolist()</span><br><span class="line">    idx1 = tmp1.index(min(tmp1))</span><br><span class="line">    out_1[:,:][img_a[:,:]==i] = idx1</span><br><span class="line">n, bins, patches = plt.hist(out_1.flatten(), bins=<span class="number">256</span>, alpha=<span class="number">0.75</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150522726.png" alt="image-20201024150522726"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.imshow(out_1, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150545596.png" alt="image-20201024150545596"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">256</span>):</span><br><span class="line">    tmp2 = abs(cdf_img_b[j]-cdf_img_c)</span><br><span class="line">    tmp2 = tmp2.tolist()</span><br><span class="line">    idx2 = tmp2.index(min(tmp2))</span><br><span class="line">    out_2[:,:][img_a[:,:]==j] = idx2</span><br><span class="line">n, bins, patches = plt.hist(out_2.flatten(), bins=<span class="number">256</span>, alpha=<span class="number">0.75</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150613044.png" alt="image-20201024150613044"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.imshow(out_2, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150633689.png" alt="image-20201024150633689"></p>
+<h4 id="分析-4"><a href="#分析-4" class="headerlink" title="分析"></a>分析</h4><p>直方图匹配修改一幅图像的直方图，使得它与另一幅图像的直方图匹配或者具有一种预先规定的函数形状。突出了感兴趣的灰度范围，使图像质量改善。</p>
+<h2 id="对-a-b-c-进行平滑空间滤波和锐化空间滤波"><a href="#对-a-b-c-进行平滑空间滤波和锐化空间滤波" class="headerlink" title="对(a)(b)(c)进行平滑空间滤波和锐化空间滤波"></a>对(a)(b)(c)进行平滑空间滤波和锐化空间滤波</h2><h3 id="平滑空间滤波"><a href="#平滑空间滤波" class="headerlink" title="平滑空间滤波"></a>平滑空间滤波</h3><h4 id="代码及其运行结果-6"><a href="#代码及其运行结果-6" class="headerlink" title="代码及其运行结果"></a>代码及其运行结果</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 平滑空间滤波（均值滤波）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">means_filter</span>(<span class="params">input_image, filter_size</span>):</span></span><br><span class="line">    input_image_cp = np.copy(input_image)  <span class="comment"># 输入图像的副本</span></span><br><span class="line">    filter_template = np.ones((filter_size, filter_size))  <span class="comment"># 空间滤波器模板</span></span><br><span class="line">    pad_num = int((filter_size - <span class="number">1</span>) / <span class="number">2</span>)  <span class="comment"># 输入图像需要填充的尺寸</span></span><br><span class="line">    input_image_cp = np.pad(input_image_cp, (pad_num, pad_num), mode=<span class="string">&quot;constant&quot;</span>, constant_values=<span class="number">0</span>)  <span class="comment"># 填充输入图像</span></span><br><span class="line">    m, n = input_image_cp.shape  <span class="comment"># 获取填充后的输入图像的大小</span></span><br><span class="line">    output_image = np.copy(input_image_cp)  <span class="comment"># 输出图像</span></span><br><span class="line">     <span class="comment"># 空间滤波</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(pad_num, m - pad_num):</span><br><span class="line">         <span class="keyword">for</span> j <span class="keyword">in</span> range(pad_num, n - pad_num):</span><br><span class="line">            output_image[i, j] = np.sum(filter_template * input_image_cp[i - pad_num:i + pad_num + <span class="number">1</span>, j - pad_num:j + pad_num + <span class="number">1</span>]) / (filter_size ** <span class="number">2</span>)</span><br><span class="line">    output_image = output_image[pad_num:m - pad_num, pad_num:n - pad_num]  <span class="comment"># 裁剪</span></span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> output_image</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    means_filter_imag_a = means_filter(img_a, <span class="number">3</span>)</span><br><span class="line">    plt.imshow(means_filter_imag_a, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150807011.png" alt="image-20201024150807011"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    means_filter_imag_b = means_filter(img_b, <span class="number">3</span>)</span><br><span class="line">    plt.imshow(means_filter_imag_b, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150828348.png" alt="image-20201024150828348"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    means_filter_imag_c = means_filter(img_c, <span class="number">3</span>)</span><br><span class="line">    plt.imshow(means_filter_imag_c, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150847545.png" alt="image-20201024150847545"></p>
+<h4 id="分析-5"><a href="#分析-5" class="headerlink" title="分析"></a>分析</h4><p>平滑空间滤波对图像进行模糊处理，去除了图像中一些不重要的细节，减小了噪声。</p>
+<h3 id="锐化空间滤波"><a href="#锐化空间滤波" class="headerlink" title="锐化空间滤波"></a>锐化空间滤波</h3><h4 id="代码及其运行结果-7"><a href="#代码及其运行结果-7" class="headerlink" title="代码及其运行结果"></a>代码及其运行结果</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 锐化空间滤波（拉普拉斯算子）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">laplace_sharpen</span>(<span class="params">input_image, c</span>):</span></span><br><span class="line">    input_image_cp = np.copy(input_image)  <span class="comment"># 输入图像的副本</span></span><br><span class="line">    <span class="comment"># 拉普拉斯滤波器</span></span><br><span class="line">    laplace_filter = np.array([</span><br><span class="line">         [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">         [<span class="number">1</span>, <span class="number">-8</span>, <span class="number">1</span>],</span><br><span class="line">         [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">    ])</span><br><span class="line">    input_image_cp = np.pad(input_image_cp, (<span class="number">1</span>, <span class="number">1</span>), mode=<span class="string">&#x27;constant&#x27;</span>, constant_values=<span class="number">0</span>)  <span class="comment"># 填充输入图像</span></span><br><span class="line">    m, n = input_image_cp.shape  <span class="comment"># 填充后的输入图像的尺寸</span></span><br><span class="line">    output_image = np.copy(input_image_cp)  <span class="comment"># 输出图像</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, m - <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, n - <span class="number">1</span>):</span><br><span class="line">            R = np.sum(laplace_filter * input_image_cp[i - <span class="number">1</span>:i + <span class="number">2</span>, j - <span class="number">1</span>:j + <span class="number">2</span>])  <span class="comment"># 拉普拉斯滤波器响应</span></span><br><span class="line">            output_image[i, j] = input_image_cp[i, j] + c * R</span><br><span class="line">    output_image = output_image[<span class="number">1</span>:m - <span class="number">1</span>, <span class="number">1</span>:n - <span class="number">1</span>]  <span class="comment"># 裁剪</span></span><br><span class="line">    <span class="keyword">return</span> output_image</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    laplace_sharpen_imag_a = laplace_sharpen(img_a, <span class="number">1</span>)</span><br><span class="line">    plt.imshow(laplace_sharpen_imag_a, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024150949793.png" alt="image-20201024150949793"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    laplace_sharpen_imag_b = laplace_sharpen(img_b, <span class="number">1</span>)</span><br><span class="line">    plt.imshow(laplace_sharpen_imag_b, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151827839.png" alt="image-20201024151827839"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    laplace_sharpen_imag_c = laplace_sharpen(img_c, <span class="number">1</span>)</span><br><span class="line">    plt.imshow(laplace_sharpen_imag_c, cmap=<span class="string">&quot;gray&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201024151922169.png" alt="image-20201024151922169"></p>
+<h4 id="分析-6"><a href="#分析-6" class="headerlink" title="分析"></a>分析</h4><p>锐化空间滤波突出了图像中的细节，增强了被模糊的细节。</p>
+
+    </article>
+    <!-- license  -->
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/10/17/Leetcode%E7%AC%AC%E5%9B%9B%E9%A2%98/" title= "Leetcode第四题：合并两个有序链表">
+                    <div class="prevTitle">Leetcode第四题：合并两个有序链表</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:903064697@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/qq903064697" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer qq" title=qq>
+                  
+                  <img class="profile-qr" src="/assets/qq.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+    
+     
+    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+    
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%BC%A0%E7%85%A7%E7%89%87%EF%BC%8C%E7%94%A8%E4%BB%A3%E7%A0%81%E8%AE%A1%E7%AE%97%E7%9B%B4%E6%96%B9%E5%9B%BE%EF%BC%8C%E6%A6%82%E6%8B%AC%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%89%B9%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">三张照片，用代码计算直方图，概括直方图特点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%8A%E5%85%B6%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.1.</span> <span class="toc-text">代码及其运行结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">概述直方图的特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9-a-b-c-%E8%BF%9B%E8%A1%8C%E5%8F%8D%E8%BD%AC%E5%8F%98%E6%8D%A2%E3%80%81%E5%AF%B9%E6%95%B0%E5%8F%98%E6%8D%A2%E3%80%81%E4%BC%BD%E9%A9%AC%E5%8F%98%E6%8D%A2%EF%BC%9B"><span class="toc-number">2.</span> <span class="toc-text">对(a)(b)(c)进行反转变换、对数变换、伽马变换；</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E8%BD%AC%E5%8F%98%E6%8D%A2"><span class="toc-number">2.1.</span> <span class="toc-text">反转变换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%8A%E5%85%B6%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-1"><span class="toc-number">2.1.1.</span> <span class="toc-text">代码及其运行结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">2.1.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E5%8F%98%E6%8D%A2"><span class="toc-number">2.2.</span> <span class="toc-text">对数变换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%8A%E5%85%B6%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-2"><span class="toc-number">2.2.1.</span> <span class="toc-text">代码及其运行结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%BD%E9%A9%AC%E5%8F%98%E6%8D%A2"><span class="toc-number">2.3.</span> <span class="toc-text">伽马变换</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%8A%E5%85%B6%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-3"><span class="toc-number">2.3.1.</span> <span class="toc-text">代码及其运行结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90-2"><span class="toc-number">2.3.2.</span> <span class="toc-text">分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9-a-b-c-%E8%BF%9B%E8%A1%8C%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96%EF%BC%9B%E7%94%A8-c-%E7%9A%84%E7%9B%B4%E6%96%B9%E5%9B%BE%EF%BC%8C%E5%AF%B9-a-%E5%92%8C-b-%E8%BF%9B%E8%A1%8C%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%8C%B9%E9%85%8D"><span class="toc-number">3.</span> <span class="toc-text">对(a)(b)(c)进行直方图均衡化；用(c)的直方图，对(a)和(b)进行直方图匹配</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96"><span class="toc-number">3.1.</span> <span class="toc-text">直方图均衡化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%8A%E5%85%B6%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-4"><span class="toc-number">3.1.1.</span> <span class="toc-text">代码及其运行结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90-3"><span class="toc-number">3.1.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%8C%B9%E9%85%8D"><span class="toc-number">3.2.</span> <span class="toc-text">直方图匹配</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%8A%E5%85%B6%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-5"><span class="toc-number">3.2.1.</span> <span class="toc-text">代码及其运行结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90-4"><span class="toc-number">3.2.2.</span> <span class="toc-text">分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9-a-b-c-%E8%BF%9B%E8%A1%8C%E5%B9%B3%E6%BB%91%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2%E5%92%8C%E9%94%90%E5%8C%96%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2"><span class="toc-number">4.</span> <span class="toc-text">对(a)(b)(c)进行平滑空间滤波和锐化空间滤波</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E6%BB%91%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2"><span class="toc-number">4.1.</span> <span class="toc-text">平滑空间滤波</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%8A%E5%85%B6%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-6"><span class="toc-number">4.1.1.</span> <span class="toc-text">代码及其运行结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90-5"><span class="toc-number">4.1.2.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%90%E5%8C%96%E7%A9%BA%E9%97%B4%E6%BB%A4%E6%B3%A2"><span class="toc-number">4.2.</span> <span class="toc-text">锐化空间滤波</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%8A%E5%85%B6%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C-7"><span class="toc-number">4.2.1.</span> <span class="toc-text">代码及其运行结果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%9E%90-6"><span class="toc-number">4.2.2.</span> <span class="toc-text">分析</span></a></li></ol></li></ol></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 10
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/17</span><a class="archive-post-title" href= "/2020/10/17/Leetcode%E7%AC%AC%E5%9B%9B%E9%A2%98/" >Leetcode第四题：合并两个有序链表</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/13</span><a class="archive-post-title" href= "/2020/10/13/Leetcode%E7%AC%AC%E4%B8%89%E9%A2%98/" >Leetcode第三题：罗马数字转整数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/10</span><a class="archive-post-title" href= "/2020/10/10/Leetcode%E7%AC%AC%E4%BA%8C%E9%A2%98/" >Leetcode第二题：整数反转</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/07</span><a class="archive-post-title" href= "/2020/10/07/Leetcode%E7%AC%AC%E4%B8%80%E9%A2%98/" >Leetcode第一题：两数之和</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/09/27/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" >数字图像处理笔记</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86/" >数据库原理笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/26</span><a class="archive-post-title" href= "/2020/09/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" >我的第一篇博客文章</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/09/27/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/" >软件工程笔记</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/25</span><a class="archive-post-title" href= "/2020/10/25/%E7%81%B0%E5%BA%A6%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" >灰度图像处理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/" >操作系统原理笔记</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "John Doe"
+    }
+</script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+    <!-- algolia -->
+    
+    <!-- busuanzi  -->
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+     
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+    i
+    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+        <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
+
+
