@@ -367,6 +367,35 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/28/HTML%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/" >
+            
+                <span>HTML基本知识</span>
+        </a>
+        <div class="abstract-content">
+            HTML简介及其基本标记一、Web常用术语
+浏览器：是客户软件，它使用户能够显示一超文本文档并与之对话。
+Web服务器：响应Web浏览器检索资源的请求。它也用来指运行服务器程序的计算机。
+主页：他是当用户选择连接到任何Web服务器时被显示的第一个超文本文档。
+HTML（Hypertext Markup Language/超文本标记语言）：是用来创建Web文档的编码形式。
+HTTP（Hypertext Transfer Pretocol/超文本传输协议）：时用来在Web上传输超文本的协议。所谓协议是计算机用来通讯的一套规则。
+URL（Uniform Resource Locator/统一资...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/28</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/10/25/%E7%81%B0%E5%BA%A6%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" >
             
                 <span>灰度图像处理</span>
@@ -384,9 +413,15 @@ height:50vh;
 
 
 
-代码及其运行结果123456from PIL import Imageimport matplotlib.pyplot as pltimport numpy as npimg_a=np.array(Image.open(&quot;a.png&quot;).convert(&#x27;L&#x27;))arr=img_a.flatten()n, bins, patches = plt.hist(arr, bins=256, alpha=0.75)
+直方图原理定义
+灰度级为$[0,L-1]$范围的数字图像的直方图(Histogram)是离散函数$h(r_k)=nk(k=0,1,…,L-1)$;
+$r_k$是第$k$级灰度；
+$n_k$是图像中灰度级为$r_k$的像素的个数。
 
-123img_b=np.array(Im...
+
+归一化的直方图：$h(r_k)=\frac{n_k}{n}(k=0,1,…,L-1)$，$n$为图像总像素个数，$\sum_kh(r_k)=1$。
+
+代码及其运行结果123456from PIL import Imageimport matplotlib.py...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -671,35 +706,11 @@ height:50vh;
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/09/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" >
-            
-                <span>我的第一篇博客文章</span>
-        </a>
-        <div class="abstract-content">
-            仅记录下第一篇博客文章，其实一直以来都想写技术博客，可是迟迟未能动笔，各种原因吧。
-但是其实很多时候这些都是借口，因为时间挤挤总是有的。现代人的时间变的很碎片化，仅有的一些空闲时间也被社交软件、游戏、视频等软件所占用。
-对于一个想在技术领域有深入发展的人来说，确实还是要吃得了苦、耐得住寂寞的。
-所以下定决心开始写博客。记录工作中、学习中、生活中的点点滴滴。
-希望自己能从写博客文章中，积累经验总结教训、也可以给其他人带来一丝帮助就足以了。
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/09/26</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
+    
+    <nav class="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">NEXT &gt;</a>
+    </nav>
     
 </main>
             <!-- profile -->
@@ -999,9 +1010,22 @@ height:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 11
         </div>
         <!-- search  -->
         
@@ -1014,6 +1038,11 @@ height:50vh;
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/28</span><a class="archive-post-title" href= "/2020/10/28/HTML%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/" >HTML基本知识</a>
+        </li>
     
     
         <li class="archive-post-item">

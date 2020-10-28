@@ -354,6 +354,35 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/10/28/HTML%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/" >
+            
+                <span>HTML基本知识</span>
+        </a>
+        <div class="abstract-content">
+            HTML简介及其基本标记一、Web常用术语
+浏览器：是客户软件，它使用户能够显示一超文本文档并与之对话。
+Web服务器：响应Web浏览器检索资源的请求。它也用来指运行服务器程序的计算机。
+主页：他是当用户选择连接到任何Web服务器时被显示的第一个超文本文档。
+HTML（Hypertext Markup Language/超文本标记语言）：是用来创建Web文档的编码形式。
+HTTP（Hypertext Transfer Pretocol/超文本传输协议）：时用来在Web上传输超文本的协议。所谓协议是计算机用来通讯的一套规则。
+URL（Uniform Resource Locator/统一资...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/28</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/10/25/%E7%81%B0%E5%BA%A6%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" >
             
                 <span>灰度图像处理</span>
@@ -371,9 +400,15 @@
 
 
 
-代码及其运行结果123456from PIL import Imageimport matplotlib.pyplot as pltimport numpy as npimg_a=np.array(Image.open(&quot;a.png&quot;).convert(&#x27;L&#x27;))arr=img_a.flatten()n, bins, patches = plt.hist(arr, bins=256, alpha=0.75)
+直方图原理定义
+灰度级为$[0,L-1]$范围的数字图像的直方图(Histogram)是离散函数$h(r_k)=nk(k=0,1,…,L-1)$;
+$r_k$是第$k$级灰度；
+$n_k$是图像中灰度级为$r_k$的像素的个数。
 
-123img_b=np.array(Im...
+
+归一化的直方图：$h(r_k)=\frac{n_k}{n}(k=0,1,…,L-1)$，$n$为图像总像素个数，$\sum_kh(r_k)=1$。
+
+代码及其运行结果123456from PIL import Imageimport matplotlib.py...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -703,9 +738,22 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 10
+        Total : 11
         </div>
         <!-- search  -->
         
@@ -718,6 +766,11 @@
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/28</span><a class="archive-post-title" href= "/2020/10/28/HTML%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/" >HTML基本知识</a>
+        </li>
     
     
         <li class="archive-post-item">
