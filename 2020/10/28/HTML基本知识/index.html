@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201027163452990.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201027183342339.png">
 <meta property="article:published_time" content="2020-10-28T02:13:52.306Z">
-<meta property="article:modified_time" content="2020-10-28T02:13:37.298Z">
+<meta property="article:modified_time" content="2020-10-28T02:23:07.211Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201027163452990.png">
@@ -438,7 +438,7 @@ height:50vh;
 <p>HTML文档：一系列的标签，指定页面的显示方式</p>
 <p>标签</p>
 <ul>
-<li>开始标签：<>，结束标签：</></li>
+<li>开始标签：\&lt;>，结束标签：\&lt;/></li>
 <li>开始标签和结束标签之间的文本：元素的内容</li>
 </ul>
 <p>属性</p>
@@ -449,39 +449,39 @@ height:50vh;
 <li>属性只能添加到开始标签</li>
 </ul>
 <h3 id="HTML文档的三个组成部分"><a href="#HTML文档的三个组成部分" class="headerlink" title="HTML文档的三个组成部分"></a>HTML文档的三个组成部分</h3><ul>
-<li>HTML部分：以\<HTML>标签开始，以\</HTML>标签结束</li>
-<li>头部：以\<HEAD>标签开始，以\</HEAD>标签结束</li>
-<li>主体部分：以\<BODY>标签开始，以\</BODY>标签结束</li>
+<li>HTML部分：以\<HTML\>标签开始，以\&lt;/HTML>标签结束</li>
+<li>头部：以\<HEAD\>标签开始，以\&lt;/HEAD>标签结束</li>
+<li>主体部分：以\<BODY\>标签开始，以\&lt;/BODY>标签结束</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">HTML</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">HEAD</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">TITLE</span>&gt;</span>HTML课程<span class="tag">&lt;/<span class="name">TITLE</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">HEAD</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">BODY</span> <span class="attr">bgcolor</span>=<span class="string">&quot;yellow&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">P</span>&gt;</span>你现在来到的是HTML第一课<span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">BODY</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">HTML</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="HTML文档树"><a href="#HTML文档树" class="headerlink" title="HTML文档树"></a>HTML文档树</h3><p>HTML文档中的所有节点组成了一个文档树（或节点数）。HTML文档中的每个元素、属性、文本等都代表着树中的一个节点。树起始于文档节点，并由此继续伸出枝条，直到处于这棵树最低级别的所有文本节点为止。</p>
 <p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201027183342339.png" alt="image-20201027183342339"></p>
 <h2 id="四、HTML标签"><a href="#四、HTML标签" class="headerlink" title="四、HTML标签"></a>四、HTML标签</h2><h3 id="文本标签"><a href="#文本标签" class="headerlink" title="文本标签"></a>文本标签</h3><ul>
-<li>标题标签：6级标题，\<h1>最大，\<h6>最小</li>
-<li>段落：\<p></li>
-<li>换行：\<br></li>
-<li>格式：\<b>,\<u>,\<i>,\<em>,\<font></li>
-<li>内嵌文本：\<span></li>
-<li>上下标：\<sup>,\<sub></li>
-<li>计算机源代码：\<code></li>
-<li>保留文本中的空格和换行符：\<pre></li>
+<li>标题标签：6级标题，\<h1\>最大，\<h6\>最小</li>
+<li>段落：\<p\></li>
+<li>换行：\<br\></li>
+<li>格式：\<b\>,\<u\>,\<i\>,\<em\>,\<font\></li>
+<li>内嵌文本：\<span\></li>
+<li>上下标：\<sup\>,\<sub\></li>
+<li>计算机源代码：\<code\></li>
+<li>保留文本中的空格和换行符：\<pre\></li>
 <li>引用<ul>
-<li>\<blockquote cite=""> \</blockquote></li>
+<li>\<blockquote cite=""\> \&lt;/blockquote></li>
 </ul>
 </li>
 </ul>
 <h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><ul>
 <li>分割线：\<hr></li>
-<li>\&lt;img src=“URL” alt=“图片未能显示时效果” /&gt;</li>
+<li>\&lt;img src=“URL” alt=“图片未能显示时效果” /></li>
 </ul>
 <h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><ul>
-<li>\&lt;na href=“URL” target=”_blank”&gt;Link text\&lt;/a&gt;</li>
+<li>\&lt;na href=“URL” target=”_blank”>Link text\&lt;/a></li>
 <li>Link text：图片或其他HTML元素都可以成为链接</li>
 <li>Download：规定被下载的超链接目标,内容为下载后的文件名</li>
 <li>Target：_blank、_parent、_self、_top、framename</li>
 <li>name：锚anchor<ul>
-<li>\<a name=" tips ">\</a></li>
-<li>\<a href="#tips">\</a></li>
+<li>\<a name=" tips "\>\&lt;/a></li>
+<li>\<a href="#tips"\>\&lt;/a></li>
 </ul>
 </li>
 </ul>
@@ -500,15 +500,15 @@ height:50vh;
 </li>
 </ul>
 <h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><ul>
-<li>\<table><ul>
-<li>行：\<tr><ul>
-<li>单元格：\<td></li>
-<li>表头：\<th></li>
+<li>\<table\><ul>
+<li>行：\<tr\><ul>
+<li>单元格：\<td\></li>
+<li>表头：\<th\></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>\<thead>/\<tbody>/\<tfoot></li>
+<li>\<thead>/\<tbody\>/\<tfoot\></li>
 </ul>
 <h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
 <li>Border：边框宽度</li>
@@ -523,21 +523,21 @@ height:50vh;
 </li>
 <li><p>每个框架都独立于其他的框架</p>
 </li>
-<li><p>\<frameset></p>
+<li><p>\<frameset\></p>
 <ul>
-<li>\<frame></li>
+<li>\<frame\></li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">frameset</span> <span class="attr">cols</span>=<span class="string">&quot;25%,75%&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">frame</span> <span class="attr">src</span>=<span class="string">&quot;frame_a.htm&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">frame</span> <span class="attr">src</span>=<span class="string">&quot;frame_b.htm&quot;</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">frameset</span>&gt;</span> </span><br></pre></td></tr></table></figure>
 </li>
-<li><p>\<noframes></p>
+<li><p>\<noframes\></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">noframes</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span>您的浏览器无法处理框架！  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">noframes</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>框架嵌套</p>
 </li>
 <li><p>导航框架</p>
 <ul>
-<li>\<frame>:name属性</li>
-<li>\<a>：target属性</li>
+<li>\<frame\>:name属性</li>
+<li>\<a\>：target属性</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">frameset</span> <span class="attr">rows</span>=<span class="string">&quot;50%,50%&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">frame</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">frameset</span> <span class="attr">cols</span>=<span class="string">&quot;25%,75%&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">frame</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">frame</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">frameset</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">frameset</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -545,13 +545,13 @@ height:50vh;
 <h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><ul>
 <li><p>用于收集用户输入</p>
 </li>
-<li><p>\<form></p>
+<li><p>\<form\></p>
 <ul>
 <li>action属性：在提交表单时执行的动作</li>
 <li>method属性：提交表单时所用的HTTP方法（GET或POST）</li>
 </ul>
 </li>
-<li><p>\<input></p>
+<li><p>\<input\></p>
 <p>Type</p>
 <ul>
 <li>Text、password</li>
@@ -564,8 +564,8 @@ height:50vh;
 <ul>
 <li>value 、disabled 、readonly 、maxlength </li>
 <li>autocomplete( on/off) </li>
-<li>Novalidate：属于\<form> 标签</li>
-<li>Form：规定\<input> 元素所属的一个或多个表单</li>
+<li>Novalidate：属于\<form\> 标签</li>
+<li>Form：规定\<input\> 元素所属的一个或多个表单</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;action_page.php&quot;</span> <span class="attr">id</span>=<span class="string">&quot;form1&quot;</span>&gt;</span></span><br><span class="line">   First name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;fname&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> Last name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;lname&quot;</span> <span class="attr">form</span>=<span class="string">&quot;form1&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
@@ -573,11 +573,11 @@ height:50vh;
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">formaction</span>=<span class="string">&quot;demo_admin.asp&quot;</span><span class="attr">value</span>=<span class="string">&quot;Submit as admin&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>List：引用的 \<datalist> 元素中包含了 \<input> 元素的预定义选项</li>
+<li>List：引用的 \<datalist\> 元素中包含了 \<input\> 元素的预定义选项</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">list</span>=<span class="string">&quot;browsers&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">&quot;browsers&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Internet Explorer&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Firefox&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Chrome&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Opera&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;Safari&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span> </span><br></pre></td></tr></table></figure>
 <ul>
-<li>pattern ：检查 \<input> 元素值的正则表达式</li>
+<li>pattern ：检查 \<input\> 元素值的正则表达式</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Country code: </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;country_code&quot;</span> <span class="attr">pattern</span>=<span class="string">&quot;[A-Za-z]&#123;3&#125;&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">title</span>=<span class="string">&quot;Three letter country code&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
@@ -591,22 +591,22 @@ height:50vh;
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/html/&quot;</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">a</span>&gt;</span> |</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/css/&quot;</span>&gt;</span>CSS<span class="tag">&lt;/<span class="name">a</span>&gt;</span> |</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/js/&quot;</span>&gt;</span>JavaScript<span class="tag">&lt;/<span class="name">a</span>&gt;</span> |</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/jquery/&quot;</span>&gt;</span>jQuery<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="HTML5其他标签"><a href="#HTML5其他标签" class="headerlink" title="HTML5其他标签"></a>HTML5其他标签</h3><ul>
-<li>\<section>、\<article>、 \<header>、 \<footer></li>
+<li>\<section\>、\<article\>、 \<header\>、 \<footer\></li>
 <li>HTML4 ：属性名，HTML5：标签名</li>
 <li>Canvas（画布）/SVG （可伸缩矢量图形 (Scalable Vector Graphics)）</li>
 <li>多媒体、Web存储</li>
 </ul>
 <h3 id="头部"><a href="#头部" class="headerlink" title="头部"></a>头部</h3><ul>
-<li><p>\<title>：定义文档的标题</p>
+<li><p>\<title\>：定义文档的标题</p>
 </li>
-<li><p>\<base>：为页面上的所有链接规定默认地址或默认目标。使用指定的基本 URL 来解析所有的相对 URL</p>
+<li><p>\<base\>：为页面上的所有链接规定默认地址或默认目标。使用指定的基本 URL 来解析所有的相对 URL</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;http://www.csu.edu.cn/images&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">base</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>\<link>:定义文档与外部资源之间的关系</p>
+<li><p>\<link\>:定义文档与外部资源之间的关系</p>
 </li>
-<li><p>\<style>:HTML 文档定义样式信息</p>
+<li><p>\<style\>:HTML 文档定义样式信息</p>
 </li>
-<li><p>\<meta></p>
+<li><p>\<meta\></p>
 <ul>
 <li><p>提供关于 HTML 文档的元数据。元数据不会显示在页面上，对于机器是可读的</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">“UTF-8”</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;keywords&quot;</span> <span class="attr">content</span>=<span class="string">&quot;HTML,ASP,PHP,SQL&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -618,7 +618,7 @@ height:50vh;
 </li>
 </ul>
 <h3 id="HTML注释标签"><a href="#HTML注释标签" class="headerlink" title="HTML注释标签"></a>HTML注释标签</h3><ul>
-<li>\<!-- 在此处写注释 --></li>
+<li>\&lt;!— 在此处写注释 —></li>
 </ul>
 <h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><ul>
 <li><p>URL 只能使用 ASCII 字符集来通过因特网进行发送</p>
@@ -788,7 +788,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%A0%87%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">HTML简介及其基本标记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Web"><span class="toc-number">1.1.</span> <span class="toc-text">一、Web</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.1.1.</span> <span class="toc-text">常用术语</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81HTML%E7%AE%80%E4%BB%8B"><span class="toc-number">1.2.</span> <span class="toc-text">二、HTML简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%EF%BC%9A%E8%B6%85%E6%96%87%E6%9C%AC%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80"><span class="toc-number">1.2.1.</span> <span class="toc-text">HTML：超文本标记语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%EF%BC%88Cascading-Style-Sheets%EF%BC%89%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="toc-number">1.2.2.</span> <span class="toc-text">CSS（Cascading Style Sheets）层叠样式表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Js%EF%BC%88Javascript%EF%BC%89%E2%80%94%E2%80%94%E8%A1%8C%E4%B8%BA"><span class="toc-number">1.2.3.</span> <span class="toc-text">Js（Javascript）——行为</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81HTML%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.</span> <span class="toc-text">三、HTML文档结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.1.</span> <span class="toc-text">HTML文档结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E6%96%87%E6%A1%A3%E7%9A%84%E4%B8%89%E4%B8%AA%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-number">1.3.2.</span> <span class="toc-text">HTML文档的三个组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E6%96%87%E6%A1%A3%E6%A0%91"><span class="toc-number">1.3.3.</span> <span class="toc-text">HTML文档树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81HTML%E6%A0%87%E7%AD%BE"><span class="toc-number">1.4.</span> <span class="toc-text">四、HTML标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE"><span class="toc-number">1.4.1.</span> <span class="toc-text">文本标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">最大，\最小</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link"><span class="toc-number">2.0.0.0.0.1.</span> <span class="toc-text">最小</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">2.0.1.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-number">2.0.2.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">2.0.3.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">2.0.4.</span> <span class="toc-text">表格</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE"><span class="toc-number">2.0.4.1.</span> <span class="toc-text">标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">2.0.4.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E5%B5%8C%E5%A5%97"><span class="toc-number">2.0.4.3.</span> <span class="toc-text">表格嵌套</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6"><span class="toc-number">2.0.5.</span> <span class="toc-text">框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95"><span class="toc-number">2.0.6.</span> <span class="toc-text">表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA"><span class="toc-number">2.0.7.</span> <span class="toc-text">导航</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE"><span class="toc-number">2.0.8.</span> <span class="toc-text">HTML5其他标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E9%83%A8"><span class="toc-number">2.0.9.</span> <span class="toc-text">头部</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%85%B6%E5%9F%BA%E6%9C%AC%E6%A0%87%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">HTML简介及其基本标记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Web"><span class="toc-number">1.1.</span> <span class="toc-text">一、Web</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.1.1.</span> <span class="toc-text">常用术语</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81HTML%E7%AE%80%E4%BB%8B"><span class="toc-number">1.2.</span> <span class="toc-text">二、HTML简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%EF%BC%9A%E8%B6%85%E6%96%87%E6%9C%AC%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80"><span class="toc-number">1.2.1.</span> <span class="toc-text">HTML：超文本标记语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%EF%BC%88Cascading-Style-Sheets%EF%BC%89%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="toc-number">1.2.2.</span> <span class="toc-text">CSS（Cascading Style Sheets）层叠样式表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Js%EF%BC%88Javascript%EF%BC%89%E2%80%94%E2%80%94%E8%A1%8C%E4%B8%BA"><span class="toc-number">1.2.3.</span> <span class="toc-text">Js（Javascript）——行为</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81HTML%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.</span> <span class="toc-text">三、HTML文档结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84"><span class="toc-number">1.3.1.</span> <span class="toc-text">HTML文档结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E6%96%87%E6%A1%A3%E7%9A%84%E4%B8%89%E4%B8%AA%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-number">1.3.2.</span> <span class="toc-text">HTML文档的三个组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E6%96%87%E6%A1%A3%E6%A0%91"><span class="toc-number">1.3.3.</span> <span class="toc-text">HTML文档树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81HTML%E6%A0%87%E7%AD%BE"><span class="toc-number">1.4.</span> <span class="toc-text">四、HTML标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE"><span class="toc-number">1.4.1.</span> <span class="toc-text">文本标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%89%87"><span class="toc-number">1.4.2.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-number">1.4.3.</span> <span class="toc-text">链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8"><span class="toc-number">1.4.4.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC"><span class="toc-number">1.4.5.</span> <span class="toc-text">表格</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE"><span class="toc-number">1.4.5.1.</span> <span class="toc-text">标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">1.4.5.2.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E5%B5%8C%E5%A5%97"><span class="toc-number">1.4.5.3.</span> <span class="toc-text">表格嵌套</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6"><span class="toc-number">1.4.6.</span> <span class="toc-text">框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95"><span class="toc-number">1.4.7.</span> <span class="toc-text">表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E8%88%AA"><span class="toc-number">1.4.8.</span> <span class="toc-text">导航</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE"><span class="toc-number">1.4.9.</span> <span class="toc-text">HTML5其他标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E9%83%A8"><span class="toc-number">1.4.10.</span> <span class="toc-text">头部</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E6%B3%A8%E9%87%8A%E6%A0%87%E7%AD%BE"><span class="toc-number">1.4.11.</span> <span class="toc-text">HTML注释标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URL"><span class="toc-number">1.4.12.</span> <span class="toc-text">URL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cookie"><span class="toc-number">1.5.</span> <span class="toc-text">Cookie</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">1.6.</span> <span class="toc-text">小结</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
