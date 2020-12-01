@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- title -->
+
+
+
+
+<!-- keywords -->
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
+    <meta name="author" content="John Doe">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="John Doe">
+    
+    <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content="">
+    <meta name="description" content="实验一：shell编程实验一、实验目的 熟悉shell环境和shell的执行； 理解shell程序的设计方法； 熟悉shell程序的编辑、运行、调试方法和过程。  二、实验准备环境PC机 VMware workstation Ubuntu20.04 64bit 主要知识 shell条件控制 shell函数 文件、文件夹的操作 文件的读写 其他常用命令  三、实验时间2020.11.5-2020.1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux实验：shell编程">
+<meta property="og:url" content="http://example.com/2020/12/02/linux%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="实验一：shell编程实验一、实验目的 熟悉shell环境和shell的执行； 理解shell程序的设计方法； 熟悉shell程序的编辑、运行、调试方法和过程。  二、实验准备环境PC机 VMware workstation Ubuntu20.04 64bit 主要知识 shell条件控制 shell函数 文件、文件夹的操作 文件的读写 其他常用命令  三、实验时间2020.11.5-2020.1">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/%E6%B5%81%E7%A8%8B%E5%9B%BE.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172131503.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172146500.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201171939361.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201171957703.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172037720.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172107331.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172224726.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172247522.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172305464.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172412089.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172436931.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172526491.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172541583.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172611521.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173321679.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173148240.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173111700.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173044980.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173413587.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173356110.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201171903940.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172209796.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172340409.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172505929.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172948582.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173024698.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/7@SS_5OLRZKP5G1%7D%7D9_SRSE.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/8IKQDH(L8W$">
+<meta property="article:published_time" content="2020-12-01T23:19:57.070Z">
+<meta property="article:modified_time" content="2020-12-01T23:19:41.485Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/qq903064697/clouding/main/%E6%B5%81%E7%A8%8B%E5%9B%BE.svg">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    
+    <title>linux实验：shell编程 · Han&#39;s Blog</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+</style>
+
+    <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+(function( w ){
+	"use strict";
+	// rel=preload support test
+	if( !w.loadCSS ){
+		w.loadCSS = function(){};
+	}
+	// define on the loadCSS obj
+	var rp = loadCSS.relpreload = {};
+	// rel=preload feature support test
+	// runs once and returns a function for compat purposes
+	rp.support = (function(){
+		var ret;
+		try {
+			ret = w.document.createElement( "link" ).relList.supports( "preload" );
+		} catch (e) {
+			ret = false;
+		}
+		return function(){
+			return ret;
+		};
+	})();
+
+	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+	// then change that media back to its intended value on load
+	rp.bindMediaToggle = function( link ){
+		// remember existing media attr for ultimate state, or default to 'all'
+		var finalMedia = link.media || "all";
+
+		function enableStylesheet(){
+			link.media = finalMedia;
+		}
+
+		// bind load handlers to enable media
+		if( link.addEventListener ){
+			link.addEventListener( "load", enableStylesheet );
+		} else if( link.attachEvent ){
+			link.attachEvent( "onload", enableStylesheet );
+		}
+
+		// Set rel and non-applicable media type to start an async request
+		// note: timeout allows this to happen async to let rendering continue in IE
+		setTimeout(function(){
+			link.rel = "stylesheet";
+			link.media = "only x";
+		});
+		// also enable media after 3 seconds,
+		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+		setTimeout( enableStylesheet, 3000 );
+	};
+
+	// loop through link elements in DOM
+	rp.poly = function(){
+		// double check this to prevent external calls from running
+		if( rp.support() ){
+			return;
+		}
+		var links = w.document.getElementsByTagName( "link" );
+		for( var i = 0; i < links.length; i++ ){
+			var link = links[ i ];
+			// qualify links to those with rel=preload and as=style attrs
+			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+				// prevent rerunning on link
+				link.setAttribute( "data-loadcss", true );
+				// bind listeners to toggle media back
+				rp.bindMediaToggle( link );
+			}
+		}
+	};
+
+	// if unsupported, run the polyfill
+	if( !rp.support() ){
+		// run once at least
+		rp.poly();
+
+		// rerun poly on an interval until onload
+		var run = w.setInterval( rp.poly, 500 );
+		if( w.addEventListener ){
+			w.addEventListener( "load", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		} else if( w.attachEvent ){
+			w.attachEvent( "onload", function(){
+				rp.poly();
+				w.clearInterval( run );
+			} );
+		}
+	}
+
+
+	// commonjs
+	if( typeof exports !== "undefined" ){
+		exports.loadCSS = loadCSS;
+	}
+	else {
+		w.loadCSS = loadCSS;
+	}
+}( typeof global !== "undefined" ? global : this ) );
+</script>
+
+    <link rel="icon" href= "/assets/favicon.jpg" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script" />
+    <link rel="preload" href="/scripts/main.js" as="script" />
+    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
+    
+    <!-- fancybox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="read-progress"></div>
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Han&#39;s Blog.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">linux实验：shell编程</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>Han's Blog.</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro" style="
+
+
+
+
+
+
+
+height:50vh;
+">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            linux实验：shell编程
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">3.5k</span>Reading time: <span class="post-count reading-time">14 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/12/02</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+        <script>
+ 
+  // get user agent
+  var browser = {
+    versions: function () {
+      var u = window.navigator.userAgent;
+      return {
+        userAgent: u,
+        trident: u.indexOf('Trident') > -1, //IE内核
+        presto: u.indexOf('Presto') > -1, //opera内核
+        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+        iPad: u.indexOf('iPad') > -1, //是否为iPad
+        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
+      };
+    }()
+  }
+  console.log("userAgent:" + browser.versions.userAgent);
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded');
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
+      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in');
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb(){
+    if (browser.versions.uc) {
+      console.log("UCBrowser");
+      fontLoaded();
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular']
+        },
+        loading: function () {  //所有字体开始加载
+          // console.log('loading');
+        },
+        active: function () {  //所有字体已渲染
+          fontLoaded();
+        },
+        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout');
+          fontLoaded();
+        },
+        timeout: 5000 // Set the timeout to two seconds
+      });
+    }
+  }
+
+  function asyncErr(){
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
+    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  var asyncLoadWithFallBack = function(arr, success, reject) {
+      var currReject = function(){
+        reject()
+        arr.shift()
+        if(arr.length)
+          async(arr[0], success, currReject)
+        }
+
+      async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack([
+    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
+    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
+    "/lib/webfontloader.min.js"
+  ], asyncCb, asyncErr)
+</script>        
+        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+        <div class="container container-unloaded">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="实验一：shell编程实验"><a href="#实验一：shell编程实验" class="headerlink" title="实验一：shell编程实验"></a>实验一：shell编程实验</h1><h2 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h2><ol>
+<li>熟悉shell环境和shell的执行；</li>
+<li>理解shell程序的设计方法；</li>
+<li>熟悉shell程序的编辑、运行、调试方法和过程。</li>
+</ol>
+<h2 id="二、实验准备"><a href="#二、实验准备" class="headerlink" title="二、实验准备"></a>二、实验准备</h2><h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>PC机</p>
+<p>VMware workstation</p>
+<p>Ubuntu20.04 64bit</p>
+<h3 id="主要知识"><a href="#主要知识" class="headerlink" title="主要知识"></a>主要知识</h3><ul>
+<li>shell条件控制</li>
+<li>shell函数</li>
+<li>文件、文件夹的操作</li>
+<li>文件的读写</li>
+<li>其他常用命令</li>
+</ul>
+<h2 id="三、实验时间"><a href="#三、实验时间" class="headerlink" title="三、实验时间"></a>三、实验时间</h2><p>2020.11.5-2020.11.19</p>
+<h2 id="四、实验内容"><a href="#四、实验内容" class="headerlink" title="四、实验内容"></a>四、实验内容</h2><p>使用shell进行编程，使得程序能够完成以下功能：</p>
+<p>​        将给定的源文件夹中的文件按照后缀名进行分类，并复制到目标文件夹中的各子文件夹中（各子文件夹以对应后缀名作为文件夹名）。同时，在目标文件夹中，应当有一个analysis.txt的分析文件，至少需要记录各文件的原始路径，现路径与其后缀名等信息。</p>
+<h3 id="基本要求"><a href="#基本要求" class="headerlink" title="基本要求"></a>基本要求</h3><ol>
+<li>源文件夹与目的文件夹通过参数的方式传入，若未指定源文件夹，则以当前文件夹为源文件夹；若未指定目标文件夹，则需要在临时目录（/tmp）中创建临时文件夹来进行存储。</li>
+<li>程序应当判断目标文件夹是否已存在，若已存在，则需要在文件夹名后面加上一个随机子串，防止破坏原有文件夹结构。</li>
+<li>若出现文件重名，需要在新加入的文件后缀名前添加数字段以保证复制的正常进行，如：若main.cpp发生冲突，则需要修改文件名为main.2.cpp，依次类推。</li>
+<li>程序需要输出源文件夹、目标文件夹、分析文件的路径。</li>
+<li>分析文件可以使用column命令进行对齐。</li>
+</ol>
+<h2 id="五、基本原理"><a href="#五、基本原理" class="headerlink" title="五、基本原理"></a>五、基本原理</h2><h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>Linux，全称GNU/Linux，是一种免费使用和自由传播的类UNIX操作系统。它是一个基于POSIX和Unix的多用户、多任务、支持多线程和多CPU的操作系统。它能运行主要的Unix工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
+<h4 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h4><p>Linux的基本思想有两点：第一，一切都是文件；第二，每个文件都有确定的用途。其中第一条详细来讲就是系统中的所有都归结为一个文件，包括命令、硬件和软件设备、操作系统、进程等等对于操作系统内核而言，都被视为拥有各自特性或类型的文件。</p>
+<h3 id="shell编程"><a href="#shell编程" class="headerlink" title="shell编程"></a>shell编程</h3><p>Shell 是一个用 C 语言编写的程序，它是用户使用 Linux 的桥梁。Shell 既是一种命令语言，又是一种程序设计语言。</p>
+<p>Shell 是指一种应用程序，这个应用程序提供了一个界面，用户通过这个界面访问操作系统内核的服务。</p>
+<h4 id="shell脚本"><a href="#shell脚本" class="headerlink" title="shell脚本"></a>shell脚本</h4><p>Shell 脚本（shell script），是一种为 shell 编写的脚本程序。</p>
+<p>业界所说的 shell 通常都是指 shell 脚本，但读者朋友要知道，shell 和 shell script 是两个不同的概念。</p>
+<p>由于习惯的原因，简洁起见，本文出现的 “shell编程” 都是指 shell 脚本编程，不是指开发 shell 自身。</p>
+<h4 id="shell环境"><a href="#shell环境" class="headerlink" title="shell环境"></a>shell环境</h4><p>Shell 编程跟 JavaScript、php 编程一样，只要有一个能编写代码的文本编辑器和一个能解释执行的脚本解释器就可以了。</p>
+<p>本次实验用的是Bash</p>
+<h2 id="六、实现过程"><a href="#六、实现过程" class="headerlink" title="六、实现过程"></a>六、实现过程</h2><h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/%E6%B5%81%E7%A8%8B%E5%9B%BE.svg" alt="流程图"></p>
+<h3 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h3><p><strong>使用${}来对文件名进行切割</strong></p>
+<ul>
+<li>${var##*/}</li>
+</ul>
+<p>该命令的作用是去掉变量var从左边算起的最后一个’/‘字符及其左边的内容，返回从左边算起的最后一个’/‘（不含该字符）的右边的内容。可提取出需要的文件名file.txt</p>
+<ul>
+<li>${var##*.}</li>
+</ul>
+<p>该命令的作用是去除掉变量var从左边算起的最后一个’.‘字符及其左边的内容，返回从左边算起的最后一个’.‘（不含该文字）的右边的内容。可提取出需要的文件后缀</p>
+<ul>
+<li>${var#*.}</li>
+</ul>
+<p>该命令的作用是去掉变量var从左边算起的第一个’.‘字符及其左边的内容，返回从左边算起第一个’.‘（不含该字符）的右边部分的内容。可用从file.tar.gz中提取tar.gz</p>
+<ul>
+<li>${var%/*}</li>
+</ul>
+<p>该命令的使用是去掉变量var从右边算起的第一个’/‘字符及其右边的内容，返回从右边算起的第一个’/‘（不含该字符）的左边的内容。</p>
+<p>${}总结：</p>
+<p>其实${}并不是专门为提取文件名或者目录名的，它的使用是变量的提取和替换等等操作，它可以提取很多内容，并不一定是’/‘，’.’</p>
+<p>规律：</p>
+<p>#：表示从左边算起第一个</p>
+<p>%：表示从右边算起第一个</p>
+<p>##：表示从左边算起最后一个</p>
+<p>%%：表示从右边算起最后一个</p>
+<p>即，#总是表示从左边算起，%总是表示从右边算起</p>
+<p>*：表示要删除的内容，对于#和##的情况，它位于指定的字符（例子中的’/‘和’.‘）的左边，表示删除指定字符及其左边的内容；对于%和%%的情况，它位于指定的字符的右边，表示删除指定字符及其右边的内容。</p>
+<p>例如：${var%%x*}表示找出从右边算起最后一个字符x，并删除字符x及其右边的字符。</p>
+<p><strong>指定参数个数，是单一源路径或是单一目标路径，自定义传入参数：source和dest path，并根据不同的参数执行不同的函数，实现单一功能</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">while getopts &quot;ade:bf:cg&quot; opt; do</span><br><span class="line">    case $opt in</span><br><span class="line">        a)</span><br><span class="line">            echo &quot;这是都给了源文件和目标文件夹:&quot;</span><br><span class="line">            main $2 $3</span><br><span class="line">            ;;</span><br><span class="line">        b)</span><br><span class="line">            echo &quot;只给了源文件夹:&quot;</span><br><span class="line">            main $2 &quot;/tmp/临时文件夹&quot;</span><br><span class="line">            ;;</span><br><span class="line">        c)</span><br><span class="line">            echo &quot;只给了目标文件夹:&quot;</span><br><span class="line">            main &quot;/home/han/桌面/源文件&quot; $3</span><br><span class="line">            ;;</span><br><span class="line">        \?)</span><br><span class="line">            echo &quot;Invalid option!&quot;</span><br><span class="line">            ;;</span><br><span class="line">    esac</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p><strong>程序应当判断目标文件夹是否已存在，若存在则需要在文件夹名后面加上一个随机子串</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rnd=$(date +%s%N | cut -c6-13)</span><br></pre></td></tr></table></figure>
+<p><strong>程序需要输出源文件夹、目标文件夹、分析文件的路径</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $&#123;file&#125;&quot;:\t源文件路径: &quot;$1&quot;\t目标文件路径: &quot;$destForder/$&#123;file##*.&#125;/&gt;&gt;$destForder/tmp.txt</span><br></pre></td></tr></table></figure>
+<p><strong>判断目标文件夹是否已存在，若存在，则在文件夹名后加上一个随机子串</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Random() &#123;</span><br><span class="line">    rnd=$(date +%s%N | cut -c6-13)</span><br><span class="line">    if [ ! -d &quot;$&#123;1&#125;&quot; ]</span><br><span class="line">    then</span><br><span class="line">        mkdir $&#123;1&#125;</span><br><span class="line">        destForder=$&#123;1&#125;</span><br><span class="line">    else</span><br><span class="line">    	mkdir $&#123;1%/*&#125;/$&#123;1##*/&#125;$rnd</span><br><span class="line">    	destForder=$&#123;1%/*&#125;/$&#123;1##*/&#125;$rnd</span><br><span class="line">    fi</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p>本次实验报告的截图为六次运行的结果，两次给源路径和目标路径，两次只给源路径，两次只给目标路径，以此来多方面展示实验结果的完整性，以及实验任务的完成情况。</p>
+<h4 id="第一次：源路径和目标路径"><a href="#第一次：源路径和目标路径" class="headerlink" title="第一次：源路径和目标路径"></a>第一次：源路径和目标路径</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172131503.png" alt="image-20201201172131503"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172146500.png" alt="image-20201201172146500"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201171939361.png" alt="image-20201201171939361"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201171957703.png" alt="image-20201201171957703"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172037720.png" alt="image-20201201172037720"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172107331.png" alt="image-20201201172107331"></p>
+<h4 id="第二次：源路径和目标路径"><a href="#第二次：源路径和目标路径" class="headerlink" title="第二次：源路径和目标路径"></a>第二次：源路径和目标路径</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172224726.png" alt="image-20201201172224726"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172247522.png" alt="image-20201201172247522"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172305464.png" alt="image-20201201172305464"></p>
+<h4 id="第三次：源路径，默认目标路径为-tmp-临时文件夹"><a href="#第三次：源路径，默认目标路径为-tmp-临时文件夹" class="headerlink" title="第三次：源路径，默认目标路径为/tmp/临时文件夹"></a>第三次：源路径，默认目标路径为/tmp/临时文件夹<img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172412089.png" alt="image-20201201172412089"></h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172436931.png" alt="image-20201201172436931"></p>
+<h4 id="第四次：源路径，默认目标路径为-tmp-临时文件夹"><a href="#第四次：源路径，默认目标路径为-tmp-临时文件夹" class="headerlink" title="第四次：源路径，默认目标路径为/tmp/临时文件夹"></a>第四次：源路径，默认目标路径为/tmp/临时文件夹</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172526491.png" alt="image-20201201172526491"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172541583.png" alt="image-20201201172541583"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172611521.png" alt="image-20201201172611521"></p>
+<h4 id="第五次：只给目标路径，源路径默认为-home-han-桌面-源文件"><a href="#第五次：只给目标路径，源路径默认为-home-han-桌面-源文件" class="headerlink" title="第五次：只给目标路径，源路径默认为/home/han/桌面/源文件"></a>第五次：只给目标路径，源路径默认为/home/han/桌面/源文件</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173321679.png" alt="image-20201201173321679"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173148240.png" alt="image-20201201173148240"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173111700.png" alt="image-20201201173111700"></p>
+<h4 id="第六次：只给目标路径，源路径默认为-home-han-桌面-源文件"><a href="#第六次：只给目标路径，源路径默认为-home-han-桌面-源文件" class="headerlink" title="第六次：只给目标路径，源路径默认为/home/han/桌面/源文件"></a>第六次：只给目标路径，源路径默认为/home/han/桌面/源文件</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173044980.png" alt="image-20201201173044980"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173413587.png" alt="image-20201201173413587"></p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173356110.png" alt="image-20201201173356110"></p>
+<h3 id="运行截图"><a href="#运行截图" class="headerlink" title="运行截图"></a>运行截图</h3><h4 id="第一次运行"><a href="#第一次运行" class="headerlink" title="第一次运行"></a>第一次运行</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201171903940.png" alt="image-20201201171903940"></p>
+<h4 id="第二次运行"><a href="#第二次运行" class="headerlink" title="第二次运行"></a>第二次运行</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172209796.png" alt="image-20201201172209796"></p>
+<h4 id="第三次运行"><a href="#第三次运行" class="headerlink" title="第三次运行"></a>第三次运行</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172340409.png" alt="image-20201201172340409"></p>
+<h4 id="第四次运行"><a href="#第四次运行" class="headerlink" title="第四次运行"></a>第四次运行</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172505929.png" alt="image-20201201172505929"></p>
+<h4 id="第五次运行"><a href="#第五次运行" class="headerlink" title="第五次运行"></a>第五次运行</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201172948582.png" alt="image-20201201172948582"></p>
+<h4 id="第六次运行"><a href="#第六次运行" class="headerlink" title="第六次运行"></a>第六次运行</h4><p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/image-20201201173024698.png" alt="image-20201201173024698"></p>
+<h2 id="七、实验总结"><a href="#七、实验总结" class="headerlink" title="七、实验总结"></a>七、实验总结</h2><h3 id="实验过程分析"><a href="#实验过程分析" class="headerlink" title="实验过程分析"></a>实验过程分析</h3><p>整个实验过程大致分为三个阶段</p>
+<h4 id="第一阶段：第一个功能实现"><a href="#第一阶段：第一个功能实现" class="headerlink" title="第一阶段：第一个功能实现"></a>第一阶段：第一个功能实现</h4><p>第一阶段的代码如下</p>
+<p><img src="https://raw.githubusercontent.com/qq903064697/clouding/main/7@SS_5OLRZKP5G1%7D%7D9_SRSE.png" alt="img"></p>
+<p>此时只完成了这个实验的分类功能，形成了大体框架，但是大部分功能都没有实现，细节也没有讨论，只有给定的源路径和目标路径。</p>
+<h4 id="第二阶段：大部分功能实现"><a href="#第二阶段：大部分功能实现" class="headerlink" title="第二阶段：大部分功能实现"></a>第二阶段：大部分功能实现</h4><p>代码如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line">readfile() &#123;</span><br><span class="line">    </span><br><span class="line">    rnd=$(date +%s%N | cut -c6-13)</span><br><span class="line">    if [ ! -d &quot;$2&quot; ]</span><br><span class="line">    then</span><br><span class="line">    	mkdir $2</span><br><span class="line">    	destForder=$2</span><br><span class="line">    else</span><br><span class="line">    	mkdir $&#123;2%/*&#125;/$&#123;2##*/&#125;$rnd</span><br><span class="line">    	destForder=$&#123;2%/*&#125;/$&#123;2##*/&#125;$rnd</span><br><span class="line">    fi</span><br><span class="line">    for file in `ls $1`</span><br><span class="line">    do</span><br><span class="line">        if [ ! -d &quot;$destForder/$&#123;file##*.&#125;&quot; ]</span><br><span class="line">        then</span><br><span class="line">            mkdir $destForder/$&#123;file##*.&#125;</span><br><span class="line">            echo &quot; &quot;&gt;&gt;$destForder/tmp.txt</span><br><span class="line">            echo $&#123;file##*.&#125;&quot;文件:&quot;&gt;&gt;$destForder/tmp.txt</span><br><span class="line">        fi</span><br><span class="line">        cp $1/$&#123;file&#125; $destForder/$&#123;file##*.&#125;</span><br><span class="line">        echo $&#123;file&#125;&quot;:\t源文件路径: &quot;$1&quot;\t目标文件路径: &quot;$destForder/$&#123;file##*.&#125;/&gt;&gt;$destForder/tmp.txt</span><br><span class="line">    done</span><br><span class="line">    column -t &quot;$destForder/tmp.txt&quot; &gt; &quot;$destForder/analysis.txt&quot;</span><br><span class="line">    rm -f &quot;$destForder/tmp.txt&quot;</span><br><span class="line">    echo &quot;源文件路径:\t&quot;$1</span><br><span class="line">    echo &quot;目标文件路径:\t&quot;$destForder</span><br><span class="line">    echo &quot;分析文件路径:\t&quot;$destForder</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">readfile <span class="variable">$1</span> <span class="variable">$2</span></span></span><br><span class="line"></span><br><span class="line">readfile1() &#123;</span><br><span class="line"></span><br><span class="line">    rnd=$(date +%s%N | cut -c6-13)</span><br><span class="line">    destForder=&quot;/tmp/临时文件夹&quot;</span><br><span class="line">    if [ ! -d &quot;$destForder&quot; ]</span><br><span class="line">    then</span><br><span class="line">    	mkdir $destForder</span><br><span class="line">    else</span><br><span class="line">    	mkdir $&#123;destForder%/*&#125;/$&#123;destForder##*/&#125;$rnd</span><br><span class="line">    	destForder=$&#123;destForder%/*&#125;/$&#123;destForder##*/&#125;$rnd</span><br><span class="line">    fi</span><br><span class="line">    </span><br><span class="line">    for file in `ls $1`</span><br><span class="line">    do</span><br><span class="line">        if [ ! -d &quot;$destForder/$&#123;file##*.&#125;&quot; ]</span><br><span class="line">        then</span><br><span class="line">            mkdir $destForder/$&#123;file##*.&#125;</span><br><span class="line">            echo $&#123;file##*.&#125;&quot;:&quot;&gt;&gt;$destForder/analysis.txt</span><br><span class="line">        fi</span><br><span class="line">        cp -r $1/$&#123;file&#125; $destForder/$&#123;file##*.&#125;</span><br><span class="line">        echo $&#123;file&#125;&quot;:\t源文件路径: &quot;$1&quot;\t目标文件路径: &quot;$destForder/$&#123;file##*.&#125;/&gt;&gt;$destForder/analysis.txt </span><br><span class="line">    done</span><br><span class="line">    echo &quot;源文件路径:\t&quot;$1</span><br><span class="line">    echo &quot;目标文件路径:\t&quot;$destForder</span><br><span class="line">    echo &quot;分析文件路径:\t&quot;$destForder</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">readfile2() &#123;</span><br><span class="line">   </span><br><span class="line">    rnd=$(date +%s%N | cut -c6-13)</span><br><span class="line">    forder=&quot;/home/han/桌面/源文件&quot;</span><br><span class="line">    destForder=$&#123;forder##*/&#125;</span><br><span class="line">    #echo $&#123;forder##*/&#125;</span><br><span class="line"></span><br><span class="line">    if [ ! -d &quot;$1&quot; ]</span><br><span class="line">    then</span><br><span class="line">    	mkdir $1</span><br><span class="line">    	destForder=$1</span><br><span class="line">    else</span><br><span class="line">    	mkdir $&#123;1%/*&#125;/$&#123;1##*/&#125;$rnd</span><br><span class="line">    	destForder=$&#123;1%/*&#125;/$&#123;1##*/&#125;$rnd</span><br><span class="line">    fi</span><br><span class="line">    for file in `ls /home/idter/LinuxShellS/Filetest/`</span><br><span class="line">    do</span><br><span class="line">        if [ ! -d &quot;$1/$destForder/$&#123;file##*.&#125;&quot; ]</span><br><span class="line">        then</span><br><span class="line">            mkdir $1/$destForder/$&#123;file##*.&#125;</span><br><span class="line">            echo $&#123;file##*.&#125;&quot;:&quot;&gt;&gt;$&#123;1&#125;/$destForder/analysis.txt</span><br><span class="line">        fi</span><br><span class="line">        cp /home/idter/LinuxShellS/Filetest/$&#123;file&#125;  $1/$destForder/$&#123;file##*.&#125;</span><br><span class="line">        echo $&#123;file&#125;&quot;:\t源文件路径: /home/idter/LinuxShellS/Filetest/\t目标文件路径: &quot;$1&gt;&gt;$1/$destForder/analysis.txt</span><br><span class="line">    done</span><br><span class="line">    echo &quot;源文件路径:\t&quot;$forder</span><br><span class="line">    echo &quot;目标文件路径:\t&quot;$destForder</span><br><span class="line">    echo &quot;分析文件路径:\t&quot;$destForder</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">readfile1 <span class="variable">$1</span> </span></span><br><span class="line">while getopts &quot;ade:bf:cg&quot; opt; do</span><br><span class="line">    case $opt in</span><br><span class="line">        a)</span><br><span class="line">            echo &quot;This is both_path:&quot;</span><br><span class="line">            readfile $2 $3</span><br><span class="line">            ;;</span><br><span class="line">        b)</span><br><span class="line">            echo &quot;This is source_path:&quot;</span><br><span class="line">            readfile1 $2</span><br><span class="line">            ;;</span><br><span class="line">        c)</span><br><span class="line">            echo &quot;This is dest_path:&quot;</span><br><span class="line">            readfile2 $2</span><br><span class="line">            ;;</span><br><span class="line">        \?)</span><br><span class="line">            echo &quot;Invalid option!&quot;</span><br><span class="line">            ;;</span><br><span class="line">    esac</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+<p>这个阶段下，这个实现的大部分功能均已实现，比如通过传参来解决源路径和目标路径的问题就是在这一阶段通过查资料来实现的。但是，虽然整体功能已经实现，但是代码重复较多，没有进行代码优化，而且有一个实验要求理解不透彻，以至于一个很重要的功能没有实现。</p>
+<h4 id="第三阶段：功能完全实现"><a href="#第三阶段：功能完全实现" class="headerlink" title="第三阶段：功能完全实现"></a>第三阶段：功能完全实现</h4><p>这一阶段，主要是对代码的优化，和功能的完善，在此特别感谢张哲源同学对我的帮助，都是在他的帮助下，让我理解了我第二阶段没有理解透彻的实验要求，在这一阶段实现了。</p>
+<p>我不理解的问题：<img src="https://raw.githubusercontent.com/qq903064697/clouding/main/8IKQDH(L8W$" alt="img">WK3%5B%7BTH4NZD.png)如果每次都新建文件夹，怎么会有文件重名。</p>
+<p>通过张哲源同学的解答，我明白了，源文件中存在文件夹，源文件夹是father，然后这个文件夹内包括1个子文件夹son，和一个文件test.txt。然后son文件夹里有另一个同名的test.txt，这样的话移动到目标文件夹的时候就会出现两个test.txt。</p>
+<p>最后通过查找资料和与同学讨论，完善了代码，并且减少了代码重复，使代码更简洁。</p>
+<h3 id="实验体会"><a href="#实验体会" class="headerlink" title="实验体会"></a>实验体会</h3><p>通过这次实验，我了解了常用的shell编程和shell程序设计的基础知识，认识并且理解了shell程序流程控制、shell程序的运行方式、shell程序的调试方法。为以后更加系统的学习linux打下了坚实的基础。</p>
+<p>更重要的是，在遇到问题和困难时，要自己先进行思考，并且查找资料，如果自己想不到，可以找同学虚心求教。</p>
+<h2 id="八、源代码"><a href="#八、源代码" class="headerlink" title="八、源代码"></a>八、源代码</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 判断目标文件夹是否已存在，若存在，则在文件夹名后加上一个随机子串</span></span><br><span class="line">Random() &#123;</span><br><span class="line">    rnd=$(date +%s%N | cut -c6-13)</span><br><span class="line">    if [ ! -d &quot;$&#123;1&#125;&quot; ]</span><br><span class="line">    then</span><br><span class="line">        mkdir $&#123;1&#125;</span><br><span class="line">        destForder=$&#123;1&#125;</span><br><span class="line">    else</span><br><span class="line">    	mkdir $&#123;1%/*&#125;/$&#123;1##*/&#125;$rnd</span><br><span class="line">    	destForder=$&#123;1%/*&#125;/$&#123;1##*/&#125;$rnd</span><br><span class="line">    fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">将文件进行识别及分类</span></span><br><span class="line">readfile() &#123;</span><br><span class="line">    for file in `ls $1`</span><br><span class="line">    do</span><br><span class="line">    	if [ -f &quot;$&#123;1&#125;/$&#123;file&#125;&quot; ]</span><br><span class="line">    	then</span><br><span class="line">    	    if [ ! -d &quot;$&#123;destForder&#125;/$&#123;file##*.&#125;&quot; ]</span><br><span class="line">    	    then</span><br><span class="line">    	        mkdir $&#123;destForder&#125;/$&#123;file##*.&#125;</span><br><span class="line">    	        echo $&#123;file##*.&#125;&quot;文件:&quot;&gt;&gt;$destForder/tmp.txt</span><br><span class="line">    	    fi</span><br><span class="line">    	    if [ ! -f &quot;$&#123;destForder&#125;/$&#123;file##*.&#125;/$&#123;file&#125;&quot; ]</span><br><span class="line">    	    then</span><br><span class="line">    	    	cp $&#123;1&#125;/$&#123;file&#125; $destForder/$&#123;file##*.&#125;</span><br><span class="line">        	    echo $&#123;file&#125;&quot;:\t源文件路径: &quot;$1&quot;\t目标文件路径: &quot;$destForder/$&#123;file##*.&#125;/&gt;&gt;$destForder/tmp.txt</span><br><span class="line">            else</span><br><span class="line">                random=$(date +%s%N | cut -c6-13)</span><br><span class="line">                cp $&#123;1&#125;/$&#123;file&#125; $destForder/$&#123;file##*.&#125;/$&#123;file%.*&#125;$&#123;random&#125;&quot;.&quot;$&#123;file##*.&#125;</span><br><span class="line">        	    </span><br><span class="line">        	    echo $&#123;file&#125;&quot;:\t源文件路径: &quot;$1&quot;\t目标文件路径: &quot;$destForder/$&#123;file##*.&#125;/&gt;&gt;$destForder/tmp.txt</span><br><span class="line">        	fi</span><br><span class="line">    	elif [ -d &quot;$&#123;1&#125;/$&#123;file&#125;&quot; ]</span><br><span class="line">    	then</span><br><span class="line">    	    readfile &quot;$&#123;1&#125;/$&#123;file&#125;&quot;</span><br><span class="line">    	fi</span><br><span class="line">    done</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">将两个函数进行整合并补充细节</span></span><br><span class="line">main() &#123;</span><br><span class="line">    Random $&#123;2&#125;</span><br><span class="line">    Source=$&#123;1&#125;</span><br><span class="line">    readfile $&#123;1&#125;</span><br><span class="line">    column -t &quot;$destForder/tmp.txt&quot; &gt; &quot;$destForder/analysis.txt&quot;</span><br><span class="line">    rm -f &quot;$destForder/tmp.txt&quot;</span><br><span class="line">    echo &quot;源文件路径:\t&quot;$&#123;Source&#125;</span><br><span class="line">    echo &quot;目标文件路径:\t&quot;$&#123;destForder&#125;</span><br><span class="line">    echo &quot;分析文件路径:\t&quot;$&#123;destForder&#125;</span><br><span class="line">&#125;</span><br><span class="line">while getopts &quot;ade:bf:cg&quot; opt; do</span><br><span class="line">    case $opt in</span><br><span class="line">        a)</span><br><span class="line">            echo &quot;这是都给了源文件和目标文件夹:&quot;</span><br><span class="line">            main $2 $3</span><br><span class="line">            ;;</span><br><span class="line">        b)</span><br><span class="line">            echo &quot;只给了源文件夹:&quot;</span><br><span class="line">            main $2 &quot;/tmp/临时文件夹&quot;</span><br><span class="line">            ;;</span><br><span class="line">        c)</span><br><span class="line">            echo &quot;只给了目标文件夹:&quot;</span><br><span class="line">            main &quot;/home/han/桌面/源文件&quot; $3</span><br><span class="line">            ;;</span><br><span class="line">        \?)</span><br><span class="line">            echo &quot;Invalid option!&quot;</span><br><span class="line">            ;;</span><br><span class="line">    esac</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+    </article>
+    <!-- license  -->
+    
+    <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/11/04/%E5%B8%B8%E7%94%A8python%E5%AE%9E%E7%8E%B0/" title= "32个常用python实现">
+                    <div class="prevTitle">32个常用python实现</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
+    
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
+            
+        </div>
+        <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="mailto:903064697@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/qq903064697" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer qq" title=qq>
+                  
+                  <img class="profile-qr" src="/assets/qq.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+    
+     
+    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+    
+    </div>
+    
+</footer>
+    </div>
+    <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%9Ashell%E7%BC%96%E7%A8%8B%E5%AE%9E%E9%AA%8C"><span class="toc-number">1.</span> <span class="toc-text">实验一：shell编程实验</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84"><span class="toc-number">1.1.</span> <span class="toc-text">一、实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87"><span class="toc-number">1.2.</span> <span class="toc-text">二、实验准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83"><span class="toc-number">1.2.1.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%9F%A5%E8%AF%86"><span class="toc-number">1.2.2.</span> <span class="toc-text">主要知识</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AE%9E%E9%AA%8C%E6%97%B6%E9%97%B4"><span class="toc-number">1.3.</span> <span class="toc-text">三、实验时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="toc-number">1.4.</span> <span class="toc-text">四、实验内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%A6%81%E6%B1%82"><span class="toc-number">1.4.1.</span> <span class="toc-text">基本要求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86"><span class="toc-number">1.5.</span> <span class="toc-text">五、基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux"><span class="toc-number">1.5.1.</span> <span class="toc-text">Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-number">1.5.1.1.</span> <span class="toc-text">基本思想</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E7%BC%96%E7%A8%8B"><span class="toc-number">1.5.2.</span> <span class="toc-text">shell编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#shell%E8%84%9A%E6%9C%AC"><span class="toc-number">1.5.2.1.</span> <span class="toc-text">shell脚本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shell%E7%8E%AF%E5%A2%83"><span class="toc-number">1.5.2.2.</span> <span class="toc-text">shell环境</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-number">1.6.</span> <span class="toc-text">六、实现过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">1.6.1.</span> <span class="toc-text">流程图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81"><span class="toc-number">1.6.2.</span> <span class="toc-text">核心代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C"><span class="toc-number">1.6.3.</span> <span class="toc-text">运行结果</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%EF%BC%9A%E6%BA%90%E8%B7%AF%E5%BE%84%E5%92%8C%E7%9B%AE%E6%A0%87%E8%B7%AF%E5%BE%84"><span class="toc-number">1.6.3.1.</span> <span class="toc-text">第一次：源路径和目标路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%EF%BC%9A%E6%BA%90%E8%B7%AF%E5%BE%84%E5%92%8C%E7%9B%AE%E6%A0%87%E8%B7%AF%E5%BE%84"><span class="toc-number">1.6.3.2.</span> <span class="toc-text">第二次：源路径和目标路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%EF%BC%9A%E6%BA%90%E8%B7%AF%E5%BE%84%EF%BC%8C%E9%BB%98%E8%AE%A4%E7%9B%AE%E6%A0%87%E8%B7%AF%E5%BE%84%E4%B8%BA-tmp-%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.6.3.3.</span> <span class="toc-text">第三次：源路径，默认目标路径为&#x2F;tmp&#x2F;临时文件夹</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AC%A1%EF%BC%9A%E6%BA%90%E8%B7%AF%E5%BE%84%EF%BC%8C%E9%BB%98%E8%AE%A4%E7%9B%AE%E6%A0%87%E8%B7%AF%E5%BE%84%E4%B8%BA-tmp-%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-number">1.6.3.4.</span> <span class="toc-text">第四次：源路径，默认目标路径为&#x2F;tmp&#x2F;临时文件夹</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AC%A1%EF%BC%9A%E5%8F%AA%E7%BB%99%E7%9B%AE%E6%A0%87%E8%B7%AF%E5%BE%84%EF%BC%8C%E6%BA%90%E8%B7%AF%E5%BE%84%E9%BB%98%E8%AE%A4%E4%B8%BA-home-han-%E6%A1%8C%E9%9D%A2-%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number">1.6.3.5.</span> <span class="toc-text">第五次：只给目标路径，源路径默认为&#x2F;home&#x2F;han&#x2F;桌面&#x2F;源文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E6%AC%A1%EF%BC%9A%E5%8F%AA%E7%BB%99%E7%9B%AE%E6%A0%87%E8%B7%AF%E5%BE%84%EF%BC%8C%E6%BA%90%E8%B7%AF%E5%BE%84%E9%BB%98%E8%AE%A4%E4%B8%BA-home-han-%E6%A1%8C%E9%9D%A2-%E6%BA%90%E6%96%87%E4%BB%B6"><span class="toc-number">1.6.3.6.</span> <span class="toc-text">第六次：只给目标路径，源路径默认为&#x2F;home&#x2F;han&#x2F;桌面&#x2F;源文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE"><span class="toc-number">1.6.4.</span> <span class="toc-text">运行截图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="toc-number">1.6.4.1.</span> <span class="toc-text">第一次运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="toc-number">1.6.4.2.</span> <span class="toc-text">第二次运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="toc-number">1.6.4.3.</span> <span class="toc-text">第三次运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="toc-number">1.6.4.4.</span> <span class="toc-text">第四次运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="toc-number">1.6.4.5.</span> <span class="toc-text">第五次运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="toc-number">1.6.4.6.</span> <span class="toc-text">第六次运行</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%AE%9E%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-number">1.7.</span> <span class="toc-text">七、实验总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-number">1.7.1.</span> <span class="toc-text">实验过程分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.7.1.1.</span> <span class="toc-text">第一阶段：第一个功能实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%A4%A7%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.7.1.2.</span> <span class="toc-text">第二阶段：大部分功能实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%8A%9F%E8%83%BD%E5%AE%8C%E5%85%A8%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.7.1.3.</span> <span class="toc-text">第三阶段：功能完全实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E4%BD%93%E4%BC%9A"><span class="toc-number">1.7.2.</span> <span class="toc-text">实验体会</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-number">1.8.</span> <span class="toc-text">八、源代码</span></a></li></ol></li></ol>
+    </div>
+    
+    <div class="back-top iconfont-archer">&#xe639;</div>
+    <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-panel-archives">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 13
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/02</span><a class="archive-post-title" href= "/2020/12/02/linux%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" >linux实验：shell编程</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/28</span><a class="archive-post-title" href= "/2020/10/28/HTML%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/" >HTML基本知识</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/17</span><a class="archive-post-title" href= "/2020/10/17/Leetcode%E7%AC%AC%E5%9B%9B%E9%A2%98/" >Leetcode第四题：合并两个有序链表</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/13</span><a class="archive-post-title" href= "/2020/10/13/Leetcode%E7%AC%AC%E4%B8%89%E9%A2%98/" >Leetcode第三题：罗马数字转整数</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/10</span><a class="archive-post-title" href= "/2020/10/10/Leetcode%E7%AC%AC%E4%BA%8C%E9%A2%98/" >Leetcode第二题：整数反转</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/07</span><a class="archive-post-title" href= "/2020/10/07/Leetcode%E7%AC%AC%E4%B8%80%E9%A2%98/" >Leetcode第一题：两数之和</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/09/27/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" >数字图像处理笔记</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86/" >数据库原理笔记</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/26</span><a class="archive-post-title" href= "/2020/09/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" >我的第一篇博客文章</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/09/27/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E7%AC%94%E8%AE%B0/" >软件工程笔记</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/04</span><a class="archive-post-title" href= "/2020/11/04/%E5%B8%B8%E7%94%A8python%E5%AE%9E%E7%8E%B0/" >32个常用python实现</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/25</span><a class="archive-post-title" href= "/2020/10/25/%E7%81%B0%E5%BA%A6%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" >灰度图像处理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/27</span><a class="archive-post-title" href= "/2020/09/27/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86/" >操作系统原理笔记</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #787878; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var siteMeta = {
+        root: "/",
+        author: "John Doe"
+    }
+</script>
+    <!-- CDN failover -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ === 'undefined')
+        {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
+        }
+    </script>
+    <script src="/scripts/main.js"></script>
+    <!-- algolia -->
+    
+    <!-- busuanzi  -->
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ  -->
+    
+    </div>
+    <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
+     
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+    i
+    < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+        <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
+
+
